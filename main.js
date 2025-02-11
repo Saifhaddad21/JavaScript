@@ -1,13 +1,10 @@
 
-// String Syntax + Character Escape Sequences
-// \Escape + Line Continue 
-// \n 
+// concatenation    >>>>space
 
-console.log('elzero web "school"');
-console.log("elzero web 'school'");
-console.log("elzero web \"school\"");
-console.log('elzero \\ web \'school\'');
-console.log("elzero \
-    web \
-    school");
-    console.log("elzero\nweb\nschool");
+let a = "We Love";
+let b = "JavaScript";
+
+document.write(a + b);
+document.write(a + " " +b);
+
+console.log(a, b);
