@@ -1,10 +1,13 @@
 
-// concatenation    >>>>space
+// template literals (template string)
 
 let a = "We Love";
 let b = "JavaScript";
+let c = "and"
+let d = "programming"
 
-document.write(a + b);
-document.write(a + " " +b);
+console.log(a + " \"\" " + b + " " + "\n" + c + " " + d);
 
-console.log(a, b);
+console.log(`${a} "" '' \\ ${b} 
+    ${c} ${d}`)
+
