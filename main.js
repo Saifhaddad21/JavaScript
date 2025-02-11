@@ -1,19 +1,24 @@
-// variable intro 
-// what is variable ??
-// why we use variables ??
-// declare a variable and use 
-// syntax ( keyword || variable name ||assignment operator || variable value )
-// variable without var 
-// multiple variable in the same line 
-// id and global variable 
-// loosely typed vs strongly typed
+// Var :
+// 1-Redeclar (Yes)
+// 2-Access Before Declare (undefined)
+// 3-Variable Scope Drama [Added To Window] ()
+// 4-Block Or Function Scope ()
 
-var user = "saif" , 
-age = 24 ;
-console.log(user);
-console.log(user);
-console.log(user);
-console.log(age);
-console.log(hello);
+// Let : 
+// 1-Redeclar (No => Error)
+// 2-Access Before Declare (error)
+// 3-Variable Scope 
+// 4-Block Or Function Scope 
 
-hello.innerHTML = "option";
+// Const : 
+// 1-Redeclar (No => Error)
+// 2-Access Before Declare (error)
+// 3-Variable Scope 
+// 4-Block Or Function Scope 
+
+var a = 1 ;
+var a = 1 ;
+
+let a = 1 ; 
+let a = 1 ;
+console.log(a);
