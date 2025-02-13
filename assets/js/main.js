@@ -35,18 +35,33 @@
 // console.log(10 - "saif");
 // console.log(typeof NaN);
 
-let products = ["saif", "zaid", "jack" , "saif"];
-let colors = ["red", "green", "blue"];
-let showcount = 3 ;
+// let products = ["saif", "zaid", "jack" , "saif"];
+// let colors = ["red", "green", "blue"];
+// let showcount = 5 ;
  
-document.write(`<h1>show ${showcount} products</h1>`);
+// document.write(`<h1>show ${showcount} products</h1>`);
 
-for (let i = 0 ; i < showcount ; i++) {
-    document.write(`<div>`);
-    document.write(`<h3> [${i + 1}] ${products[i]}</h3>`);
-    for (let j = 0; j < colors.length; j++) {
-        documentw.write(`<p> ${colors[j]}</p>`);
-    }
-    document.write(`<p>${colors.join( "|" )}</p>`); 
-    document.write(`</div>`);
-}   
+// for (let i = 0 ; i < showcount ; i++) {
+//     document.write(`<div>`);
+//     document.write(`<h3> [${i + 1}] ${products[i]}</h3>`);
+//     for (let j = 0; j < colors.length; j++) {
+//         documentw.write(`<p> ${colors[j]}</p>`);
+//     }
+//     document.write(`<p>${colors.join( "|" )}</p>`); 
+//     document.write(`<div>`);
+// }   
+
+function sayhello() {
+    console.log(`hello saif haddad`);
+}
+
+sayhello ();
+
+function bay (UserName ,age) { 
+    if (age < 20) {
+        console.log (`this app is not suitable for you`);
+    }else {
+    console.log(`hi ${UserName} your age is ${age}`);
+}
+}
+bay ("saif" , 24);
