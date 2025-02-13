@@ -17,20 +17,32 @@
 // Extra 
 // Repeat 
 
-var title = "Elzero";
-var description = "Elzero Web School";
-var date = "25\\10";
+// var title = "Elzero";
+// var description = "Elzero Web School";
+// var date = "25\\10";
 
-document.write(
-    <div class="title">
-        <h3>${"description"}</h3>
-        <p>${"date"}</p>
-    </div>
-);
+// document.write(
+//     <div class="title">
+//         <h3>${"description"}</h3>
+//         <p>${"date"}</p>
+//     </div>
+// );
 
 
-console.log(10 + 10);
-console.log(10 + "saif");
-console.log(20 - 10);
-console.log(10 - "saif");
-console.log(typeof NaN);
+// console.log(10 + 10);
+// console.log(10 + "saif");
+// console.log(20 - 10);
+// console.log(10 - "saif");
+// console.log(typeof NaN);
+
+let products = ["saif", "zaid", "jack" , "saif"];
+let colors = ["red", "green", "blue"];
+let showcount = 5 ;
+ 
+document.write(`<h1>show ${showcount} products</h1>`);
+
+for (let i = 0 ; i < showcount ; i++) {
+    document.write(`<div>`);
+    document.write(`<h3> [${i + 1}] ${products[i]}</h3>`);
+    document.write(`</div>`);
+}
