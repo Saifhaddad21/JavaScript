@@ -124,17 +124,31 @@
 // generate(2020, 2025);
 
 // }
+//////////////////////////////////////////////////////////////////////////
+// function sayhello (username = "unknown", age = "unknown"){  //third way 
+//     // if ( age === undefined) {
+//     //     age = "unknown" ;
+//     // }  >>first way ..
 
-function sayhello (username = "unknown", age = "unknown"){  //third way 
-    // if ( age === undefined) {
-    //     age = "unknown" ;
-    // }  >>first way ..
+
+//     // age = age || "unknown" ;   >> second way ..
+
+//     return `Hello ${username} your age is ${age}`;
+// }
+// console.log(sayhello("saif", 24));
+// console.log(sayhello("zaid"));
+// console.log(sayhello("nada", 23));
+
+////////////////////////////////////////////////////////
 
 
-    // age = age || "unknown" ;   >> second way ..
-
-    return `Hello ${username} your age is ${age}`;
+function calc(...numbers) {
+    let result = o;
+    for (let i = 0; i < numbers.length; i++) {
+        result += numbers[i];
+    }
+    return `final result is ${result}`;
 }
-console.log(sayhello("saif", 24));
-console.log(sayhello("zaid"));
-console.log(sayhello("nada", 23));
+console.log(calc(10, 20, 30, 40, 50));
+
+/////////////////////////////////////
