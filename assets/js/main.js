@@ -64,4 +64,18 @@ function bay (UserName ,age) {
     console.log(`hi ${UserName} your age is ${age}`);
 }
 }
-bay ("saif" , 24);
+bay ("saif", 24);
+bay ("jack", 21);
+bay ("zaid", 25);
+bay ("nrmin", 16);
+
+function generateyeares(start, end , exclude) {
+    for (let i = start ; i <= end ; i++) {
+  
+    if (i === exclude) { 
+        continue;
+    }
+    console.log(i);
+}
+}
+generateyeares(2000, 2026, 2025);
