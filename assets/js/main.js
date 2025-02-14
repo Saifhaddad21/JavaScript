@@ -353,3 +353,21 @@ Named Function
 //     // return Element + Element ;
 // }, 10); 
 // // console.log(addself);
+
+/////////////////////////////////////////////
+// (Higher-Order-Functions->>Map practice)
+let swappingcases = "eLzErO";
+let invertednumbers = [1, -10, -20, 15, 100, -30];
+let ignoreboolean = "ELZ123er40";
+let sw = swappingcases.split("").map(function(ele) { 
+    //condition ? true : false 
+    return ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase();
+})
+.join("");
+
+console.log(sw);
+
+let inv = invertednumbers.map(function(ele){
+    return -ele ;
+});
+console.log(inv);
