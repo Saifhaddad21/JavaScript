@@ -292,19 +292,64 @@
 
 // (Scope-Lexical(Static))
 
-function parent() {
-    let a = 10;
+// function parent() {  ///here we can take just from parent .. 
+//     let a = 10;
 
-    function child() {
-        console.log(a);
+//     function child() {    ///here we can take from parent and child only ..
+//         console.log(a);
 
-        function grand() {
-            let b = 200;
-            console.log(`From Grand ${a}`)
-            console.log(`From Grand ${b}`)
-        }
-        grand();
-    }
-    child();
-}
-parent();
+//         function grand() {
+//             let b = 200;
+//             console.log(`From Grand ${a}`) ///here we can take from parent, child and from grand ..
+//             console.log(`From Grand ${b}`)
+//         }
+//         grand();
+//     }
+//     child();
+// }
+// parent();
+
+////////////////////////////////////////////
+
+// (Higher-Order-Functions->>Maps)
+
+/*
+---> is a function that accepts functions as parameters and/or returns a function
+
+Map 
+---method creates a new array 
+--- populated with the results of calling a provided function on every element 
+---in the calling array. 
+
+Syntax map(callBackFunction (Element, Index, Array) { }, thisArg) 
+Element => The current element being processed in the array. 
+Index => The index of the current element being processed in the array. 
+Array => The Current Array 
+
+Notes 
+Map Return A New Array 
+
+Examples 
+Anonymous Function 
+Named Function 
+*/
+
+// let mynums = [1,2,3,4,5,6];
+
+// let newarray = [];
+
+// for (let i = 0; i < mynums.length; i++) {
+//     newarray.push(mynums[i] + mynums[i]);
+// }
+// console.log(newarray);
+
+// // same idea with map 
+
+// let addself = mynums.map( function(Element, Index, Array){
+// console.log(`current Element => ${Element}`);
+// console.log(`current Index => ${Index}`);
+// console.log(`Array => ${Array}`);
+// console.log(`This => ${This}`); 
+//     // return Element + Element ;
+// }, 10); 
+// // console.log(addself);
