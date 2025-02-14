@@ -189,7 +189,7 @@
 // setTimeout(function () {
 //     console.log("Good");
 // }, 2000);
- /////////////////////////////////////////
+/////////////////////////////////////////
 
 //  (Return-Nested-Function)
 
@@ -211,7 +211,7 @@
 //     function concatMsg () {
 //         return  `${message} ${fName} ${lName}`;
 //     }
-    
+
 //     return concatMsg();
 // }
 // console.log(sayMessage("Saif", "Haddad"));
@@ -226,7 +226,7 @@
 //         }
 //         return  `${message} ${getFullName()}`;
 //     }
-    
+
 //     return concatMsg();
 // }
 // console.log(sayMessage("Saif", "Haddad"));
@@ -245,5 +245,28 @@
 // let print = (num1, num2) => num1 + num2 ;
 
 // console.log(print(100, 50));
+
+///////////////////////////////////
+
+// (Global-And-Local)
+
+var a = 1;
+let b = 2;
+
+function showtext() {
+    var a = 10;
+    let b = 20;
+
+    console.log(`function - From Local ${a}`);
+    console.log(`function - From Local ${b}`);
+}
+console.log(`From Global ${a}`);
+console.log(`From Global ${b}`);
+
+showtext();
+
+//local can be read from global --but-- 
+//global can't be read from local --
+
 
 ///////////////////////////////////
