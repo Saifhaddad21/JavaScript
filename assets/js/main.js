@@ -355,19 +355,104 @@ Named Function
 // // console.log(addself);
 
 /////////////////////////////////////////////
-// (Higher-Order-Functions->>Map practice)
-let swappingcases = "eLzErO";
-let invertednumbers = [1, -10, -20, 15, 100, -30];
-let ignoreboolean = "ELZ123er40";
-let sw = swappingcases.split("").map(function(ele) { 
-    //condition ? true : false 
-    return ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase();
-})
-.join("");
+// // (Higher-Order-Functions->>Map practice)
+// // let swappingcases = "eLzErO";
+// // let invertednumbers = [1, -10, -20, 15, 100, -30];
+// // let ignoreboolean = "ELZ123er40";
+// // let sw = swappingcases.split("").map(function(ele) { 
+// //     //condition ? true : false 
+// //     return ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase();
+// // })
+// // .join("");
 
-console.log(sw);
+// // console.log(sw);
 
-let inv = invertednumbers.map(function(ele){
-    return -ele ;
-});
-console.log(inv);
+// // let inv = invertednumbers.map(function(ele){
+// //     return -ele ;
+// // });
+// // console.log(inv);
+// ///////////////////////////////////////////
+// // (Filter)
+// let friends = ["Saif" , "zaid" , "jack" , "mhanna" , "naeem" , "Salameh" , "Sanad"]
+
+// let numbers = [11, 20, 2, 5, 17, 10];
+// // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// // let addmap = numbers.map(function(el){
+// // return el + el ; 
+// // });
+
+// // console.log(addmap);
+
+// // let addfilter = numbers.filter(function(el){
+// //     return el + el ; 
+// //     });
+
+// //     console.log(addfilter);
+// // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// // let filteredfriends = friends.filter(function (el){
+// // return el.startsWith("S") ? true : false;
+// // });
+
+// // console.log(filteredfriends);
+
+// // let evennumbers = numbers.filter(function(el){
+// //     return el % 2 === 0 ? true : false ;
+// // });
+
+// // console.log(evennumbers);
+
+// // >> the different between map : filter is
+// // map to make action :: filter to make filter .. 
+
+// // >>>>>>>>>>>>>>>>>>>>>>>
+
+// /////////////////////////////////////////////////////////////
+
+// (Filter-Practice)
+// Filter Words More Than 4 Characters 
+// let sentence = "I Love Foood Code Too Playing Much";
+// let smallwords = sentence
+//     .split(" ")
+//     .filter(function (ele) {
+//         return ele.length <= 4;
+//     })
+//     .join(" ");
+
+// console.log(smallwords);
+
+// // Ignore Numbers 
+// let ignoreNumbers = "Elz123er4o";
+// let ign = ignoreNumbers
+//     .split("")
+//     .filter(function (ele) {
+//         return isNaN(parseInt(ele));
+//     })
+//     .join("");
+// console.log(ign);
+
+
+// let ign = ignoreNumbers
+//     .split("")
+//     .map(function (ele) {
+//         return isNaN(parseInt(ele));
+//     })
+//     .join("");
+// console.log(ign);
+
+// Filter Strings + Multiply 
+// let mix = "A13BS2ZX";
+// let mixedContent = mix
+//     .split("")
+//     .filter(function (ele) {
+//         return !isNaN(parseInt(ele));
+//     })
+//     .map(function (ele) {
+//         return ele * ele;
+//     })
+//     .join("");
+
+
+// console.log(mixedContent);
+
+//////////////////////////////////////////////////////
