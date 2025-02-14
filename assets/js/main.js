@@ -141,14 +141,34 @@
 
 ////////////////////////////////////////////////////////
 
-
-function calc(...numbers) {
-    let result = o;
-    for (let i = 0; i < numbers.length; i++) {
-        result += numbers[i];
-    }
-    return `final result is ${result}`;
-}
-console.log(calc(10, 20, 30, 40, 50));
+// (function-rest-parameters)
+// function calc(...numbers) {
+//     let result = o;
+//     for (let i = 0; i < numbers.length; i++) {
+//         result += numbers[i];
+//     }
+//     return `final result is ${result}`;
+// }
+// console.log(calc(10, 20, 30, 40, 50));
 
 /////////////////////////////////////
+
+// (function-ultimate-practice)
+function showinfo(username = "unknown", age = "unknown", rate = 0, show = "yes", ...skills) {
+    document.write(`<div>`);
+    document.write(`<h2>Welcome, ${username}</h2>`);
+    document.write(`<p>Age: ${age}</p>`);
+    document.write(`<p>Hour Rate: $${rate}</p>`);
+    if (show === "yes") {
+        if (skills.length > 0){
+            document.write(`<p>Skills : ${skills.join(" | ")} <p/>`);
+        }else {
+            document.write(`<p>Skills : No skills </p>`);
+        }
+    } else {
+        document.write(`<p> Skills Is Hidden </p>`);
+    }
+    document.write(`</div>`);
+}
+
+showinfo("Saif", 24 , 20 , "yes", "HTML" , "CSS");
