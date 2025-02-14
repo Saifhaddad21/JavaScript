@@ -80,47 +80,61 @@
 // }
 // generateyeares(2000, 2026, 2025);
 
-{
-    function sayhello(UserName) {
-        return `Hello ${UserName}`;
+// {
+//     function sayhello(UserName) {
+//         return `Hello ${UserName}`;
 
-    }
+//     }
 
-    let result = sayhello("saif");
+//     let result = sayhello("saif");
 
-    console.log(result);
+//     console.log(result);
+// }
+
+// {
+//     function calc(num1, num2) {
+//         return num1 + num2;
+
+//     }
+
+//     let result = calc(10, 20);
+
+//     console.log(result);
+// }
+// {
+//     function calc(num1, num2) {
+//         return num1 + num2;
+
+//     }
+
+//     let result = calc(10, 20);
+
+//     console.log(result + 100);
+// }
+
+// {
+// function generate (start, end){
+// for (let i = start; i <= end; i++) {
+// console.log(i);
+// if (i === 2022){
+// return `interruptting`
+// }
+// }
+// }
+// generate(2020, 2025);
+
+// }
+
+function sayhello (username = "unknown", age = "unknown"){  //third way 
+    // if ( age === undefined) {
+    //     age = "unknown" ;
+    // }  >>first way ..
+
+
+    // age = age || "unknown" ;   >> second way ..
+
+    return `Hello ${username} your age is ${age}`;
 }
-
-{
-    function calc(num1, num2) {
-        return num1 + num2;
-
-    }
-
-    let result = calc(10, 20);
-
-    console.log(result);
-}
-{
-    function calc(num1, num2) {
-        return num1 + num2;
-
-    }
-
-    let result = calc(10, 20);
-
-    console.log(result + 100);
-}
-
-{
-function generate (start, end){
-for (let i = start; i <= end; i++) {
-console.log(i);
-if (i === 2022){
-return `interruptting`
-}
-}
-}
-generate(2020, 2025);
-
-}
+console.log(sayhello("saif", 24));
+console.log(sayhello("zaid"));
+console.log(sayhello("nada", 23));
