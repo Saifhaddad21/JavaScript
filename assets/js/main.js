@@ -154,21 +154,38 @@
 /////////////////////////////////////
 
 // (function-ultimate-practice)
-function showinfo(username = "unknown", age = "unknown", rate = 0, show = "yes", ...skills) {
-    document.write(`<div>`);
-    document.write(`<h2>Welcome, ${username}</h2>`);
-    document.write(`<p>Age: ${age}</p>`);
-    document.write(`<p>Hour Rate: $${rate}</p>`);
-    if (show === "yes") {
-        if (skills.length > 0){
-            document.write(`<p>Skills : ${skills.join(" | ")} <p/>`);
-        }else {
-            document.write(`<p>Skills : No skills </p>`);
-        }
-    } else {
-        document.write(`<p> Skills Is Hidden </p>`);
-    }
-    document.write(`</div>`);
-}
+// function showinfo(username = "unknown", age = "unknown", rate = 0, show = "yes", ...skills) {
+//     document.write(`<div>`);
+//     document.write(`<h2>Welcome, ${username}</h2>`);
+//     document.write(`<p>Age: ${age}</p>`);
+//     document.write(`<p>Hour Rate: $${rate}</p>`);
+//     if (show === "yes") {
+//         if (skills.length > 0){
+//             document.write(`<p>Skills : ${skills.join(" | ")} <p/>`);
+//         }else {
+//             document.write(`<p>Skills : No skills </p>`);
+//         }
+//     } else {
+//         document.write(`<p> Skills Is Hidden </p>`);
+//     }
+//     document.write(`</div>`);
+// }
 
-showinfo("Saif", 24 , 20 , "yes", "HTML" , "CSS");
+// showinfo("Saif", 24 , 20 , "yes", "HTML" , "CSS");
+
+/////////////////////////////////////////////////
+
+// (Anonymous-function-and-practice)
+
+let calculator = function (num1, num2) {
+ return num1 + num2 ;
+};
+console.log(calculator(10,20));
+
+document.getElementById("Show").onclick = function () {
+    console.log ("Show");
+};
+
+setTimeout(function () {
+    console.log("Good");
+}, 2000);
