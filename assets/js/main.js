@@ -177,15 +177,61 @@
 
 // (Anonymous-function-and-practice)
 
-let calculator = function (num1, num2) {
- return num1 + num2 ;
-};
-console.log(calculator(10,20));
+// let calculator = function (num1, num2) {
+//  return num1 + num2 ;
+// };
+// console.log(calculator(10,20));
 
-document.getElementById("Show").onclick = function () {
-    console.log ("Show");
-};
+// document.getElementById("Show").onclick = function () {
+//     console.log ("Show");
+// };
 
-setTimeout(function () {
-    console.log("Good");
-}, 2000);
+// setTimeout(function () {
+//     console.log("Good");
+// }, 2000);
+ /////////////////////////////////////////
+
+//  (Return-Nested-Function)
+
+// //Example One :
+// function saymessage(fname, lname) {
+//     let message = `Hello`;
+//     //Nested Function
+//     function concatmsg () {
+//         message = `${message} ${fname} ${lname}`;
+//     }
+//     concatmsg(); 
+//     return message;
+// }
+// console.log(saymessage("saif", "haddad"));
+
+// //Example two : 
+// function sayMessage(fName, lName) {
+//     let message = `Hello` ;
+//     function concatMsg () {
+//         return  `${message} ${fName} ${lName}`;
+//     }
+    
+//     return concatMsg();
+// }
+// console.log(sayMessage("Saif", "Haddad"));
+
+//Example three : 
+// function sayMessage(fName, lName) {
+//     let message = `Hello` ;
+//     function concatMsg () {
+
+//         function getFullName(){
+//             return `${fName, lName}`;
+//         }
+//         return  `${message} ${getFullName()}`;
+//     }
+    
+//     return concatMsg();
+// }
+// console.log(sayMessage("Saif", "Haddad"));
+
+
+/////////////////////////////////////////////////////
+
+// (Arrow-Function-Syntax)
