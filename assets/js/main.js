@@ -248,25 +248,44 @@
 
 ///////////////////////////////////
 
-// (Global-And-Local)
+// // (Global-And-Local)
 
-var a = 1;
-let b = 2;
+// var a = 1;
+// let b = 2;
 
-function showtext() {
-    var a = 10;
-    let b = 20;
+// function showtext() {
+//     var a = 10;
+//     let b = 20;
 
-    console.log(`function - From Local ${a}`);
-    console.log(`function - From Local ${b}`);
-}
-console.log(`From Global ${a}`);
-console.log(`From Global ${b}`);
+//     console.log(`function - From Local ${a}`);
+//     console.log(`function - From Local ${b}`);
+// }
+// console.log(`From Global ${a}`);
+// console.log(`From Global ${b}`);
 
-showtext();
+// showtext();
 
-//local can be read from global --but-- 
-//global can't be read from local --
+// //local can be read from global --but-- 
+// //global can't be read from local --
 
 
-///////////////////////////////////
+// ///////////////////////////////////
+
+// (Scope-Block)
+
+
+// //var is not block code
+// var x = 10 ;
+// if (10 === 10) {
+//     var x = 50 ;
+// }
+// console.log(x);
+// ////
+// var x = 10 ;
+// if (10 === 10) {
+//     let x = 50 ;
+// }
+// console.log(x);
+
+
+///////////////////////
