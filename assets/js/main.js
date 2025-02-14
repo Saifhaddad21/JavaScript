@@ -38,7 +38,7 @@
 // let products = ["saif", "zaid", "jack" , "saif"];
 // let colors = ["red", "green", "blue"];
 // let showcount = 5 ;
- 
+
 // document.write(`<h1>show ${showcount} products</h1>`);
 
 // for (let i = 0 ; i < showcount ; i++) {
@@ -51,31 +51,76 @@
 //     document.write(`<div>`);
 // }   
 
-function sayhello() {
-    console.log(`hello saif haddad`);
-}
+// function sayhello() {
+//     console.log(`hello saif haddad`);
+// }
 
-sayhello ();
+// sayhello ();
 
-function bay (UserName ,age) { 
-    if (age < 20) {
-        console.log (`this app is not suitable for you`);
-    }else {
-    console.log(`hi ${UserName} your age is ${age}`);
-}
-}
-bay ("saif", 24);
-bay ("jack", 21);
-bay ("zaid", 25);
-bay ("nrmin", 16);
+// function bay (UserName ,age) { 
+//     if (age < 20) {
+//         console.log (`this app is not suitable for you`);
+//     }else {
+//     console.log(`hi ${UserName} your age is ${age}`);
+// }
+// }
+// bay ("saif", 24);
+// bay ("jack", 21);
+// bay ("zaid", 25);
+// bay ("nrmin", 16);
 
-function generateyeares(start, end , exclude) {
-    for (let i = start ; i <= end ; i++) {
-  
-    if (i === exclude) { 
-        continue;
+// function generateyeares(start, end , exclude) {
+//     for (let i = start ; i <= end ; i++) {
+
+//     if (i === exclude) { 
+//         continue;
+//     }
+//     console.log(i);
+// }
+// }
+// generateyeares(2000, 2026, 2025);
+
+{
+    function sayhello(UserName) {
+        return `Hello ${UserName}`;
+
     }
-    console.log(i);
+
+    let result = sayhello("saif");
+
+    console.log(result);
+}
+
+{
+    function calc(num1, num2) {
+        return num1 + num2;
+
+    }
+
+    let result = calc(10, 20);
+
+    console.log(result);
+}
+{
+    function calc(num1, num2) {
+        return num1 + num2;
+
+    }
+
+    let result = calc(10, 20);
+
+    console.log(result + 100);
+}
+
+{
+function generate (start, end){
+for (let i = start; i <= end; i++) {
+console.log(i);
+if (i === 2022){
+return `interruptting`
 }
 }
-generateyeares(2000, 2026, 2025);
+}
+generate(2020, 2025);
+
+}
