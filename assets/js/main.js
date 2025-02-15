@@ -2,20 +2,20 @@
 // ==variable and concatenation challenge ==
 // =========================================
 
-// [1] Create 3 Variables [Title, Description, Date] 
-// --All In One Statement 
-// Variable Name Must Be Two Words 
-// Title Content Is "Elzero" 
-// Description Content Is "Elzero Web School" 
-// Date Content Is "25/10" 
-// [2] Create Variable Contains Div And This Div Contains 
-// H3 For Title 
-// P For Paragraph 
-// Span For Time 
-// 5 [3] Add This Card To Page 4 Times 
-// [4] Use Template Literals For Concatenate 
-// Extra 
-// Repeat 
+// [1] Create 3 Variables [Title, Description, Date]
+// --All In One Statement
+// Variable Name Must Be Two Words
+// Title Content Is "Elzero"
+// Description Content Is "Elzero Web School"
+// Date Content Is "25/10"
+// [2] Create Variable Contains Div And This Div Contains
+// H3 For Title
+// P For Paragraph
+// Span For Time
+// 5 [3] Add This Card To Page 4 Times
+// [4] Use Template Literals For Concatenate
+// Extra
+// Repeat
 
 // var title = "Elzero";
 // var description = "Elzero Web School";
@@ -47,9 +47,9 @@
 //     for (let j = 0; j < colors.length; j++) {
 //         documentw.write(`<p> ${colors[j]}</p>`);
 //     }
-//     document.write(`<p>${colors.join( "|" )}</p>`); 
+//     document.write(`<p>${colors.join( "|" )}</p>`);
 //     document.write(`<div>`);
-// }   
+// }
 
 // function sayhello() {
 //     console.log(`hello saif haddad`);
@@ -57,7 +57,7 @@
 
 // sayhello ();
 
-// function bay (UserName ,age) { 
+// function bay (UserName ,age) {
 //     if (age < 20) {
 //         console.log (`this app is not suitable for you`);
 //     }else {
@@ -72,7 +72,7 @@
 // function generateyeares(start, end , exclude) {
 //     for (let i = start ; i <= end ; i++) {
 
-//     if (i === exclude) { 
+//     if (i === exclude) {
 //         continue;
 //     }
 //     console.log(i);
@@ -125,7 +125,7 @@
 
 // }
 //////////////////////////////////////////////////////////////////////////
-// function sayhello (username = "unknown", age = "unknown"){  //third way 
+// function sayhello (username = "unknown", age = "unknown"){  //third way
 //     // if ( age === undefined) {
 //     //     age = "unknown" ;
 //     // }  >>first way ..
@@ -200,12 +200,12 @@
 //     function concatmsg () {
 //         message = `${message} ${fname} ${lname}`;
 //     }
-//     concatmsg(); 
+//     concatmsg();
 //     return message;
 // }
 // console.log(saymessage("saif", "haddad"));
 
-// //Example two : 
+// //Example two :
 // function sayMessage(fName, lName) {
 //     let message = `Hello` ;
 //     function concatMsg () {
@@ -216,7 +216,7 @@
 // }
 // console.log(sayMessage("Saif", "Haddad"));
 
-//Example three : 
+//Example three :
 // function sayMessage(fName, lName) {
 //     let message = `Hello` ;
 //     function concatMsg () {
@@ -265,7 +265,7 @@
 
 // showtext();
 
-// //local can be read from global --but-- 
+// //local can be read from global --but--
 // //global can't be read from local --
 
 
@@ -292,7 +292,7 @@
 
 // (Scope-Lexical(Static))
 
-// function parent() {  ///here we can take just from parent .. 
+// function parent() {  ///here we can take just from parent ..
 //     let a = 10;
 
 //     function child() {    ///here we can take from parent and child only ..
@@ -316,22 +316,22 @@
 /*
 ---> is a function that accepts functions as parameters and/or returns a function
 
-Map 
----method creates a new array 
---- populated with the results of calling a provided function on every element 
----in the calling array. 
+Map
+---method creates a new array
+--- populated with the results of calling a provided function on every element
+---in the calling array.
 
-Syntax map(callBackFunction (Element, Index, Array) { }, thisArg) 
-Element => The current element being processed in the array. 
-Index => The index of the current element being processed in the array. 
-Array => The Current Array 
+Syntax map(callBackFunction (Element, Index, Array) { }, thisArg)
+Element => The current element being processed in the array.
+Index => The index of the current element being processed in the array.
+Array => The Current Array
 
-Notes 
-Map Return A New Array 
+Notes
+Map Return A New Array
 
-Examples 
-Anonymous Function 
-Named Function 
+Examples
+Anonymous Function
+Named Function
 */
 
 // let mynums = [1,2,3,4,5,6];
@@ -343,15 +343,15 @@ Named Function
 // }
 // console.log(newarray);
 
-// // same idea with map 
+// // same idea with map
 
 // let addself = mynums.map( function(Element, Index, Array){
 // console.log(`current Element => ${Element}`);
 // console.log(`current Index => ${Index}`);
 // console.log(`Array => ${Array}`);
-// console.log(`This => ${This}`); 
+// console.log(`This => ${This}`);
 //     // return Element + Element ;
-// }, 10); 
+// }, 10);
 // // console.log(addself);
 
 /////////////////////////////////////////////
@@ -359,8 +359,8 @@ Named Function
 // // let swappingcases = "eLzErO";
 // // let invertednumbers = [1, -10, -20, 15, 100, -30];
 // // let ignoreboolean = "ELZ123er40";
-// // let sw = swappingcases.split("").map(function(ele) { 
-// //     //condition ? true : false 
+// // let sw = swappingcases.split("").map(function(ele) {
+// //     //condition ? true : false
 // //     return ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase();
 // // })
 // // .join("");
@@ -378,13 +378,13 @@ Named Function
 // let numbers = [11, 20, 2, 5, 17, 10];
 // // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // // let addmap = numbers.map(function(el){
-// // return el + el ; 
+// // return el + el ;
 // // });
 
 // // console.log(addmap);
 
 // // let addfilter = numbers.filter(function(el){
-// //     return el + el ; 
+// //     return el + el ;
 // //     });
 
 // //     console.log(addfilter);
@@ -403,14 +403,14 @@ Named Function
 // // console.log(evennumbers);
 
 // // >> the different between map : filter is
-// // map to make action :: filter to make filter .. 
+// // map to make action :: filter to make filter ..
 
 // // >>>>>>>>>>>>>>>>>>>>>>>
 
 // ///////////////////////////////////////////////////////////////////////////
 
 // (Filter-Practice)
-// Filter Words More Than 4 Characters 
+// Filter Words More Than 4 Characters
 // let sentence = "I Love Foood Code Too Playing Much";
 // let smallwords = sentence
 //     .split(" ")
@@ -421,7 +421,7 @@ Named Function
 
 // console.log(smallwords);
 
-// // Ignore Numbers 
+// // Ignore Numbers
 // let ignoreNumbers = "Elz123er4o";
 // let ign = ignoreNumbers
 //     .split("")
@@ -440,7 +440,7 @@ Named Function
 //     .join("");
 // console.log(ign);
 
-// Filter Strings + Multiply 
+// Filter Strings + Multiply
 // let mix = "A13BS2ZX";
 // let mixedContent = mix
 //     .split("")
@@ -457,23 +457,23 @@ Named Function
 
 //////////////////////////////////////////////////////////////////////
 // (Higher Order Functions - Reduce)
-// Reduce 
-//     method executes a reducer function on each element of the array, 
+// Reduce
+//     method executes a reducer function on each element of the array,
 //     resulting in a single output value.
 
-// Syntax 
-//     reduce(callBackFunc(Accumulator, Current Val, Current Index, Source Array) { }, initialValue) 
-//     Accumulator => the accumulated value previously returned in the last invocation 
-//     Current Val => The current element being processed in the array 
-//     Index => The index of the current element being processed in the array.. 
-//     Starts from index 0 if an initialValue is provided.. 
-//     Otherwise, it starts from index 1. 
+// Syntax
+//     reduce(callBackFunc(Accumulator, Current Val, Current Index, Source Array) { }, initialValue)
+//     Accumulator => the accumulated value previously returned in the last invocation
+//     Current Val => The current element being processed in the array
+//     Index => The index of the current element being processed in the array..
+//     Starts from index 0 if an initialValue is provided..
+//     Otherwise, it starts from index 1.
 // // Array => The Current Array
 // let nums = [10, 20, 15, 30];
 // let add = nums.reduce(function (acc, current, index, arr) {
 //     console.log(`Acc => ${acc}`);
 //     console.log(`Current Element => ${current}`);
-//     console.log(`Current Element Index => ${index}); 
+//     console.log(`Current Element Index => ${index});
 //     console.log('Array => ${arr}`);
 //     console.log(acc + current);
 //     console.log(`#############`);
@@ -499,31 +499,31 @@ Named Function
 ////////////////////////////////////////////////////////////////////////////////////
 // (Higher Order Functions - ForEach And Practice)
 
-/* 
-Object 
-Intro and What Is Object 
--Testing Window Object 
-Accessing Object 
+/*
+Object
+Intro and What Is Object
+-Testing Window Object
+Accessing Object
 */
-// let user = { 
-// // Properties 
-// theName: "Osama", 
-// theAge: 38, 
-// // Methods 
-// sayHello: function () { 
-// return `Hello`; 
-// }, 
-// }; 
-// console.log(user.theName); 
-// console.log(user.theAge); 
-// console.log(user.sayHello); 
+// let user = {
+// // Properties
+// theName: "Osama",
+// theAge: 38,
+// // Methods
+// sayHello: function () {
+// return `Hello`;
+// },
+// };
+// console.log(user.theName);
+// console.log(user.theAge);
+// console.log(user.sayHello);
 
 //////////////////////////////////////////////////////////////////////////
 // (Dot Notation vs Bracket Notation)
-/*Object 
-Dig Deeper 
-Dot Notation vs Bracket Notation 
-Dynamic Property Name 
+/*Object
+Dig Deeper
+Dot Notation vs Bracket Notation
+Dynamic Property Name
 */
 
 // let user = {
@@ -533,23 +533,23 @@ Dynamic Property Name
 // console.log(user.theName);
 // console.log(user["theName"]);
 // console.log(user["country of"]);
-// let myVar = "country"; 
+// let myVar = "country";
 
 // let user = {
 //     theName: "Saif",
 //     country: "Jordan"
 // };
 // console.log(user.theName);
-// console.log(user.country); //user.country 
-// console.log(user.myVar); //user.country 
+// console.log(user.country); //user.country
+// console.log(user.myVar); //user.country
 // console.log(user [myVar]); // user.country
 
 
 ////////////////////////////////////////////////////////////////////////////////////
 // (Nested Object And Advanced Trainings)
-/* 
-Object 
-- Nested Object And Trainings 
+/*
+Object
+- Nested Object And Trainings
 // */
 // let available = true;
 
@@ -592,23 +592,60 @@ Object
 ////////////////////////////////////////////////////////////////////////////////////
 // object
 // (creat with new keyword new object )
-let user = new Object({ 
-    age : 20 ,
-});
+// let user = new Object({
+//     age : 20 ,
+// });
 
-console.log(user);
+// console.log(user);
 
-user.age = 24;
-user["country"] = ["Jordan"];
+// user.age = 24;
+// user["country"] = ["Jordan"];
 
-user.sayhello = function() {
-return `Hello`
-};
+// user.sayhello = function() {
+// return `Hello`
+// };
 
-console.log(user);
-console.log(user.age);
-console.log(user.country);
-console.log(user.sayhello());
+// console.log(user);
+// console.log(user.age);
+// console.log(user.country);
+// console.log(user.sayhello());
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
+/*
+Function this Keyword 
+    this Introduction 
+  - this Inside Object Method 
+ ---When a function is called as a method of an object, 
+    its this is set to the object the method is called on. 
+    Global Object 
+  - Test Variables With Window And This 
+    Global Context 
+    Function Context 
+
+Search 
+Strict Mode 
+*/
+
+///////////////////////////////////////////////////////////////////////////////////
+// (Create Object With Assign Method)
+let obj1 = {
+    prop1: 1,
+    meth1: function () {
+        return this.prop1;
+    },
+};
+let obj2 = {
+    prop2: 2,
+    meth2: function () {
+        return this.prop2;
+    },
+};
+let targetObject = {
+    prop1: 1,
+    prop3: 3,
+};
+
+let finalobject = Object.assign(targetObject, obj1, obj2);
+
+console.log(finalobject);
