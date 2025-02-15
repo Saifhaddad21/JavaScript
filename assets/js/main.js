@@ -505,17 +505,44 @@ Intro and What Is Object
 -Testing Window Object 
 Accessing Object 
 */
-let user = { 
-// Properties 
-theName: "Osama", 
-theAge: 38, 
-// Methods 
-sayHello: function () { 
-return `Hello`; 
-}, 
-}; 
-console.log(user.theName); 
-console.log(user.theAge); 
-console.log(user.sayHello); 
+// let user = { 
+// // Properties 
+// theName: "Osama", 
+// theAge: 38, 
+// // Methods 
+// sayHello: function () { 
+// return `Hello`; 
+// }, 
+// }; 
+// console.log(user.theName); 
+// console.log(user.theAge); 
+// console.log(user.sayHello); 
 
 //////////////////////////////////////////////////////////////////////////
+// (Dot Notation vs Bracket Notation)
+/*Object 
+Dig Deeper 
+Dot Notation vs Bracket Notation 
+Dynamic Property Name 
+*/
+
+// let user = {
+//     theName: "Saif",
+//     "country of": "Jordan",
+// };
+// console.log(user.theName);
+// console.log(user["theName"]);
+// console.log(user["country of"]);
+let myVar = "country"; 
+
+let user = {
+    theName: "Saif",
+    country: "Jordan"
+};
+console.log(user.theName);
+console.log(user.country); //user.country 
+console.log(user.myVar); //user.country 
+console.log(user [myVar]); // user.country
+
+
+//////////////////////////////////////////////////////////
