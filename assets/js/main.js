@@ -533,16 +533,60 @@ Dynamic Property Name
 // console.log(user.theName);
 // console.log(user["theName"]);
 // console.log(user["country of"]);
-let myVar = "country"; 
+// let myVar = "country"; 
+
+// let user = {
+//     theName: "Saif",
+//     country: "Jordan"
+// };
+// console.log(user.theName);
+// console.log(user.country); //user.country 
+// console.log(user.myVar); //user.country 
+// console.log(user [myVar]); // user.country
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// (Nested Object And Advanced Trainings)
+/* 
+Object 
+- Nested Object And Trainings 
+*/
+let available = true;
 
 let user = {
-    theName: "Saif",
-    country: "Jordan"
+    name: "Saif",
+    age: 24,
+    skills: ["HTML", "CSS", "JS"],
+    available: false,
+    addresses: {
+        ksa: "Riyadh",
+        jordan:
+        {
+            one: "Amman",
+            two: "Al-salt",
+        },
+    },
+    checkAv: function () {
+        if (user.available === true) {
+            return `Free For Work`;
+        } else {
+            return `Not Free`;
+        }
+    },
 };
-console.log(user.theName);
-console.log(user.country); //user.country 
-console.log(user.myVar); //user.country 
-console.log(user [myVar]); // user.country
+console.log(user.name);
+console.log(user.age);
+console.log(user.skills);
+console.log(user.skills.join(" | "));
+console.log(user.skills.jo);
+console.log(user.skills[2]);  //access with index
+console.log(user.addresses);
+console.log(user.addresses.ksa);
+console.log(user.addresses.jordan.one);
+console.log(user["addresses"].jordan.two);
+console.log(user["addresses"]["jordan"]["two"]);
 
 
-//////////////////////////////////////////////////////////
+console.log(user.checkAv());
+
+////////////////////////////////////////////////////////////////////////////////////
