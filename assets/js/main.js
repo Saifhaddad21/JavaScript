@@ -550,43 +550,65 @@ Dynamic Property Name
 /* 
 Object 
 - Nested Object And Trainings 
-*/
-let available = true;
+// */
+// let available = true;
 
-let user = {
-    name: "Saif",
-    age: 24,
-    skills: ["HTML", "CSS", "JS"],
-    available: false,
-    addresses: {
-        ksa: "Riyadh",
-        jordan:
-        {
-            one: "Amman",
-            two: "Al-salt",
-        },
-    },
-    checkAv: function () {
-        if (user.available === true) {
-            return `Free For Work`;
-        } else {
-            return `Not Free`;
-        }
-    },
-};
-console.log(user.name);
-console.log(user.age);
-console.log(user.skills);
-console.log(user.skills.join(" | "));
-console.log(user.skills.jo);
-console.log(user.skills[2]);  //access with index
-console.log(user.addresses);
-console.log(user.addresses.ksa);
-console.log(user.addresses.jordan.one);
-console.log(user["addresses"].jordan.two);
-console.log(user["addresses"]["jordan"]["two"]);
+// let user = {
+//     name: "Saif",
+//     age: 24,
+//     skills: ["HTML", "CSS", "JS"],
+//     available: false,
+//     addresses: {
+//         ksa: "Riyadh",
+//         jordan:
+//         {
+//             one: "Amman",
+//             two: "Al-salt",
+//         },
+//     },
+//     checkAv: function () {
+//         if (user.available === true) {
+//             return `Free For Work`;
+//         } else {
+//             return `Not Free`;
+//         }
+//     },
+// };
+// console.log(user.name);
+// console.log(user.age);
+// console.log(user.skills);
+// console.log(user.skills.join(" | "));
+// console.log(user.skills.jo);
+// console.log(user.skills[2]);  //access with index
+// console.log(user.addresses);
+// console.log(user.addresses.ksa);
+// console.log(user.addresses.jordan.one);
+// console.log(user["addresses"].jordan.two);
+// console.log(user["addresses"]["jordan"]["two"]);
 
 
-console.log(user.checkAv());
+// console.log(user.checkAv());
 
 ////////////////////////////////////////////////////////////////////////////////////
+// object
+// (creat with new keyword new object )
+let user = new Object({ 
+    age : 20 ,
+});
+
+console.log(user);
+
+user.age = 24;
+user["country"] = ["Jordan"];
+
+user.sayhello = function() {
+return `Hello`
+};
+
+console.log(user);
+console.log(user.age);
+console.log(user.country);
+console.log(user.sayhello());
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
