@@ -485,13 +485,37 @@ Named Function
 // (Higher Order Functions - Reduce Practice)
 
 
-let theBiggest = ["Bla", "Propaganda", "Other", "AAA", "Battery", "Test"];
-let check = theBiggest.reduce(function (acc, current) {
-    console.log(`Acc => ${acc}`);
-    console.log(`Current Element => ${current}`);
-    console.log(acc.length > current.length ? acc : current);
-    console.log(`#############`);
-    return acc.length > current.length ? acc : current;
-});
+// let theBiggest = ["Bla", "Propaganda", "Other", "AAA", "Battery", "Test"];
+// let check = theBiggest.reduce(function (acc, current) {
+//     console.log(`Acc => ${acc}`);
+//     console.log(`Current Element => ${current}`);
+//     console.log(acc.length > current.length ? acc : current);
+//     console.log(`#############`);
+//     return acc.length > current.length ? acc : current;
+// });
 
-console.log(check);
+// console.log(check);
+
+////////////////////////////////////////////////////////////////////////////////////
+// (Higher Order Functions - ForEach And Practice)
+
+/* 
+Object 
+Intro and What Is Object 
+-Testing Window Object 
+Accessing Object 
+*/
+let user = { 
+// Properties 
+theName: "Osama", 
+theAge: 38, 
+// Methods 
+sayHello: function () { 
+return `Hello`; 
+}, 
+}; 
+console.log(user.theName); 
+console.log(user.theAge); 
+console.log(user.sayHello); 
+
+//////////////////////////////////////////////////////////////////////////
