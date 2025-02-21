@@ -629,23 +629,95 @@ Strict Mode
 
 ///////////////////////////////////////////////////////////////////////////////////
 // (Create Object With Assign Method)
-let obj1 = {
-    prop1: 1,
-    meth1: function () {
-        return this.prop1;
-    },
-};
-let obj2 = {
-    prop2: 2,
-    meth2: function () {
-        return this.prop2;
-    },
-};
-let targetObject = {
-    prop1: 1,
-    prop3: 3,
-};
+// let obj1 = {
+//     prop1: 1,
+//     meth1: function () {
+//         return this.prop1;
+//     },
+// };
+// let obj2 = {
+//     prop2: 2,
+//     meth2: function () {
+//         return this.prop2;
+//     },
+// };
+// let targetObject = {
+//     prop1: 1,
+//     prop3: 3,
+// };
 
-let finalobject = Object.assign(targetObject, obj1, obj2);
+// let finalobject = Object.assign(targetObject, obj1, obj2);
 
-console.log(finalobject);
+// console.log(finalobject);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// (What Is DOM And Select Elements)
+/*DOM 
+What Is DOM 
+DOM Selectors 
+Find Element By ID 
+Find Element By Tag Name 
+Find Element By Class Name 
+Find Element By CSS Selectors 
+Find Element By Collection
+title
+body
+images
+forms
+links
+    */
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// DOM [Create Elements] 
+// - -createElement 
+//    createComment 
+//    createTextNode 
+//    createAttribute 
+// //    appendChild 
+
+
+// let myelement = document.createElement("div");
+// let myattr = document.createAttribute("data-custom");
+
+// myelement.className = "product";
+// myelement.setAttributeNode(myattr);
+
+
+// console.log(myelement);
+////////////////////////////////////////////////////////////////////////////////////////
+
+// (Get Set Elements Content And Attributes) 
+
+// let myElement = document.querySelector(".js");
+
+
+// console
+// /////////////////////
+
+// FileSystem.
+
+/////////////////////////////////////////////////////////////////////////////////
+// (Creat and append elements)
+let myelement = document.createElement("div");
+let myattr = document.createAttribute("data-custom");
+let mytext = document.createTextNode("product-one");
+let mycomment = document.createComment("this is div")
+
+myelement.className = "product";
+myelement.setAttributeNode(myattr);
+myelement.setAttribute("data-test", "testing");
+
+// Append Comment To Element 
+myelement.appendChild(mycomment);
+
+// Append Text To Element 
+myelement.appendChild(mytext);
+
+// Append Element To Body 
+document.body.appendChild(myelement);
+
+// console.log(myelement);
