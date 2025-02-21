@@ -702,22 +702,50 @@ links
 
 /////////////////////////////////////////////////////////////////////////////////
 // (Creat and append elements)
-let myelement = document.createElement("div");
-let myattr = document.createAttribute("data-custom");
-let mytext = document.createTextNode("product-one");
-let mycomment = document.createComment("this is div")
+// let myelement = document.createElement("div");
+// let myattr = document.createAttribute("data-custom");
+// let mytext = document.createTextNode("product-one");
+// let mycomment = document.createComment("this is div")
 
-myelement.className = "product";
-myelement.setAttributeNode(myattr);
-myelement.setAttribute("data-test", "testing");
+// myelement.className = "product";
+// myelement.setAttributeNode(myattr);
+// myelement.setAttribute("data-test", "testing");
 
-// Append Comment To Element 
-myelement.appendChild(mycomment);
+// // Append Comment To Element 
+// myelement.appendChild(mycomment);
 
-// Append Text To Element 
-myelement.appendChild(mytext);
+// // Append Text To Element 
+// myelement.appendChild(mytext);
 
-// Append Element To Body 
-document.body.appendChild(myelement);
+// // Append Element To Body 
+// document.body.appendChild(myelement);
 
-// console.log(myelement);
+// // console.log(myelement);
+
+/////////////////////////////////////////////////////////////////////////////////////
+// (Product With Title And Description Practice)
+/*
+dom [creat elements]
+practice products with heading and paragraph
+*/
+
+let myMainElement = document.createElement("div");
+let myHeading = document.createElement("h2");
+let myParagraph = document.createElement("p");
+
+let myHeadingText = document.createTextNode("Product Title");
+let myParagraphText = document.createTextNode("Product Description");
+
+// Add Heading Text 
+myHeading.appendChild(myHeadingText);
+// Add Heading To Main Elements
+myMainElement.appendChild(myHeading);
+
+// Add Paragraph Text
+myParagraph.appendChild(myParagraphText);
+// Add paragraph to main element
+myMainElement.appendChild(myParagraph);
+
+myMainElement.className = "product";
+
+document.body.appendChild(myMainElement);
