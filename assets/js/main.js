@@ -761,16 +761,62 @@ DOM [deal with childrens]
 -firstelementchild 
 -lastelementchild 
 */
-  
-let myelement = document.querySelector("div");
 
-console.log(myelement);
-console.log(myelement.children);
-console.log(myelement.children[0]);
-console.log(myelement.childNodes);
-console.log(myelement.childNodes[0]);
+// let myelement = document.querySelector("div");
 
-console.log(myelement.firstChild);
+// console.log(myelement);
+// console.log(myelement.children);
+// console.log(myelement.children[0]);
+// console.log(myelement.childNodes);
+// console.log(myelement.childNodes[0]);
 
-console.log(myelement.lastChild);
+// console.log(myelement.firstChild);
 
+// console.log(myelement.lastChild);
+
+/////////////////////////////////////////////////////////
+// (DOM Events)
+/*
+DOM [Events] 
+--Use Events On HTML 
+--Use Events On JS 
+----onclick 
+----oncontextmenu 
+----onmouseenter 
+----onmouseleave 
+
+----onload 
+----onscroll 
+----onresize 
+
+----onfocus 
+----onblur 
+----onsubmit
+*/
+
+let mybtn = document.getElementById("btn");
+
+// mybtn.onclick = function () {
+// console.log("clicked");
+// }; 
+
+
+// mybtn.oncontextmenu = function () {
+//   console.log("clicked");
+// };
+
+// mybtn.onmouseenter = function () {
+//   console.log("clicked");
+// };
+
+mybtn.onmouseleave = function () {
+  console.log("clicked");
+};
+
+window.onscroll = function () {
+  console.log("Scroll");
+};
+
+window.onresize = function () {
+  console.log("onresize");
+};
