@@ -729,23 +729,48 @@ dom [creat elements]
 practice products with heading and paragraph
 */
 
-let myMainElement = document.createElement("div");
-let myHeading = document.createElement("h2");
-let myParagraph = document.createElement("p");
+// let myMainElement = document.createElement("div");
+// let myHeading = document.createElement("h2");
+// let myParagraph = document.createElement("p");
 
-let myHeadingText = document.createTextNode("Product Title");
-let myParagraphText = document.createTextNode("Product Description");
+// let myHeadingText = document.createTextNode("Product Title");
+// let myParagraphText = document.createTextNode("Product Description");
 
-// Add Heading Text 
-myHeading.appendChild(myHeadingText);
-// Add Heading To Main Elements
-myMainElement.appendChild(myHeading);
+// // Add Heading Text 
+// myHeading.appendChild(myHeadingText);
+// // Add Heading To Main Elements
+// myMainElement.appendChild(myHeading);
 
-// Add Paragraph Text
-myParagraph.appendChild(myParagraphText);
-// Add paragraph to main element
-myMainElement.appendChild(myParagraph);
+// // Add Paragraph Text
+// myParagraph.appendChild(myParagraphText);
+// // Add paragraph to main element
+// myMainElement.appendChild(myParagraph);
 
-myMainElement.className = "product";
+// myMainElement.className = "product";
 
-document.body.appendChild(myMainElement);
+// document.body.appendChild(myMainElement);
+
+///////////////////////////////////////////////////////////////////////////
+// (Deal With Childrens)
+/*
+DOM [deal with childrens]
+-children 
+-childnodes
+-firstchild 
+-lastchild 
+-firstelementchild 
+-lastelementchild 
+*/
+  
+let myelement = document.querySelector("div");
+
+console.log(myelement);
+console.log(myelement.children);
+console.log(myelement.children[0]);
+console.log(myelement.childNodes);
+console.log(myelement.childNodes[0]);
+
+console.log(myelement.firstChild);
+
+console.log(myelement.lastChild);
+
