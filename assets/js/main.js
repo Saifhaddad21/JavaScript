@@ -775,48 +775,82 @@ DOM [deal with childrens]
 // console.log(myelement.lastChild);
 
 /////////////////////////////////////////////////////////
-// (DOM Events)
-/*
-DOM [Events] 
---Use Events On HTML 
---Use Events On JS 
-----onclick 
-----oncontextmenu 
-----onmouseenter 
-----onmouseleave 
+// // (DOM Events)
+// /*
+// DOM [Events] 
+// --Use Events On HTML 
+// --Use Events On JS 
+// ----onclick 
+// ----oncontextmenu 
+// ----onmouseenter 
+// ----onmouseleave 
 
-----onload 
-----onscroll 
-----onresize 
+// ----onload 
+// ----onscroll 
+// ----onresize 
 
-----onfocus 
-----onblur 
-----onsubmit
-*/
+// ----onfocus 
+// ----onblur 
+// ----onsubmit
+// */
 
-let mybtn = document.getElementById("btn");
+// let mybtn = document.getElementById("btn");
 
-// mybtn.onclick = function () {
-// console.log("clicked");
-// }; 
+// // mybtn.onclick = function () {
+// // console.log("clicked");
+// // }; 
 
 
-// mybtn.oncontextmenu = function () {
+// // mybtn.oncontextmenu = function () {
+// //   console.log("clicked");
+// // };
+
+// // mybtn.onmouseenter = function () {
+// //   console.log("clicked");
+// // };
+
+// mybtn.onmouseleave = function () {
 //   console.log("clicked");
 // };
 
-// mybtn.onmouseenter = function () {
-//   console.log("clicked");
+// window.onscroll = function () {
+//   console.log("Scroll");
 // };
 
-mybtn.onmouseleave = function () {
-  console.log("clicked");
+// window.onresize = function () {
+//   console.log("onresize");
+// };
+
+////////////////////////////////////////////////////////////////
+// (Validate Form And Prevent Default)  
+
+let userinput = document.querySelector("[name='username']");
+let ageinput = document.querySelector("[name='age']");
+
+
+document.forms[0].onsubmit = function (e) {
+  let uservalid = false;
+  let agevalid = false;
+
+  // console.log(userinput.value);
+  // console.log(userinput.value.length);
+
+  if (userinput.value !== ""  && userinput.value.length <= 10) {
+  // console.log("valid");
+  uservalid = true ;
+  }
+  
+  if (ageinput.value !== "") {
+  agevalid = true ; 
+  }
+
+
+  if (uservalid === false || agevalid === false) {
+    e.preventDefault();
+  }
 };
 
-window.onscroll = function () {
-  console.log("Scroll");
-};
-
-window.onresize = function () {
-  console.log("onresize");
+document.links[0].onmouseenter = function (event) {
+  console.log(event);
+  event.preventDefault();
 };
