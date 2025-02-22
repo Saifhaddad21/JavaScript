@@ -857,7 +857,7 @@ DOM [deal with childrens]
 
 
 //////////////////////////////////////////////////////////////////////
-
+// (CSS Styling And Stylesheets)
 /*
 DOM [CSS] 
 --style 
@@ -867,15 +867,48 @@ DOM [CSS]
 */
 
 
-let element = document.getElementById("my-div"); 
+// let element = document.getElementById("my-div"); 
 
-element.style.color = "red"; 
-element.style.fontWeight = "bold"; 
+// element.style.color = "red"; 
+// element.style.fontWeight = "bold"; 
 
-element.style.cssText = "font-weight: bold; color: green; opacity: 0.9"; 
+// element.style.cssText = "font-weight: bold; color: green; opacity: 0.9"; 
 
-element.style.removeProperty("color"); 
-element.style.setProperty("font-size", "40px", "important"); 
+// element.style.removeProperty("color"); 
+// element.style.setProperty("font-size", "40px", "important"); 
 
-document.styleSheets[0].rules[0].style.removeProperty("line-height");
-document.styleSheets[0].rules[0].style.setProperty("background-color", "red", "important");
+// document.styleSheets[0].rules[0].style.removeProperty("line-height");
+// document.styleSheets[0].rules[0].style.setProperty("background-color", "red", "important");
+
+///////////////////////////////////////////////////////////////////
+
+// (CSS Styling And Stylesheets)
+
+/* 
+DOM [Deal With Elements] 
+--before [Element || String] 
+--after [Element || String] 
+--append [Element || String] 
+--prepend [Element || String] 
+--remove 
+*/
+
+let element = document.getElementById("my-div");
+let createdp = document.createElement("p");
+
+// element.before("Hello From JS Before");
+// element.after("Hello From JS After");
+
+// element.before("createdp");
+// element.after("createdp");
+
+element.append("  <<<Hello From JS After");
+element.prepend(" Hello From JS Before  >>>");
+
+element.append("createdp");
+element.prepend("createdp"); 
+
+////remove :: 
+
+element.remove();
+createdp.remove();
