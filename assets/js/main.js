@@ -839,7 +839,7 @@ DOM [deal with childrens]
 //   // console.log("valid");
 //   uservalid = true ;
 //   }
-  
+
 //   if (ageinput.value !== "") {
 //   agevalid = true ; 
 //   }
@@ -924,16 +924,35 @@ DOM [Traversing]
 ---parentElement 
 */
 
-let span = document.querySelector(".two");
+// let span = document.querySelector(".two");
 
-// console.log(span.nextSibling);
-// console.log(span.previousSibling);
-// console.log(span.nextElementSibling);
-// console.log(span.previousElementSibling);
-console.log(span.parentElement);
+// // console.log(span.nextSibling);
+// // console.log(span.previousSibling);
+// // console.log(span.nextElementSibling);
+// // console.log(span.previousElementSibling);
+// console.log(span.parentElement);
 
-span.onclick = function () {
-  span.parentElement.remove();
-}
+// span.onclick = function () {
+//   span.parentElement.remove();
+// }
 
 //////////////////////////     /////////////////////////////// //////////////////
+// (  What Is BOM? )
+/*BOM[Browser Object Model]
+Introduction 
+Window Object Is The Browser Window 
+Window Contain The Document Object 
+All Global Variables And Objects And Functions Are Members Of Window Object 
+Test Document And Console 
+What Can We Do With Window Object ?
+  Open Window 
+Close Window 
+Move Window 
+Resize Window 
+Print Document 
+Run Code After Period Of Time Once Or More 
+Fully Control The URL 
+Save Data Inside Browser To Use Later
+  */
+window.document.title = "Hello JS";
+
