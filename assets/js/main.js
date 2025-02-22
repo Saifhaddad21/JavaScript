@@ -822,35 +822,60 @@ DOM [deal with childrens]
 // };
 
 ////////////////////////////////////////////////////////////////
-// (Validate Form And Prevent Default)  
+// // (Validate Form And Prevent Default)  
 
-let userinput = document.querySelector("[name='username']");
-let ageinput = document.querySelector("[name='age']");
+// let userinput = document.querySelector("[name='username']");
+// let ageinput = document.querySelector("[name='age']");
 
 
-document.forms[0].onsubmit = function (e) {
-  let uservalid = false;
-  let agevalid = false;
+// document.forms[0].onsubmit = function (e) {
+//   let uservalid = false;
+//   let agevalid = false;
 
-  // console.log(userinput.value);
-  // console.log(userinput.value.length);
+//   // console.log(userinput.value);
+//   // console.log(userinput.value.length);
 
-  if (userinput.value !== ""  && userinput.value.length <= 10) {
-  // console.log("valid");
-  uservalid = true ;
-  }
+//   if (userinput.value !== ""  && userinput.value.length <= 10) {
+//   // console.log("valid");
+//   uservalid = true ;
+//   }
   
-  if (ageinput.value !== "") {
-  agevalid = true ; 
-  }
+//   if (ageinput.value !== "") {
+//   agevalid = true ; 
+//   }
 
 
-  if (uservalid === false || agevalid === false) {
-    e.preventDefault();
-  }
-};
+//   if (uservalid === false || agevalid === false) {
+//     e.preventDefault();
+//   }
+// };
 
-document.links[0].onmouseenter = function (event) {
-  console.log(event);
-  event.preventDefault();
-};
+// document.links[0].onmouseenter = function (event) {
+//   console.log(event);
+//   event.preventDefault();
+// };
+
+
+//////////////////////////////////////////////////////////////////////
+
+/*
+DOM [CSS] 
+--style 
+--cssText 
+--removeProperty (propertyName) [Inline, Stylesheet] 
+- setProperty(propertyName, value, priority) 
+*/
+
+
+let element = document.getElementById("my-div"); 
+
+element.style.color = "red"; 
+element.style.fontWeight = "bold"; 
+
+element.style.cssText = "font-weight: bold; color: green; opacity: 0.9"; 
+
+element.style.removeProperty("color"); 
+element.style.setProperty("font-size", "40px", "important"); 
+
+document.styleSheets[0].rules[0].style.removeProperty("line-height");
+document.styleSheets[0].rules[0].style.setProperty("background-color", "red", "important");
