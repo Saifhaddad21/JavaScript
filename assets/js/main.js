@@ -893,22 +893,47 @@ DOM [Deal With Elements]
 --remove 
 */
 
-let element = document.getElementById("my-div");
-let createdp = document.createElement("p");
+// let element = document.getElementById("my-div");
+// let createdp = document.createElement("p");
 
-// element.before("Hello From JS Before");
-// element.after("Hello From JS After");
+// // element.before("Hello From JS Before");
+// // element.after("Hello From JS After");
 
-// element.before("createdp");
-// element.after("createdp");
+// // element.before("createdp");
+// // element.after("createdp");
 
-element.append("  <<<Hello From JS After");
-element.prepend(" Hello From JS Before  >>>");
+// element.append("  <<<Hello From JS After");
+// element.prepend(" Hello From JS Before  >>>");
 
-element.append("createdp");
-element.prepend("createdp"); 
+// element.append("createdp");
+// element.prepend("createdp"); 
 
-////remove :: 
+// ////remove :: 
 
-element.remove();
-createdp.remove();
+// element.remove();
+// createdp.remove();
+
+//////////////////////////////////////////////////////////////////////////////
+// (DOM Traversing)
+/*
+DOM [Traversing] 
+---nextSibling 
+---previousSibling 
+---nextElementSibling 
+---previousElementSibling 
+---parentElement 
+*/
+
+let span = document.querySelector(".two");
+
+// console.log(span.nextSibling);
+// console.log(span.previousSibling);
+// console.log(span.nextElementSibling);
+// console.log(span.previousElementSibling);
+console.log(span.parentElement);
+
+span.onclick = function () {
+  span.parentElement.remove();
+}
+
+//////////////////////////     /////////////////////////////// //////////////////
