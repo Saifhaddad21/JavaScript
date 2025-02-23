@@ -954,5 +954,43 @@ Run Code After Period Of Time Once Or More
 Fully Control The URL 
 Save Data Inside Browser To Use Later
   */
-window.document.title = "Hello JS";
+
+
+// window.document.title = "Hello JS";
+
+//////////////////////////////////////////////////////////////////
+// ( setTimeout and clearTimeout )
+/*
+BOM [Browser Object-Model] 
+setTimeout(Function, Timeout, Additional Params) 
+clearTimeout(Identifier) 
+*/ 
+
+// setTimeout(function () {
+//   console.log("msg");
+// }, 3000);
+
+// /////hello part one 
+// setTimeout(saymsg, 3000);
+
+// function saymsg() {
+//   console.log("Hello java after 3 sec .")
+// }
+// //     hello part two 
+
+
+// setTimeout(saymsg, 3000, "Saif", 25);
+
+// function saymsg(user , age) {
+//   console.log(`My name is ${user} and my age is ${age}`);
+// }
+
+
+setTimeout(saymsg, 3000, "Saif", 25);
+
+function saymsg(user , age) {
+  console.log(`My name is saif`);
+}
+ let btn = document.querySelector("button")
+
 
