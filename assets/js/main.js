@@ -986,11 +986,17 @@ clearTimeout(Identifier)
 // }
 
 
-setTimeout(saymsg, 3000, "Saif", 25);
+let counter = setTimeout(saymsg, 3000);
 
-function saymsg(user , age) {
+function saymsg () {
   console.log(`My name is saif`);
 }
- let btn = document.querySelector("button")
+
+
+ let btn = document.querySelector("button");
+
+ btn.onclick = function () {
+clearTimeout(counter);
+ }
 
 
