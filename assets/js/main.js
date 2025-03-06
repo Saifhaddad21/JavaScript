@@ -986,17 +986,48 @@ clearTimeout(Identifier)
 // }
 
 
-let counter = setTimeout(saymsg, 3000);
+// let counter = setTimeout(saymsg, 3000);
 
-function saymsg () {
-  console.log(`My name is saif`);
-}
-
-
- let btn = document.querySelector("button");
-
- btn.onclick = function () {
-clearTimeout(counter);
- }
+// function saymsg () {
+//   console.log(`My name is saif`);
+// }
 
 
+//  let btn = document.querySelector("button");
+
+//  btn.onclick = function () {
+// clearTimeout(counter);
+//  }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// Local Storage : 
+
+// setItem : 
+window.localStorage.setItem("color", "red");
+window.localStorage.fontWeight = "bold";
+window.localStorage["fontSize"] = "20px";
+
+//getItem : 
+console.log(window.localStorage.getItem("color"));
+console.log(window.localStorage.color);
+console.log(window.localStorage["color"]);
+
+// remove one :
+// window.localStorage.removeItem("color");
+
+//clear all :
+// window.localStorage.clear("color");
+
+//get key : 
+console.log(window.localStorage.key(0)); 
+
+//set color in page : 
+document.body.style.background = window.localStorage.color ;
+
+
+
+
+console.log(window.localStorage);
+console.log(typeof window.localStorage);
