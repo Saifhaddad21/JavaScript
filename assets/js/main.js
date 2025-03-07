@@ -1005,29 +1005,68 @@ clearTimeout(Identifier)
 // Local Storage : 
 
 // setItem : 
-window.localStorage.setItem("color", "red");
-window.localStorage.fontWeight = "bold";
-window.localStorage["fontSize"] = "20px";
+// window.localStorage.setItem("color", "red");
+// window.localStorage.fontWeight = "bold";
+// window.localStorage["fontSize"] = "20px";
 
-//getItem : 
-console.log(window.localStorage.getItem("color"));
-console.log(window.localStorage.color);
-console.log(window.localStorage["color"]);
+// //getItem : 
+// console.log(window.localStorage.getItem("color"));
+// console.log(window.localStorage.color);
+// console.log(window.localStorage["color"]);
 
-// remove one :
-// window.localStorage.removeItem("color");
+// // remove one :
+// // window.localStorage.removeItem("color");
 
-//clear all :
-// window.localStorage.clear("color");
+// //clear all :
+// // window.localStorage.clear("color");
 
-//get key : 
-console.log(window.localStorage.key(0)); 
-
-//set color in page : 
-document.body.style.background = window.localStorage.color ;
+// //get key : 
+// console.log(window.localStorage.key(0)); 
+// local storage color application practice :
 
 
+// //set color in page : 
+// document.body.style.background = window.localStorage.color ;
 
 
-console.log(window.localStorage);
-console.log(typeof window.localStorage);
+
+// console.log(window.localStorage);
+// console.log(typeof window.localStorage);
+
+/////////////////////////////////////////////////////////////////////////////
+// local storage color application practice :
+
+let lis = document.querySelectorAll("ul li");
+let exp = document.querySelector(".experiment");
+
+// window.localStorage.clear(); 
+
+if (window.localStorage.getItem("color") ) {
+   // if there is color in local storage :
+   // [1] add color to div 
+  exp.style.backgroundColor = window.localStorage.getItem("color");
+  // [2]  // remove activae class from all lis : 
+    lis.forEach((li) => {
+      li.classList.remove("active"); 
+    });
+    // [3] add active class to current color :
+    document.querySelector(`[data-color="${window.localStorage.getItem("color")}"]`).classList.add("active");
+}else { // if there is no color in local storage :
+  console.log("No");
+};
+
+lis.forEach((li) => {
+  li.addEventListener("click", (e) =>{ 
+    // console.log(e.currentTarget.dataset.color);
+    // remove activae class from all lis : 
+    lis.forEach((li) => {
+      li.classList.remove("active"); 
+    });
+    // add active class to current element :
+    e.currentTarget.classList.add("active");
+    // add current color to local storge :
+    window.localStorage.setItem("color", e.currentTarget.dataset.color);
+    // change div background color : 
+    exp.style.backgroundColor = e.currentTarget.dataset.color;
+  });
+}); 
