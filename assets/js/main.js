@@ -1229,32 +1229,107 @@ clearTimeout(Identifier)
 ////////////////////////////////////////////////////////////////////////////////
 // (Destructuring Mixed Content) : 
 
-const user = { 
-  theName : "saif",
-  theAge : 25,
-  skills : ["html", "css", "js"],
-  addresses : {
-    jordan : "amman",
-    egypt : "cairo",
-  },
-};
+// const user = { 
+//   theName : "saif",
+//   theAge : 25,
+//   skills : ["html", "css", "js"],
+//   addresses : {
+//     jordan : "amman",
+//     egypt : "cairo",
+//   },
+// };
 
-const {
-  theName : a ,
-  theAge : b, 
-  skills : [one , two , three],
-  addresses : {jordan  : j} 
-} = user;
+// const {
+//   theName : a ,
+//   theAge : b, 
+//   skills : [one , two , three],
+//   addresses : {jordan  : j} 
+// } = user;
 
-console.log(`your name is : ${a}`);
-console.log(`your age is : ${b}`);
-console.log(`your skills progress is : ${one}, ${two}, ${three}`);
-console.log(`your skills progress is : ${one}, ${three}`);
-console.log(`your last skill is : ${three}`);
-console.log(`your css skill progress is : ${two}`);
-console.log(`your js skill progress is : ${three}`);
-console.log(`your live in : ${j}`);
+// console.log(`your name is : ${a}`);
+// console.log(`your age is : ${b}`);
+// console.log(`your skills progress is : ${one}, ${two}, ${three}`);
+// console.log(`your skills progress is : ${one}, ${three}`);
+// console.log(`your last skill is : ${three}`);
+// console.log(`your css skill progress is : ${two}`);
+// console.log(`your js skill progress is : ${three}`);
+// console.log(`your live in : ${j}`);
 
-///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Set Data Types And Methods) : 
+
+// let myData = [1, 1, 1 ,2 ,3] ;
+
+// //[1] : add 
+// // let myUniqueData = new Set([1, 1, 1,2 ,3]);
+// // let myUniqueData = new Set(myData);
+// // let myUniqueData = new Set().add(1).add(1).add(1).add(2).add(3);
+// let myUniqueData = new Set();
+// myUniqueData.add(1).add(1).add(1).add(2).add(3);
+
+// console.log(myData);
+// console.log(myUniqueData);
+
+// console.log(myUniqueData.size);
+
+// console.log(myData[0]);
+// console.log(myUniqueData[0]); // you cant inside the (set) (undifined)
+
+// //[2] : delete
+// // myUniqueData.delete(2);
+// // console.log(myUniqueData.delete(2));
+// console.log(myUniqueData.delete(20));
+
+// console.log(myUniqueData);
+// console.log(myUniqueData.size);
+
+// ///[3] : clear
+// myUniqueData.clear(); 
+
+// console.log(myUniqueData);
+// console.log(myUniqueData.size);
+
+//[4] : has
+
+///// ***false 
+// let myData = [1, 1, 1, 2, 3, "A"];
+
+// let myUniqueData = new Set();
+// myUniqueData.add(1).add(1).add(1).add(2).add(3).add("A");
+
+// myUniqueData.clear();
+
+// console.log(myUniqueData);
+// console.log(myUniqueData.size);
+
+// console.log(myUniqueData.has("A"));
+
+////// **true
+// let myData = [1, 1, 1, 2, 3, "A"];
+
+// let myUniqueData = new Set();
+// myUniqueData.add(1).add(1).add(1).add(2).add(3).add("A");
+
+
+// console.log(`is set has => ${myUniqueData.has("A")}`);
+
+// ////// **tfalse
+// let myData = [1, 1, 1, 2, 3, "A"];
+
+// let myUniqueData = new Set();
+// myUniqueData.add(1).add(1).add(1).add(2).add(3).add("A");
+
+
+// console.log(`is set has => ${myUniqueData.has("a".toUpperCase())}`); //here we have a different letter (a) 
+
+////// **to make true
+let myData = [1, 1, 1, 2, 3, "A"];
+
+let myUniqueData = new Set();
+myUniqueData.add(1).add(1).add(1).add(2).add(3).add("A");
+
+
+console.log(`is set has => ${myUniqueData.has("a".toUpperCase())}`);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
