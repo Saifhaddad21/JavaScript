@@ -1381,46 +1381,92 @@ clearTimeout(Identifier)
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Map Data Type Vs Object) : 
 
-let myObject = {};
-let myEmptyObject = Object.create(null);
-let myMap = new Map();
+// let myObject = {};
+// let myEmptyObject = Object.create(null);
+// let myMap = new Map();
 
-console.log(myObject);
-console.log(myEmptyObject);
-console.log(myMap);
+// console.log(myObject);
+// console.log(myEmptyObject);
+// console.log(myMap);
 
-// new object :
+// // new object :
+// // let myNewObject = {
+// //   10: "saif",
+// //   "10": "zaid"
+// // }
+
+// // console.log(myNewObject[10]);
+
+
 // let myNewObject = {
-//   10: "saif",
-//   "10": "zaid"
-// }
+//   10: "number",
+//   "10": "string"
+// };
 
 // console.log(myNewObject[10]);
 
+// // new map : 
+// let myNewMap = new Map ();
 
-let myNewObject = {
-  10: "number",
-  "10": "string"
-};
+// myNewMap.set(10, "number");
+// myNewMap.set("10", "string");
+// myNewMap.set(true, "boolean");
+// myNewMap.set({a:1, b:2}, "obj");
+// myNewMap.set(function doSomething() {}, "function");
 
-console.log(myNewObject[10]);
+// console.log(myNewMap.get(10));
+// console.log(myNewMap.get("10"));
 
-// new map : 
-let myNewMap = new Map ();
+// console.log("######");
 
-myNewMap.set(10, "number");
-myNewMap.set("10", "string");
-myNewMap.set(true, "boolean");
-myNewMap.set({a:1, b:2}, "obj");
-myNewMap.set(function doSomething() {}, "function");
-
-console.log(myNewMap.get(10));
-console.log(myNewMap.get("10"));
-
-console.log("######");
-
-console.log(myNewObject);
-console.log(myNewMap);
+// console.log(myNewObject);
+// console.log(myNewMap);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Map Methods) : 
+
+//map data type : 
+// --methods
+// -----get 
+// -----set
+// -----delete
+// -----clear
+// -----has
+
+// --properities  
+// --------size
+
+let myMap = new Map([
+  [10, "Number"],
+  ["Name", "String"],
+  [false, "boolean"]
+]);
+
+  // myMap.set(10, "Number");
+  // myMap.set("Name", "String");
+
+console.log(myMap);
+
+console.log(myMap.get(10));
+console.log(myMap.get("Name"));
+console.log(myMap.get(false));
+/////////////////////////
+console.log("######");
+
+console.log(myMap.has(false));
+console.log(myMap.has("false"));
+
+console.log("######");
+/////////////////////////
+console.log(myMap.size);
+
+console.log(myMap.delete("Name")); //if print true that mean successed deleted ..here print (true)
+console.log(myMap.delete("Names")); //if print false that mean it is not deleted ..here print (false)
+
+console.log(myMap.size);
+
+myMap.clear();
+console.log(myMap.size);
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// (Map Vs WeakMap) : 127
