@@ -1118,23 +1118,54 @@ clearTimeout(Identifier)
   ////////////////////////////////////////////////////////////////////
   // ( Destructuring Arrays Part 3 - Swap Variables ) : 
    
-  let book = "video";
-  let video = "book"; 
+//   let book = "video";
+//   let video = "book"; 
 
-  /////the first way but the hard ::
-// save book value in stash 
-  // let stash = book ; 
+//   /////the first way but the hard ::
+// // save book value in stash 
+//   // let stash = book ; 
 
-  // // change book value 
-  // book = video ;
+//   // // change book value 
+//   // book = video ;
 
-  // // change video value
-  // video = stash;   
+//   // // change video value
+//   // video = stash;   
 
-////this the second way the easy (destructuring way)
-  [book, video] = [video, book];
+// ////this the second way the easy (destructuring way)
+//   [book, video] = [video, book];
    
-  console.log(book);
-  console.log(video);
+//   console.log(book);
+//   console.log(video);
 
   ///////////////////////////////////////////////////////////////////
+  // (destructuring objects part 1)  : 
+  const user = { 
+    theName : "saif",
+    theAge : 25,
+    theTitle : "Developer",
+    theCountry : "Jordan",
+  };
+
+  console.log(user.theName);
+  console.log(user.theAge);
+  console.log(user.theTitle);
+  console.log(user.theCountry);
+
+  let theName = user.theName;
+  let theAge = user.theAge;
+  let theTitle = user.theTitle;
+  let theCountry = user.theCountry;
+
+  console.log(theName);
+  console.log(theAge);
+  console.log(theTitle);
+  console.log(theCountry);
+
+ ({theName, theAge, theTitle, theCountry} = user);
+
+ console.log(theName);
+  console.log(theAge);
+  console.log(theTitle);
+  console.log(theCountry);
+
+  /////////////////////////////////////////////////////////////////////////
