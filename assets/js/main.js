@@ -1074,24 +1074,46 @@ clearTimeout(Identifier)
 ////////////////////////////////////////////////////////////////////
 // (Destructuring Arrays Part 1) : 
 
-let a = 1;
-let b = 2;
-let c = 3;
-let d = 4;
+// let a = 1;
+// let b = 2;
+// let c = 3;
+// let d = 4;
 
- let myfriend = ["saif", "zaid", "jack", "mhanna"];
+//  let myfriend = ["saif", "zaid", "jack", "mhanna"];
 
-[a, b, c, d, e = "haddad"] = myfriend;
+// [a, b, c, d, e = "haddad"] = myfriend;
 
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
-console.log(e);
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(e);
 
 
-let [x, y, ,z] = myfriend; // this will print the first one (saif)then the second (zaid) then the four name (mhanna) because we have a space (, ,)
+// let [x, y, ,z] = myfriend; // this will print the first one (saif)then the second (zaid) then the four name (mhanna) because we have a space (, ,)
 
-console.log(x);
-console.log(y);
-console.log(z);
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+///////////////////////////////////////////////////////////////////////
+// (Destructuring Arrays Part 2) : 
+
+let myfriends = ["saif", "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
+
+// console.log(myfriends[2][1][1]); 
+
+// let ["saif", "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
+// let [ , "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
+// let [ , , ["jack", ["naeem", "mosaa"], "mhanna"]];
+// let [ , , [ , ["naeem", "mosaa"], "mhanna"]];
+// let [ , , [ , ["naeem", "mosaa"], ]];
+// here to ynderstand what we do >>
+
+let [, , [ ,  [a,b]]] = myfriends;  // we want print naeem and osama   <<
+
+console.log(a);  
+console.log(b);  
+
+  ////////////////////////////////////////////////////////////////////
+
