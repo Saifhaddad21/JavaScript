@@ -1072,5 +1072,26 @@ clearTimeout(Identifier)
 // }); 
 
 ////////////////////////////////////////////////////////////////////
-// (Session Storage And Use Cases) : 
+// (Destructuring Arrays Part 1) : 
 
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 4;
+
+ let myfriend = ["saif", "zaid", "jack", "mhanna"];
+
+[a, b, c, d, e = "haddad"] = myfriend;
+
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+
+
+let [x, y, ,z] = myfriend; // this will print the first one (saif)then the second (zaid) then the four name (mhanna) because we have a space (, ,)
+
+console.log(x);
+console.log(y);
+console.log(z);
