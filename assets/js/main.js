@@ -964,7 +964,7 @@ Save Data Inside Browser To Use Later
 BOM [Browser Object-Model] 
 setTimeout(Function, Timeout, Additional Params) 
 clearTimeout(Identifier) 
-*/ 
+*/
 
 // setTimeout(function () {
 //   console.log("msg");
@@ -1115,9 +1115,9 @@ clearTimeout(Identifier)
 // console.log(a);  
 // console.log(b);  
 
-  ////////////////////////////////////////////////////////////////////
-  // ( Destructuring Arrays Part 3 - Swap Variables ) : 
-   
+////////////////////////////////////////////////////////////////////
+// ( Destructuring Arrays Part 3 - Swap Variables ) : 
+
 //   let book = "video";
 //   let video = "book"; 
 
@@ -1133,12 +1133,12 @@ clearTimeout(Identifier)
 
 // ////this the second way the easy (destructuring way)
 //   [book, video] = [video, book];
-   
+
 //   console.log(book);
 //   console.log(video);
 
-  ///////////////////////////////////////////////////////////////////
-  // (destructuring objects part 1)  : 
+///////////////////////////////////////////////////////////////////
+// (destructuring objects part 1)  : 
 //   const user = { 
 //     theName : "saif",
 //     theAge : 25,
@@ -1168,5 +1168,32 @@ clearTimeout(Identifier)
 //   console.log(theTitle);
 //   console.log(theCountry);
 
-  /////////////////////////////////////////////////////////////////////////
-  // ( Destructuring Objects Part 2) : 
+/////////////////////////////////////////////////////////////////////////
+// ( Destructuring Objects Part 2) : 
+
+const user = {
+  theName: "saif",
+  theAge: 25,
+  theTitle: "Developer",
+  theCountry: "Jordan",
+  theColor: "black",
+  skills: {                            // nested objects::
+    html:80,
+    css:70,
+  }
+};
+
+const {theName: a , theAge: b , theCountry , theColor: co = red , skills: {html: h , css: c} } = user;
+
+console.log(a);
+console.log(b);
+console.log(theCountry);
+console.log(co);
+console.log(`my html skills is ${h}`);
+console.log(`my css skills is ${c}`);
+
+
+const {html : skillone , css : skilltwo} = user.skills;
+
+console.log(`my html skills is ${skillone}`);
+console.log(`my css skills is ${skilltwo}`);
