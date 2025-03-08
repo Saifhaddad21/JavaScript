@@ -1099,21 +1099,42 @@ clearTimeout(Identifier)
 ///////////////////////////////////////////////////////////////////////
 // (Destructuring Arrays Part 2) : 
 
-let myfriends = ["saif", "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
+// let myfriends = ["saif", "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
 
-// console.log(myfriends[2][1][1]); 
+// // console.log(myfriends[2][1][1]); 
 
-// let ["saif", "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
-// let [ , "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
-// let [ , , ["jack", ["naeem", "mosaa"], "mhanna"]];
-// let [ , , [ , ["naeem", "mosaa"], "mhanna"]];
-// let [ , , [ , ["naeem", "mosaa"], ]];
-// here to ynderstand what we do >>
+// // let ["saif", "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
+// // let [ , "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
+// // let [ , , ["jack", ["naeem", "mosaa"], "mhanna"]];
+// // let [ , , [ , ["naeem", "mosaa"], "mhanna"]];
+// // let [ , , [ , ["naeem", "mosaa"], ]];
+// // here to ynderstand what we do >>
 
-let [, , [ ,  [a,b]]] = myfriends;  // we want print naeem and osama   <<
+// let [, , [ ,  [a,b]]] = myfriends;  // we want print naeem and osama   <<
 
-console.log(a);  
-console.log(b);  
+// console.log(a);  
+// console.log(b);  
 
   ////////////////////////////////////////////////////////////////////
+  // ( Destructuring Arrays Part 3 - Swap Variables ) : 
+   
+  let book = "video";
+  let video = "book"; 
 
+  /////the first way but the hard ::
+// save book value in stash 
+  // let stash = book ; 
+
+  // // change book value 
+  // book = video ;
+
+  // // change video value
+  // video = stash;   
+
+////this the second way the easy (destructuring way)
+  [book, video] = [video, book];
+   
+  console.log(book);
+  console.log(video);
+
+  ///////////////////////////////////////////////////////////////////
