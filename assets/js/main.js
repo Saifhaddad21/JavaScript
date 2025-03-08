@@ -1171,29 +1171,59 @@ clearTimeout(Identifier)
 /////////////////////////////////////////////////////////////////////////
 // ( Destructuring Objects Part 2) : 
 
+// const user = {
+//   theName: "saif",
+//   theAge: 25,
+//   theTitle: "Developer",
+//   theCountry: "Jordan",
+//   theColor: "black",
+//   skills: {                            // nested objects::
+//     html:80,
+//     css:70,
+//   }
+// };
+
+// const {theName: a , theAge: b , theCountry , theColor: co = red , skills: {html: h , css: c} } = user;
+
+// console.log(a);
+// console.log(b);
+// console.log(theCountry);
+// console.log(co);
+// console.log(`my html skills is ${h}`);
+// console.log(`my css skills is ${c}`);
+
+
+// const {html : skillone , css : skilltwo} = user.skills;
+
+// console.log(`my html skills is ${skillone}`);
+// console.log(`my css skills is ${skilltwo}`);
+
+/////////////////////////////////////////////////////////////////////////////////////
+// (Destructuring Function Parameters) :
+
 const user = {
-  theName: "saif",
-  theAge: 25,
-  theTitle: "Developer",
-  theCountry: "Jordan",
-  theColor: "black",
-  skills: {                            // nested objects::
-    html:80,
-    css:70,
-  }
+  theName : "saif" ,
+  theAge : 25 , 
+  skills : {
+    html: 80,
+    css: 70,
+  },
 };
 
-const {theName: a , theAge: b , theCountry , theColor: co = red , skills: {html: h , css: c} } = user;
+showdetails(user);
 
-console.log(a);
-console.log(b);
-console.log(theCountry);
-console.log(co);
-console.log(`my html skills is ${h}`);
-console.log(`my css skills is ${c}`);
+// function showdetails(obj) {
+//   console.log(`your name is ${obj.theName}`);
+//   console.log(`your age is ${obj.theAge}`);
+//   console.log(`your css progress is ${obj.skills.css}`);
+// }
 
+// function showdetails({theName, theAge, skills:{css}} = user) {
+function showdetails({theName : a, theAge : b, skills:{css : c}} = user) {
 
-const {html : skillone , css : skilltwo} = user.skills;
+  console.log(`your name is ${a}`);
+  console.log(`your age is ${b}`);
+  console.log(`your css progress is ${c}`);
+}
 
-console.log(`my html skills is ${skillone}`);
-console.log(`my css skills is ${skilltwo}`);
+////////////////////////////////////////////////////////////////////////////////
