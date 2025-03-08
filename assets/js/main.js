@@ -1139,33 +1139,34 @@ clearTimeout(Identifier)
 
   ///////////////////////////////////////////////////////////////////
   // (destructuring objects part 1)  : 
-  const user = { 
-    theName : "saif",
-    theAge : 25,
-    theTitle : "Developer",
-    theCountry : "Jordan",
-  };
+//   const user = { 
+//     theName : "saif",
+//     theAge : 25,
+//     theTitle : "Developer",
+//     theCountry : "Jordan",
+//   };
 
-  console.log(user.theName);
-  console.log(user.theAge);
-  console.log(user.theTitle);
-  console.log(user.theCountry);
+//   console.log(user.theName);
+//   console.log(user.theAge);
+//   console.log(user.theTitle);
+//   console.log(user.theCountry);
 
-  let theName = user.theName;
-  let theAge = user.theAge;
-  let theTitle = user.theTitle;
-  let theCountry = user.theCountry;
+//   let theName = user.theName;
+//   let theAge = user.theAge;
+//   let theTitle = user.theTitle;
+//   let theCountry = user.theCountry;
 
-  console.log(theName);
-  console.log(theAge);
-  console.log(theTitle);
-  console.log(theCountry);
+//   console.log(theName);
+//   console.log(theAge);
+//   console.log(theTitle);
+//   console.log(theCountry);
 
- ({theName, theAge, theTitle, theCountry} = user);
+//  ({theName, theAge, theTitle, theCountry} = user);
 
- console.log(theName);
-  console.log(theAge);
-  console.log(theTitle);
-  console.log(theCountry);
+//  console.log(theName);
+//   console.log(theAge);
+//   console.log(theTitle);
+//   console.log(theCountry);
 
   /////////////////////////////////////////////////////////////////////////
+  // ( Destructuring Objects Part 2) : 
