@@ -1334,49 +1334,93 @@ clearTimeout(Identifier)
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // ( Set vs WeakSet And Garbage Collector) : 124
 
-//   Set      =>  Can Store Any Data Values .
-//   WeakSet  =>  Collection Of Objects Only . 
+// //   Set      =>  Can Store Any Data Values .
+// //   WeakSet  =>  Collection Of Objects Only . 
 
-// type of data : [set]
-let mySet = new Set([1, 1, 1, 2, 3, "A", "A"]);
+// // type of data : [set]
+// let mySet = new Set([1, 1, 1, 2, 3, "A", "A"]);
 
-console.log(mySet);
+// console.log(mySet);
 
-// size :  [set]
-console.log(`the size of elements inside set is : ${mySet.size}`);
+// // size :  [set]
+// console.log(`the size of elements inside set is : ${mySet.size}`);
 
-//values + keys [allias for values ] :  [set]
-let iterator = mySet.keys();
+// //values + keys [allias for values ] :  [set]
+// let iterator = mySet.keys();
 
-console.log(iterator);
-console.log(iterator.next());  //here false 
+// console.log(iterator);
+// console.log(iterator.next());  //here false 
 
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator);
-console.log(iterator.next()); //here true
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator);
+// console.log(iterator.next()); //here true
 
-// forEach :  [set]
+// // forEach :  [set]
 
-mySet.forEach((el) => console.log(el));  //  كل ايليمنت في السيت هون اطبعه في (هيك معنا=< )())
+// mySet.forEach((el) => console.log(el));  //  كل ايليمنت في السيت هون اطبعه في (هيك معنا=< )())
 
-console.log("#".repeat(20));
+// console.log("#".repeat(20));
 
-// type of data : [weakset]
-// let myws = new WeakSet([1, 1, 1, 2, 3, "A", "A"]);// (obj) هون راح يعطينا خطأ لانه بستنا منا نعطيه 
+// // type of data : [weakset]
+// // let myws = new WeakSet([1, 1, 1, 2, 3, "A", "A"]);// (obj) هون راح يعطينا خطأ لانه بستنا منا نعطيه 
+
+// // console.log(myws);
+
+// let myws = new WeakSet([{A: 1, b: 2}]);
 
 // console.log(myws);
 
-let myws = new WeakSet([{A: 1, b: 2}]);
+// // size :  [Weakset] we dont have size in weakset
 
-console.log(myws);
-
-// size :  [Weakset] we dont have size in weakset
-
-//values + keys [allias for values ] :  we dont have values + keys [allias for values ] in weakset
+// //values + keys [allias for values ] :  we dont have values + keys [allias for values ] in weakset
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Map Data Type Vs Object) : 
+
+let myObject = {};
+let myEmptyObject = Object.create(null);
+let myMap = new Map();
+
+console.log(myObject);
+console.log(myEmptyObject);
+console.log(myMap);
+
+// new object :
+// let myNewObject = {
+//   10: "saif",
+//   "10": "zaid"
+// }
+
+// console.log(myNewObject[10]);
+
+
+let myNewObject = {
+  10: "number",
+  "10": "string"
+};
+
+console.log(myNewObject[10]);
+
+// new map : 
+let myNewMap = new Map ();
+
+myNewMap.set(10, "number");
+myNewMap.set("10", "string");
+myNewMap.set(true, "boolean");
+myNewMap.set({a:1, b:2}, "obj");
+myNewMap.set(function doSomething() {}, "function");
+
+console.log(myNewMap.get(10));
+console.log(myNewMap.get("10"));
+
+console.log("######");
+
+console.log(myNewObject);
+console.log(myNewMap);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Map Methods) : 
