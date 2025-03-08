@@ -1199,31 +1199,62 @@ clearTimeout(Identifier)
 // console.log(`my css skills is ${skilltwo}`);
 
 /////////////////////////////////////////////////////////////////////////////////////
-// (Destructuring Function Parameters) :
+// // (Destructuring Function Parameters) :
 
-const user = {
-  theName : "saif" ,
-  theAge : 25 , 
-  skills : {
-    html: 80,
-    css: 70,
+// const user = {
+//   theName : "saif" ,
+//   theAge : 25 , 
+//   skills : {
+//     html: 80,
+//     css: 70,
+//   },
+// };
+
+// showdetails(user);
+
+// // function showdetails(obj) {
+// //   console.log(`your name is ${obj.theName}`);
+// //   console.log(`your age is ${obj.theAge}`);
+// //   console.log(`your css progress is ${obj.skills.css}`);
+// // }
+
+// // function showdetails({theName, theAge, skills:{css}} = user) {
+// function showdetails({theName : a, theAge : b, skills:{css : c}} = user) {
+
+//   console.log(`your name is ${a}`);
+//   console.log(`your age is ${b}`);
+//   console.log(`your css progress is ${c}`);
+// }
+
+////////////////////////////////////////////////////////////////////////////////
+// (Destructuring Mixed Content) : 
+
+const user = { 
+  theName : "saif",
+  theAge : 25,
+  skills : ["html", "css", "js"],
+  addresses : {
+    jordan : "amman",
+    egypt : "cairo",
   },
 };
 
-showdetails(user);
+const {
+  theName : a ,
+  theAge : b, 
+  skills : [one , two , three],
+  addresses : {jordan  : j} 
+} = user;
 
-// function showdetails(obj) {
-//   console.log(`your name is ${obj.theName}`);
-//   console.log(`your age is ${obj.theAge}`);
-//   console.log(`your css progress is ${obj.skills.css}`);
-// }
+console.log(`your name is : ${a}`);
+console.log(`your age is : ${b}`);
+console.log(`your skills progress is : ${one}, ${two}, ${three}`);
+console.log(`your skills progress is : ${one}, ${three}`);
+console.log(`your last skill is : ${three}`);
+console.log(`your css skill progress is : ${two}`);
+console.log(`your js skill progress is : ${three}`);
+console.log(`your live in : ${j}`);
 
-// function showdetails({theName, theAge, skills:{css}} = user) {
-function showdetails({theName : a, theAge : b, skills:{css : c}} = user) {
+///////////////////////////////////////////////////////////////////////////
+// (Set Data Types And Methods) : 
 
-  console.log(`your name is ${a}`);
-  console.log(`your age is ${b}`);
-  console.log(`your css progress is ${c}`);
-}
-
-////////////////////////////////////////////////////////////////////////////////
