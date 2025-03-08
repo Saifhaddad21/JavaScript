@@ -1323,13 +1323,15 @@ clearTimeout(Identifier)
 // console.log(`is set has => ${myUniqueData.has("a".toUpperCase())}`); //here we have a different letter (a) 
 
 ////// **to make true
-let myData = [1, 1, 1, 2, 3, "A"];
+// let myData = [1, 1, 1, 2, 3, "A"];
 
-let myUniqueData = new Set();
-myUniqueData.add(1).add(1).add(1).add(2).add(3).add("A");
+// let myUniqueData = new Set();
+// myUniqueData.add(1).add(1).add(1).add(2).add(3).add("A");
 
 
-console.log(`is set has => ${myUniqueData.has("a".toUpperCase())}`);
+// console.log(`is set has => ${myUniqueData.has("a".toUpperCase())}`);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+// ( Set vs WeakSet And Garbage Collector) : 124
+
 
