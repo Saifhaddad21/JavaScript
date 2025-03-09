@@ -1555,19 +1555,107 @@ clearTimeout(Identifier)
 
 // console.log(myArray);
 //////////////////////////////////////////////
-let myArray = [10, 20, 30, 40, 50, "A", "B"];
+// let myArray = [10, 20, 30, 40, 50, "A", "B"];
 
-// myArray.copyWithin(4 , 6); // 10, 20, 30, 40, "B", "A", "B"
-// myArray.copyWithin(4 , -1); // 10, 20, 30, 40, "B", "A", "B"
-//
-// myArray.copyWithin(4 , -2); // 10, 20, 30, 40, 'A', 'B', 'B'
-//
-// myArray.copyWithin(1, -2); //  10, 'A', 'B', 40, 50, 'A', 'B' // here that mean include from the last two to the end all include ('A', 'B')
+// // myArray.copyWithin(4 , 6); // 10, 20, 30, 40, "B", "A", "B"
+// // myArray.copyWithin(4 , -1); // 10, 20, 30, 40, "B", "A", "B"
+// //
+// // myArray.copyWithin(4 , -2); // 10, 20, 30, 40, 'A', 'B', 'B'
+// //
+// // myArray.copyWithin(1, -2); //  10, 'A', 'B', 40, 50, 'A', 'B' // here that mean include from the last two to the end all include ('A', 'B')
 
- myArray.copyWithin(1,-2 ,-1); // 10, "A", 30, 40, 50, "A", "B" // here we add -1 in the end to remove B (not include ) 
+// myArray.copyWithin(1, -2, -1); // 10, "A", 30, 40, 50, "A", "B" // here we add -1 in the end to remove B (not include ) 
 
-console.log(myArray);
+// console.log(myArray);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Array.some Method) : 
+/*
+--Array Methods 
+----Array.some (CallbackFunc (Element, Index, Array), This Argument) 
+-----CallbackFunc => Function To Run On Every Element On The Given Array 
+-------Element => The Current Element To Process 
+-------Index => Index Of Current Element 
+-------Array => The Current Array Working With 
+-----This Argument => Value To Use As This When Executing CallbackFunc 
+--Using 
+-----Check if Element Exists In Array 
+-----Check If Number In Range
+*/
+
+// let nums = [1, 2, 3, 4, 5, 6, 7];
+
+// let myNumber = 5;
+
+// let myNumber1 = 10;
+// let check = nums.some(function (e) {    // the first way 
+//   console.log("test");
+//   return e > 4;
+// });
+
+
+// let check = nums.some(function (e) {    
+//   console.log(this);     //  the world of (this) will print window
+//   return e > 5;
+// });
+
+// let check = nums.some(function (e) {    
+//   console.log(this);     
+//   return e > 5;
+// }, myNumber);
+
+// let check = nums.some(function (e) {    // here will print true becase the mynumber = 5 and in nums we have a number to 7 ..
+//   console.log(this);     
+//   return e > this;
+// }, myNumber);
+
+// let check1 = nums.some(function (e) {    // here will print false because the myNumber1 = 10 and in nums we dont have a number more than 10 ..
+//   console.log(this);     
+//   return e > this;
+// }, myNumber1);
+
+// let check = nums.some((e) => e > 5); // the second way (arrow way)
+
+// console.log(check);
+// console.log(check1);
+////////////////////
+// let nums = [1, 2, 3, 4, 6, 7, 8];
+
+
+// function checkValues(arr, val) {
+//   return arr.some(function (e) {
+//     return e === val ;
+//   });
+// }
+
+// console.log(checkValues(nums, 20)); // here will print false because we dont have a 20 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
+// console.log(checkValues(nums, 5));  // here will print false because we dont have a 20 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
+// console.log(checkValues(nums, 8));  // here will print true because we have a 8 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
+
+//////////////// 
+
+let nums = [1, 2, 3, 4, 6, 7, 8];
+let nums1 = [1, 2, 3, 4, 6, 7, 8, 10];
+
+let range = {
+  min: 10,
+  max: 20
+};
+
+let chechNumberInRange = nums.some(function (e) {  
+  return e >= this.min && e <= this.max;
+}, range);
+
+console.log(chechNumberInRange);  // here the answer will print false because we dont have a number in nums between or equal of 10 ...20
+///////////////// //////////////// ////////////// 
+let chechNumberInRange1 = nums1.some(function (e) {
+  // console.log(this.min);
+  // console.log(this.max);
+  return e >= this.min && e <= this.max;
+}, range);
+
+console.log(chechNumberInRange1); // here the answer will print true because we have a number in nums1 between or equal of 10 ...20
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ( Array.every Method) : 
