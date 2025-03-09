@@ -1737,4 +1737,67 @@ clearTimeout(Identifier)
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-// (Map And Set Challenge) : 
+// (Intro And What Is Regular Expression) : 134
+/*
+---Regular expressions 
+-----Email
+-----IP
+-----Phone
+-----URL
+*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//(Regular Expressions - Modifiers) : 135
+/*
+---Regular Expression 
+
+---Syntax 
+---/pattern/modifier(s); 
+---new RegExp("pattern", "modifier(s)")
+
+---Modifiers => Flags 
+(معلومه:نستطيع استخدام اكثر من حرف مع بعض و ذلك يوضح مع الامثلة )
+---i => case-insensitive //   ببطل في اولوية للاحرف الكبير او صغير (بتكون الاولوية للاول)  (insensitive غير حساس)
+---g => global //  تستخدم حتى اجيب كل الاشياء المتشابهة 
+---m => Multilines // تبحث بين الاسطر و تبلش من كلمة معينه وتنتهي الى كلمه معينه 
+
+-Search Methods 
+---match(Pattern) 
+
+-Match 
+-- Matches A String Against a Regular Expression Pattern 
+------Returns An Array With The Matches 
+------Returns null If No Match Is Found.*/
+
+// let myString = "Hello, My Name Is Saif haddad saif";
+
+// let regex = /saif/;
+
+// console.log(myString.match(regex));
+////////////
+// let myString = "Hello, My Name Is Saif haddad saif";
+
+// let regex = /saif/i;
+
+// console.log(myString.match(regex));
+////////////
+// let myString = "Hello, My Name Is Saif haddad saif";
+
+// let regex = /saif/g;
+
+// console.log(myString.match(regex));
+//////////////
+// let myString = "Hello, My Name Is Saif haddad saif"; ///هون استخدمنا حرفين مع بعض i g// 
+
+// let regex = /saif/ig;
+
+// console.log(myString.match(regex));
+///////////////
+// let myString = "Hello, My Name Is Saif haddad saif"; 
+
+// let regex = /saifs/ig;
+
+// console.log(myString.match(regex));  // Returns null If No Match Is Found.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Regular Expressions - Ranges Part 1) : 
