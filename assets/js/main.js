@@ -1511,40 +1511,63 @@ clearTimeout(Identifier)
 ---------Shorten The Method + Use argument's
 */
 
-console.log(Array.from("saif"));
-console.log(Array.from("12345"));
+// console.log(Array.from("saif"));
+// console.log(Array.from("12345"));
 
-console.log(Array.from("12345", function (n) {  //n = number 
-  return +n + +n;
-})
-);
+// console.log(Array.from("12345", function (n) {  //n = number 
+//   return +n + +n;
+// })
+// );
 
-console.log(Array.from("12345", (n) => +n + +n));// second way (arrow function)  >>the same result 
+// console.log(Array.from("12345", (n) => +n + +n));// second way (arrow function)  >>the same result 
 
-////example : 
+// ////example : 
 
-let myArray = [1, 1, 1, 2, 3, 4]; 
+// let myArray = [1, 1, 1, 2, 3, 4]; 
 
-let mySet = new Set(myArray);
+// let mySet = new Set(myArray);
 
-console.log(mySet);  // the first way 
+// console.log(mySet);  // the first way 
 
-console.log(Array.from(mySet)); // the second way 
+// console.log(Array.from(mySet)); // the second way 
 
-console.log([...new Set(myArray)]);  // the third way and its the important one and the easier (this is in the future)
+// console.log([...new Set(myArray)]);  // the third way and its the important one and the easier (this is in the future)
 
-function testArg() {
-  return arguments ;
-};
+// function testArg() {
+//   return arguments ;
+// };
 
-console.log(testArg("saif", "mhanna" ,"haddad"));
+// console.log(testArg("saif", "mhanna" ,"haddad"));
 
-///
-function Af() {
-  return Array.from(arguments) ;
-};
+// ///
+// function Af() {
+//   return Array.from(arguments) ;
+// };
 
-console.log(Af("saif", "mhanna" ,"haddad" , 1, 2 ,3));  // we use it to result the array ..
+// console.log(Af("saif", "mhanna" ,"haddad" , 1, 2 ,3));  // we use it to result the array ..
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Array.copyWithin Method)  : 129
+
+// let myArray = [10, 20, 30, 40, 50, "A", "B"];
+
+// myArray.copyWithin(3);   //10, 20, 30, 40, 10, 20, 30
+
+// console.log(myArray);
+//////////////////////////////////////////////
+let myArray = [10, 20, 30, 40, 50, "A", "B"];
+
+// myArray.copyWithin(4 , 6); // 10, 20, 30, 40, "B", "A", "B"
+// myArray.copyWithin(4 , -1); // 10, 20, 30, 40, "B", "A", "B"
+//
+// myArray.copyWithin(4 , -2); // 10, 20, 30, 40, 'A', 'B', 'B'
+//
+// myArray.copyWithin(1, -2); //  10, 'A', 'B', 40, 50, 'A', 'B' // here that mean include from the last two to the end all include ('A', 'B')
+
+ myArray.copyWithin(1,-2 ,-1); // 10, "A", 30, 40, 50, "A", "B" // here we add -1 in the end to remove B (not include ) 
+
+console.log(myArray);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Array.some Method) : 
