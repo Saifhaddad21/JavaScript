@@ -1469,34 +1469,82 @@ clearTimeout(Identifier)
 // console.log(myMap.size);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-// (Map Vs WeakMap) : 127
+// // (Map Vs WeakMap) : 127
 
-// Map     => Key Can Be Anything 
-// WeakMap => Key Can Be Object Only
+// // Map     => Key Can Be Anything 
+// // WeakMap => Key Can Be Object Only
 
-let user = {theName: "Saif"};
+// let user = {theName: "Saif"};
 
-let myMap = new Map();
+// let myMap = new Map();
 
-myMap.set(user, "object value");
+// myMap.set(user, "object value");
 
-user = null ; //override the reference 
+// user = null ; //override the reference 
 
-console.log(myMap);
-////////////////
-console.log("#".repeat(20));
-///////////////
+// console.log(myMap);
+// ////////////////
+// console.log("#".repeat(20));
+// ///////////////
 
-let wMapUser = {theName: "Saif"};
+// let wMapUser = {theName: "Saif"};
 
-let myWeakMap = new WeakMap();
+// let myWeakMap = new WeakMap();
 
-myWeakMap.set(wMapUser, "object value"); 
+// myWeakMap.set(wMapUser, "object value"); 
 
-wMapUser = null ; //override the reference 
+// wMapUser = null ; //override the reference 
 
-console.log(myWeakMap);
+// console.log(myWeakMap);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // (Array.from Method) : 
 
+/*
+--Array Methods 
+----Array.from(Iterable, MapFunc, This) 
+---------Variable 
+---------String Numbers 
+---------Set 
+---------Using The Map Function 
+---------Arrow Function 
+---------Shorten The Method + Use argument's
+*/
+
+console.log(Array.from("saif"));
+console.log(Array.from("12345"));
+
+console.log(Array.from("12345", function (n) {  //n = number 
+  return +n + +n;
+})
+);
+
+console.log(Array.from("12345", (n) => +n + +n));// second way (arrow function)  >>the same result 
+
+////example : 
+
+let myArray = [1, 1, 1, 2, 3, 4]; 
+
+let mySet = new Set(myArray);
+
+console.log(mySet);  // the first way 
+
+console.log(Array.from(mySet)); // the second way 
+
+console.log([...new Set(myArray)]);  // the third way and its the important one and the easier (this is in the future)
+
+function testArg() {
+  return arguments ;
+};
+
+console.log(testArg("saif", "mhanna" ,"haddad"));
+
+///
+function Af() {
+  return Array.from(arguments) ;
+};
+
+console.log(Af("saif", "mhanna" ,"haddad" , 1, 2 ,3));  // we use it to result the array ..
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Array.copyWithin Method)  : 129
