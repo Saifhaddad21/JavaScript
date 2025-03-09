@@ -1584,78 +1584,105 @@ clearTimeout(Identifier)
 -----Check If Number In Range
 */
 
-// let nums = [1, 2, 3, 4, 5, 6, 7];
+// // let nums = [1, 2, 3, 4, 5, 6, 7];
 
-// let myNumber = 5;
+// // let myNumber = 5;
 
-// let myNumber1 = 10;
-// let check = nums.some(function (e) {    // the first way 
-//   console.log("test");
-//   return e > 4;
-// });
+// // let myNumber1 = 10;
+// // let check = nums.some(function (e) {    // the first way 
+// //   console.log("test");
+// //   return e > 4;
+// // });
 
 
-// let check = nums.some(function (e) {    
-//   console.log(this);     //  the world of (this) will print window
-//   return e > 5;
-// });
+// // let check = nums.some(function (e) {    
+// //   console.log(this);     //  the world of (this) will print window
+// //   return e > 5;
+// // });
 
-// let check = nums.some(function (e) {    
-//   console.log(this);     
-//   return e > 5;
-// }, myNumber);
+// // let check = nums.some(function (e) {    
+// //   console.log(this);     
+// //   return e > 5;
+// // }, myNumber);
 
-// let check = nums.some(function (e) {    // here will print true becase the mynumber = 5 and in nums we have a number to 7 ..
-//   console.log(this);     
-//   return e > this;
-// }, myNumber);
+// // let check = nums.some(function (e) {    // here will print true becase the mynumber = 5 and in nums we have a number to 7 ..
+// //   console.log(this);     
+// //   return e > this;
+// // }, myNumber);
 
-// let check1 = nums.some(function (e) {    // here will print false because the myNumber1 = 10 and in nums we dont have a number more than 10 ..
-//   console.log(this);     
-//   return e > this;
-// }, myNumber1);
+// // let check1 = nums.some(function (e) {    // here will print false because the myNumber1 = 10 and in nums we dont have a number more than 10 ..
+// //   console.log(this);     
+// //   return e > this;
+// // }, myNumber1);
 
-// let check = nums.some((e) => e > 5); // the second way (arrow way)
+// // let check = nums.some((e) => e > 5); // the second way (arrow way)
 
-// console.log(check);
-// console.log(check1);
-////////////////////
+// // console.log(check);
+// // console.log(check1);
+// ////////////////////
+// // let nums = [1, 2, 3, 4, 6, 7, 8];
+
+
+// // function checkValues(arr, val) {
+// //   return arr.some(function (e) {
+// //     return e === val ;
+// //   });
+// // }
+
+// // console.log(checkValues(nums, 20)); // here will print false because we dont have a 20 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
+// // console.log(checkValues(nums, 5));  // here will print false because we dont have a 20 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
+// // console.log(checkValues(nums, 8));  // here will print true because we have a 8 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
+
+// //////////////// 
+
 // let nums = [1, 2, 3, 4, 6, 7, 8];
+// let nums1 = [1, 2, 3, 4, 6, 7, 8, 10];
 
+// let range = {
+//   min: 10,
+//   max: 20
+// };
 
-// function checkValues(arr, val) {
-//   return arr.some(function (e) {
-//     return e === val ;
-//   });
-// }
+// let chechNumberInRange = nums.some(function (e) {  
+//   return e >= this.min && e <= this.max;
+// }, range);
 
-// console.log(checkValues(nums, 20)); // here will print false because we dont have a 20 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
-// console.log(checkValues(nums, 5));  // here will print false because we dont have a 20 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
-// console.log(checkValues(nums, 8));  // here will print true because we have a 8 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
+// console.log(chechNumberInRange);  // here the answer will print false because we dont have a number in nums between or equal of 10 ...20
+// ///////////////// //////////////// ////////////// 
+// let chechNumberInRange1 = nums1.some(function (e) {
+//   // console.log(this.min);
+//   // console.log(this.max);
+//   return e >= this.min && e <= this.max;
+// }, range);
 
-//////////////// 
-
-let nums = [1, 2, 3, 4, 6, 7, 8];
-let nums1 = [1, 2, 3, 4, 6, 7, 8, 10];
-
-let range = {
-  min: 10,
-  max: 20
-};
-
-let chechNumberInRange = nums.some(function (e) {  
-  return e >= this.min && e <= this.max;
-}, range);
-
-console.log(chechNumberInRange);  // here the answer will print false because we dont have a number in nums between or equal of 10 ...20
-///////////////// //////////////// ////////////// 
-let chechNumberInRange1 = nums1.some(function (e) {
-  // console.log(this.min);
-  // console.log(this.max);
-  return e >= this.min && e <= this.max;
-}, range);
-
-console.log(chechNumberInRange1); // here the answer will print true because we have a number in nums1 between or equal of 10 ...20
+// console.log(chechNumberInRange1); // here the answer will print true because we have a number in nums1 between or equal of 10 ...20
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// ( Array.every Method) : 
+// ( Array.every Method) : 131
+
+const locations = {
+  20: "place 1",
+  30: "place 2",
+  40: "place 3",
+  50: "place 4"
+}; 
+
+let mainlocation = 15 ;
+
+let locationsarray = Objectbject.keys(locations);
+
+console.log(locationsarray);
+
+let locationarraynumber = locationsarray.map((n) => +n);
+
+console.log(locationarraynumber);
+
+let check = locationarraynumber.every(function (e) {
+  return e > this ;
+}, mainlocation);
+
+console.log(check);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Spread Syntax And Use Cases) : 
