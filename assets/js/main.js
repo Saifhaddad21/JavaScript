@@ -1423,50 +1423,80 @@ clearTimeout(Identifier)
 // console.log(myNewMap);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Map Methods) : 
+// // (Map Methods) : 
 
-//map data type : 
-// --methods
-// -----get 
-// -----set
-// -----delete
-// -----clear
-// -----has
+// //map data type : 
+// // --methods
+// // -----get 
+// // -----set
+// // -----delete
+// // -----clear
+// // -----has
 
-// --properities  
-// --------size
+// // --properities  
+// // --------size
 
-let myMap = new Map([
-  [10, "Number"],
-  ["Name", "String"],
-  [false, "boolean"]
-]);
+// let myMap = new Map([
+//   [10, "Number"],
+//   ["Name", "String"],
+//   [false, "boolean"]
+// ]);
 
-  // myMap.set(10, "Number");
-  // myMap.set("Name", "String");
+//   // myMap.set(10, "Number");
+//   // myMap.set("Name", "String");
 
-console.log(myMap);
+// console.log(myMap);
 
-console.log(myMap.get(10));
-console.log(myMap.get("Name"));
-console.log(myMap.get(false));
-/////////////////////////
-console.log("######");
+// console.log(myMap.get(10));
+// console.log(myMap.get("Name"));
+// console.log(myMap.get(false));
+// /////////////////////////
+// console.log("######");
 
-console.log(myMap.has(false));
-console.log(myMap.has("false"));
+// console.log(myMap.has(false));
+// console.log(myMap.has("false"));
 
-console.log("######");
-/////////////////////////
-console.log(myMap.size);
+// console.log("######");
+// /////////////////////////
+// console.log(myMap.size);
 
-console.log(myMap.delete("Name")); //if print true that mean successed deleted ..here print (true)
-console.log(myMap.delete("Names")); //if print false that mean it is not deleted ..here print (false)
+// console.log(myMap.delete("Name")); //if print true that mean successed deleted ..here print (true)
+// console.log(myMap.delete("Names")); //if print false that mean it is not deleted ..here print (false)
 
-console.log(myMap.size);
+// console.log(myMap.size);
 
-myMap.clear();
-console.log(myMap.size);
+// myMap.clear();
+// console.log(myMap.size);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // (Map Vs WeakMap) : 127
+
+// Map     => Key Can Be Anything 
+// WeakMap => Key Can Be Object Only
+
+let user = {theName: "Saif"};
+
+let myMap = new Map();
+
+myMap.set(user, "object value");
+
+user = null ; //override the reference 
+
+console.log(myMap);
+////////////////
+console.log("#".repeat(20));
+///////////////
+
+let wMapUser = {theName: "Saif"};
+
+let myWeakMap = new WeakMap();
+
+myWeakMap.set(wMapUser, "object value"); 
+
+wMapUser = null ; //override the reference 
+
+console.log(myWeakMap);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// (Array.from Method) : 
+
