@@ -1800,4 +1800,67 @@ clearTimeout(Identifier)
 // console.log(myString.match(regex));  // Returns null If No Match Is Found.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Regular Expressions - Ranges Part 1) : 
+// (Regular Expressions - Ranges Part 1) : 136
+
+/*
+--Regular Expression 
+
+--Ranges 
+
+---Part-1 
+(X|Y) => X Or Y 
+[0-9] => 0 Το 9 
+[^0-9] => Any Character Not 0 To 9 
+Practice 
+
+---Part-2 
+[a-z] 
+[^a-z] 
+[A-Z] 
+[^A-Z] 
+[abc] 
+[^abc]
+*/
+
+// let tld = "Com Net Org Info Code Io";
+// let tldre = /(info|org|io)/i;   //re >>> regular expressions
+// console.log(tld.match(tldre));
+
+let tld = "Com Net Org Info Code Io";
+let tldre = /(info|org|io)/ig;
+console.log(tld.match(tldre));  
+
+let nums = "12345678910";
+let numsre = /[0-9]/ig;
+console.log(nums.match(numsre));
+
+let nums1 = "12345678910";
+let numsre1 = /[0-3]/g;
+console.log(nums1.match(numsre1));
+
+let notNums = "12345678910"; //  Not ^
+let notNumsRe = /[^0-3]/ig;  // Here that mean i need all numbers without from [ 0 - 3 ]
+console.log(notNums.match(notNumsRe));
+
+let specialNums = "1!2@3#4$5%678910";
+let specialNumsRe = /[^0-9]/g;
+console.log(specialNums.match(specialNumsRe));
+
+let practice = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
+let practiceRe = /[5-9]/g;
+console.log(practice.match(practiceRe));
+
+let practice1 = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
+let practiceRe1 = /sa[5-9]/g;
+console.log(practice1.match(practiceRe1));
+
+let practice2 = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
+let practiceRe2 = /sa[5-9]a/g;
+console.log(practice2.match(practiceRe2));
+
+let practice3 = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
+let practiceRe3 = /sa[5-9]sa/g;
+console.log(practice3.match(practiceRe3));
+
+///////////////////////////////////////////////////////////////////////////////////////
+// (Regular Expressions - Ranges Part 2)  : 137
