@@ -1660,29 +1660,81 @@ clearTimeout(Identifier)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ( Array.every Method) : 131
 
-const locations = {
-  20: "place 1",
-  30: "place 2",
-  40: "place 3",
-  50: "place 4"
-}; 
+// const locations = {
+//   20: "place 1",
+//   30: "place 2",
+//   40: "place 3",
+//   50: "place 4"
+// }; 
 
-let mainlocation = 15 ;
+// let mainlocation = 15 ;
 
-let locationsarray = Objectbject.keys(locations);
+// let locationsarray = Object.keys(locations);
 
-console.log(locationsarray);
+// console.log(locationsarray);
 
-let locationarraynumber = locationsarray.map((n) => +n);
+// let locationarraynumber = locationsarray.map((n) => +n);
 
-console.log(locationarraynumber);
+// console.log(locationarraynumber);
 
-let check = locationarraynumber.every(function (e) {
-  return e > this ;
-}, mainlocation);
+// let check = locationarraynumber.every(function (e) {
+//   return e > this ;
+// }, mainlocation);
 
-console.log(check);
-
+// console.log(check);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Spread Syntax And Use Cases) : 
+
+// //spread with string => expand string
+
+// console.log("Saif");
+// console.log(..."Saif");
+// console.log([..."Saif"]);
+
+// // concatenate arrays   
+
+// let myArray1 = [1, 2, 3];
+// let myArray2 = [4, 5, 6];
+
+// let allArrays = [...myArray1, ...myArray2];
+// console.log(allArrays);
+
+// // copy array 
+
+// let copiedarray = [...myArray1];
+// console.log(copiedarray);
+
+// // push inside array 
+
+// let allfriends = ["saif", "zaid", "jack"];
+// let friendsthisyear = ["fahed", "shahem"];
+
+// allfriends.push("fahed", "shahem");
+// // allfriends.push(...friendsthisyear); // we use three dot (...) to focus inside array >>>> friendsthisyear
+
+// console.log(allfriends);
+
+// // use with math object 
+
+// let myNums = [10, 100 ,1000 , -100 , -10]; 
+// console.log(Math.max(10, 100 ,1000 , -100 , -10));  // first way without focus inside in myNums
+// console.log(Math.max(...myNums)); // second way inside the myNums by used three dot ... 
+
+// //  spread with objects => merge objects
+
+// let objone = {
+//   a: 1,
+//   b: 2,
+// };
+
+// let objtwo = {
+//   c: 3,
+//   d: 4,
+// };
+
+// console.log({...objone, ...objtwo});
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// (Map And Set Challenge) : 
