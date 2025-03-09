@@ -1826,41 +1826,92 @@ Practice
 // let tldre = /(info|org|io)/i;   //re >>> regular expressions
 // console.log(tld.match(tldre));
 
-let tld = "Com Net Org Info Code Io";
-let tldre = /(info|org|io)/ig;
-console.log(tld.match(tldre));  
+// let tld = "Com Net Org Info Code Io";
+// let tldre = /(info|org|io)/ig;
+// console.log(tld.match(tldre));  
 
-let nums = "12345678910";
-let numsre = /[0-9]/ig;
-console.log(nums.match(numsre));
+// let nums = "12345678910";
+// let numsre = /[0-9]/ig;
+// console.log(nums.match(numsre));
 
-let nums1 = "12345678910";
-let numsre1 = /[0-3]/g;
-console.log(nums1.match(numsre1));
+// let nums1 = "12345678910";
+// let numsre1 = /[0-3]/g;
+// console.log(nums1.match(numsre1));
 
-let notNums = "12345678910"; //  Not ^
-let notNumsRe = /[^0-3]/ig;  // Here that mean i need all numbers without from [ 0 - 3 ]
-console.log(notNums.match(notNumsRe));
+// let notNums = "12345678910"; //  Not ^
+// let notNumsRe = /[^0-3]/ig;  // Here that mean i need all numbers without from [ 0 - 3 ]
+// console.log(notNums.match(notNumsRe));
 
-let specialNums = "1!2@3#4$5%678910";
-let specialNumsRe = /[^0-9]/g;
-console.log(specialNums.match(specialNumsRe));
+// let specialNums = "1!2@3#4$5%678910";
+// let specialNumsRe = /[^0-9]/g;
+// console.log(specialNums.match(specialNumsRe));
 
-let practice = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
-let practiceRe = /[5-9]/g;
-console.log(practice.match(practiceRe));
+// let practice = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
+// let practiceRe = /[5-9]/g;
+// console.log(practice.match(practiceRe));
 
-let practice1 = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
-let practiceRe1 = /sa[5-9]/g;
-console.log(practice1.match(practiceRe1));
+// let practice1 = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
+// let practiceRe1 = /sa[5-9]/g;
+// console.log(practice1.match(practiceRe1));
 
-let practice2 = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
-let practiceRe2 = /sa[5-9]a/g;
-console.log(practice2.match(practiceRe2));
+// let practice2 = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
+// let practiceRe2 = /sa[5-9]a/g;
+// console.log(practice2.match(practiceRe2));
 
-let practice3 = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
-let practiceRe3 = /sa[5-9]sa/g;
-console.log(practice3.match(practiceRe3));
+// let practice3 = "sa1 sa2 sa3 sa4 sa8 sa9 sa8a sa8sa sa9sa";
+// let practiceRe3 = /sa[5-9]sa/g;
+// console.log(practice3.match(practiceRe3));
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // (Regular Expressions - Ranges Part 2)  : 137
+/*
+---Part-2 
+[a-z] 
+[^a-z] 
+[A-Z] 
+[^A-Z] 
+[abc] 
+[^abc]
+*/
+
+
+let myString = "AaBbcdefG123!234%^&*";
+
+let atozsmall = /[a-z]/g;  // [a-z] 
+
+let notatozsmall = /[^a-z]/g;   // [^a-z] 
+
+let AtoZcapital = /[A-Z]/g;  // [A-Z] 
+
+let notAtoZcapital = /[^A-Z]/g;   // [^A-Z]  
+
+let aANDcANDe = /[ace]/g;  // [abc] 
+
+let notaANDcANDe = /[^ace]/g;  // [^abc] 
+
+let lettersCapsAndSmall = /[a-zA-Z]/g;  // [a-zA-Z] 
+
+let numsAndSpecials = /[^a-zA-Z]/g;  // [^a-zA-Z] 
+
+let Specials = /[^a-zA-Z0-9]/g;  // [^a-zA-Z0-9] 
+
+let Specials1 = /[^a-z^A-Z0-9]/g;  // [^a-z^A-Z0-9] 
+
+let Specials2 = /[^a-z^A-Z^0-9]/g;  // [^a-z^A-Z^0-9]  
+
+console.log(myString.match(atozsmall));
+console.log(myString.match(notatozsmall));
+console.log(myString.match(AtoZcapital));
+console.log(myString.match(notAtoZcapital));
+console.log(myString.match(aANDcANDe));
+console.log(myString.match(notaANDcANDe));
+console.log(myString.match(lettersCapsAndSmall));
+console.log(myString.match(numsAndSpecials));
+console.log(myString.match(Specials));
+console.log(myString.match(Specials1));
+console.log(myString.match(Specials2));
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Regular Expressions - Character Classes Part 1) : 138
+
+
