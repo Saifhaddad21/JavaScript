@@ -1925,22 +1925,50 @@ Character Classes
 \S => matches non whitespace character. 
 */
 
-let email = 'O@@@g...com O@g.com O@g.net A@Y.com-o-g.com-o@s.org 1@1.com'; 
-let dot=/./g; 
-let word = /\W/g; 
-let word1 = /\w/g; 
-let valid = /\w@/g; 
-let valid1 = /\w@\w/g; 
-let valid2 = /\w@\w.com/g; 
-let valid3 = /\w@\w.(com|net)/g; 
+// let email = 'O@@@g...com O@g.com O@g.net A@Y.com-o-g.com-o@s.org 1@1.com'; 
+// let dot=/./g; 
+// let word = /\W/g; 
+// let word1 = /\w/g; 
+// let valid = /\w@/g; 
+// let valid1 = /\w@\w/g; 
+// let valid2 = /\w@\w.com/g; 
+// let valid3 = /\w@\w.(com|net)/g; 
 
-console.log(email.match(dot)); 
-console.log(email.match(word));
-console.log(email.match(word1));
-console.log(email.match(valid));
-console.log(email.match(valid1));
-console.log(email.match(valid2));
-console.log(email.match(valid3));
+// console.log(email.match(dot)); 
+// console.log(email.match(word));
+// console.log(email.match(word1));
+// console.log(email.match(valid));
+// console.log(email.match(valid1));
+// console.log(email.match(valid2));
+// console.log(email.match(valid3));
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Regular Expressions - Character Classes Part 2)  : 
+/*
+Regular Expression 
+Character Classes 
+\b => matches at the beginning or end of a word. 
+\B => matches NOT at the beginning/end of a word. 
+Test Method 
+pattern.test(input) 
+
+*/
+
+let names = "Sayed 1Spam 25pam 3Spam Spam4 Spam5 Osama Ahmed";
+
+let re = /(\bSpam)/g ; 
+console.log(names.match(re));
+
+let re1 = /(\bSpam|spam\b)/gi ; 
+console.log(names.match(re1));
+
+console.log(re1.test(names));
+console.log(/(\bSpam|spam\b)/gi .test("saif"));
+console.log(/(\bSpam|spam\b)/gi .test("1Spam"));
+console.log(/(\bSpam|spam\b)/gi .test("1Spam1"));
+console.log(/(\bSpam|spam\b)/gi .test("Spam1"));
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Regular Expressions - Quantifiers Part 1)   : 
+
