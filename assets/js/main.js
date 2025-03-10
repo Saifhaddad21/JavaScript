@@ -1972,57 +1972,74 @@ pattern.test(input)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Regular Expressions - Quantifiers Part 1)   : 
 
-let mails = "o@nn.sa osama@gmail.com elzero@gmail.net osama@gmail.ru"; //All Emails 
-let mailsRe = /(\w@\w\w.sa)/ig;
-console.log(mails.match(mailsRe));
+// let mails = "o@nn.sa osama@gmail.com elzero@gmail.net osama@gmail.ru"; //All Emails 
+// let mailsRe = /(\w@\w\w.sa)/ig;
+// console.log(mails.match(mailsRe));
 
-let mailsRe1 = /(\w+@)/ig;
-console.log(mails.match(mailsRe1));
+// let mailsRe1 = /(\w+@)/ig;
+// console.log(mails.match(mailsRe1));
 
-let mailsRe2 = /(\w+@\w+.sa)/ig;
-console.log(mails.match(mailsRe2));
+// let mailsRe2 = /(\w+@\w+.sa)/ig;
+// console.log(mails.match(mailsRe2));
 
-let mailsRe3 = /(\w+@\w+)/ig;
-console.log(mails.match(mailsRe3));
+// let mailsRe3 = /(\w+@\w+)/ig;
+// console.log(mails.match(mailsRe3));
 
-let mailsRe4 = /(\w+@\w+.(com|net))/ig;
-console.log(mails.match(mailsRe4));
+// let mailsRe4 = /(\w+@\w+.(com|net))/ig;
+// console.log(mails.match(mailsRe4));
 
-let mailsRe5 = /(\w+@\w+.\w+)/ig;
-console.log(mails.match(mailsRe5));
-///////////////////////////////////////
-console.log("#".repeat(30));
-///////////////////////////////////////
-let nums = "0110 10 150 05120 0560 350 00";
-let numsRe = /(0\d0)/ig; // // here the output is null because we dont have a number at start 0 and the end 0 and in th center just a one number . 
-console.log(nums.match(numsRe));
+// let mailsRe5 = /(\w+@\w+.\w+)/ig;
+// console.log(mails.match(mailsRe5));
+// ///////////////////////////////////////
+// console.log("#".repeat(30));
+// ///////////////////////////////////////
+// let nums = "0110 10 150 05120 0560 350 00";
+// let numsRe = /(0\d0)/ig; // // here the output is null because we dont have a number at start 0 and the end 0 and in th center just a one number . 
+// console.log(nums.match(numsRe));
 
-let numsRe1 = /(0\d+0)/ig;
-console.log(nums.match(numsRe1));
+// let numsRe1 = /(0\d+0)/ig;
+// console.log(nums.match(numsRe1));
 
-let numsRe2 = /(0\d*0)/ig;  // we use * to get the all number that in the start and end zero also if we dont have a number in the center .
-console.log(nums.match(numsRe2));
-///////////////////////////////////////
-console.log("#".repeat(30));
-///////////////////////////////////////
-let url = "https://google.com http://www.website.net web.com"; // http + https
-let urlRe = /(https)/ig;
-console.log(url.match(urlRe));
+// let numsRe2 = /(0\d*0)/ig;  // we use * to get the all number that in the start and end zero also if we dont have a number in the center .
+// console.log(nums.match(numsRe2));
+// ///////////////////////////////////////
+// console.log("#".repeat(30));
+// ///////////////////////////////////////
+// let url = "https://google.com http://www.website.net web.com"; // http + https
+// let urlRe = /(https)/ig;
+// console.log(url.match(urlRe));
 
-let urlRe1 = /(https?)/ig;
-console.log(url.match(urlRe1));
+// let urlRe1 = /(https?)/ig;
+// console.log(url.match(urlRe1));
 
-let urlRe2 = /(https?:\/\/)/ig;
-console.log(url.match(urlRe2));
+// let urlRe2 = /(https?:\/\/)/ig;
+// console.log(url.match(urlRe2));
 
-let urlRe3 = /(https?:\/\/(www.))/ig;
-console.log(url.match(urlRe3));
+// let urlRe3 = /(https?:\/\/(www.))/ig;
+// console.log(url.match(urlRe3));
 
-let urlRe4 = /(https?:\/\/(www.)?)/ig;
-console.log(url.match(urlRe4));
+// let urlRe4 = /(https?:\/\/(www.)?)/ig;
+// console.log(url.match(urlRe4));
 
-let urlRe5 = /(https?:\/\/(www.)?\w+.\w+)/ig;
-console.log(url.match(urlRe5));
+// let urlRe5 = /(https?:\/\/(www.)?\w+.\w+)/ig;
+// console.log(url.match(urlRe5));
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 // (Regular Expressions - Quantifiers Part 2)  : 
+
+/*
+Regular Expression 
+Quantifiers 
+n{x}=> Number of 
+n{x,y} => Range 
+n{x,}=> At Least x 
+*/
+
+let serials = "S100S S3000 S50000S S950000S";
+
+console.log(serials.match(/s\d{3}s/ig)); // S[Three Number]S 
+console.log(serials.match(/s\d{4,5}s/ig)); // S[Four-Or Five Number]S 
+console.log(serials.match(/s\d{4,}s/ig)); // S[At Least Four]5
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// (Regular Expressions - Quantifiers Part 3)  : 
