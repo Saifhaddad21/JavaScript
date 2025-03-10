@@ -2053,18 +2053,38 @@ $  => End With Something
 ?! => Not Followed By Something
 */
 
-let myString = "we love programming";
-let names = "10saif mhanna naeem haddad";
+// let myString = "we love programming";
+// let names = "10saif mhanna naeem haddad";
 
-console.log(/(ing$)/ig.test(myString));
-console.log(/(^we)/ig.test(myString));
-console.log(/(ad$)/ig.test(names));
-console.log(/(^10)/ig.test(names));
-console.log(/(^\d)/ig.test(names));
-console.log(/(^\w)/ig.test(names));
+// console.log(/(ing$)/ig.test(myString));
+// console.log(/(^we)/ig.test(myString));
+// console.log(/(ad$)/ig.test(names));
+// console.log(/(^10)/ig.test(names));
+// console.log(/(^\d)/ig.test(names));
+// console.log(/(^\w)/ig.test(names));
 
 
 //////////////////////////////////////////////////////////////////////////////////////
 // (Regular Expressions - Replace With Pattern)   : 
+/*
+--Regular Expressions
 
+----Replace
+----ReplaceAll
+*/
+
+let text = "We Love Programming And @ Because @ Is Amazing";
+
+console.log(text.replace("@", "Java Script")); 
+console.log(text.replaceAll("@", "Java Script")); 
+
+let re = /(@)/ig;
+
+console.log(text.replace(re, "Java Script")); 
+console.log(text.replaceAll(re, "Java Script")); 
+console.log(text.replaceAll(/(@)/ig, "Java Script"));   
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// ( Regular Expressions - Form Validation)  :
 
