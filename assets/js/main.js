@@ -2035,11 +2035,36 @@ n{x,y} => Range
 n{x,}=> At Least x 
 */
 
-let serials = "S100S S3000 S50000S S950000S";
+// let serials = "S100S S3000 S50000S S950000S";
 
-console.log(serials.match(/s\d{3}s/ig)); // S[Three Number]S 
-console.log(serials.match(/s\d{4,5}s/ig)); // S[Four-Or Five Number]S 
-console.log(serials.match(/s\d{4,}s/ig)); // S[At Least Four]5
+// console.log(serials.match(/s\d{3}s/ig)); // S[Three Number]S 
+// console.log(serials.match(/s\d{4,5}s/ig)); // S[Four-Or Five Number]S 
+// console.log(serials.match(/s\d{4,}s/ig)); // S[At Least Four]5
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // (Regular Expressions - Quantifiers Part 3)  : 
+/*
+  Regular Expression 
+  
+Quantifiers 
+$  => End With Something 
+^  => Start With Something 
+?= => Followed By Something 
+?! => Not Followed By Something
+*/
+
+let myString = "we love programming";
+let names = "10saif mhanna naeem haddad";
+
+console.log(/(ing$)/ig.test(myString));
+console.log(/(^we)/ig.test(myString));
+console.log(/(ad$)/ig.test(names));
+console.log(/(^10)/ig.test(names));
+console.log(/(^\d)/ig.test(names));
+console.log(/(^\w)/ig.test(names));
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+// (Regular Expressions - Replace With Pattern)   : 
+
+
