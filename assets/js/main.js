@@ -613,18 +613,18 @@ Object
 
 //////////////////////////////////////////////////////////////////////////////////////////
 /*
-Function this Keyword 
-    this Introduction 
-  - this Inside Object Method 
- ---When a function is called as a method of an object, 
-    its this is set to the object the method is called on. 
-    Global Object 
-  - Test Variables With Window And This 
-    Global Context 
-    Function Context 
+Function this Keyword
+    this Introduction
+  - this Inside Object Method
+ ---When a function is called as a method of an object,
+    its this is set to the object the method is called on.
+    Global Object
+  - Test Variables With Window And This
+    Global Context
+    Function Context
 
-Search 
-Strict Mode 
+Search
+Strict Mode
 */
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -653,13 +653,13 @@ Strict Mode
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 // (What Is DOM And Select Elements)
-/*DOM 
-What Is DOM 
-DOM Selectors 
-Find Element By ID 
-Find Element By Tag Name 
-Find Element By Class Name 
-Find Element By CSS Selectors 
+/*DOM
+What Is DOM
+DOM Selectors
+Find Element By ID
+Find Element By Tag Name
+Find Element By Class Name
+Find Element By CSS Selectors
 Find Element By Collection
 title
 body
@@ -672,12 +672,12 @@ links
 
 //////////////////////////////////////////////////////////////////////////////////
 
-// DOM [Create Elements] 
-// - -createElement 
-//    createComment 
-//    createTextNode 
-//    createAttribute 
-// //    appendChild 
+// DOM [Create Elements]
+// - -createElement
+//    createComment
+//    createTextNode
+//    createAttribute
+// //    appendChild
 
 
 // let myelement = document.createElement("div");
@@ -690,7 +690,7 @@ links
 // console.log(myelement);
 ////////////////////////////////////////////////////////////////////////////////////////
 
-// (Get Set Elements Content And Attributes) 
+// (Get Set Elements Content And Attributes)
 
 // let myElement = document.querySelector(".js");
 
@@ -711,13 +711,13 @@ links
 // myelement.setAttributeNode(myattr);
 // myelement.setAttribute("data-test", "testing");
 
-// // Append Comment To Element 
+// // Append Comment To Element
 // myelement.appendChild(mycomment);
 
-// // Append Text To Element 
+// // Append Text To Element
 // myelement.appendChild(mytext);
 
-// // Append Element To Body 
+// // Append Element To Body
 // document.body.appendChild(myelement);
 
 // // console.log(myelement);
@@ -736,7 +736,7 @@ practice products with heading and paragraph
 // let myHeadingText = document.createTextNode("Product Title");
 // let myParagraphText = document.createTextNode("Product Description");
 
-// // Add Heading Text 
+// // Add Heading Text
 // myHeading.appendChild(myHeadingText);
 // // Add Heading To Main Elements
 // myMainElement.appendChild(myHeading);
@@ -754,12 +754,12 @@ practice products with heading and paragraph
 // (Deal With Childrens)
 /*
 DOM [deal with childrens]
--children 
+-children
 -childnodes
--firstchild 
--lastchild 
--firstelementchild 
--lastelementchild 
+-firstchild
+-lastchild
+-firstelementchild
+-lastelementchild
 */
 
 // let myelement = document.querySelector("div");
@@ -777,20 +777,20 @@ DOM [deal with childrens]
 /////////////////////////////////////////////////////////
 // // (DOM Events)
 // /*
-// DOM [Events] 
-// --Use Events On HTML 
-// --Use Events On JS 
-// ----onclick 
-// ----oncontextmenu 
-// ----onmouseenter 
-// ----onmouseleave 
+// DOM [Events]
+// --Use Events On HTML
+// --Use Events On JS
+// ----onclick
+// ----oncontextmenu
+// ----onmouseenter
+// ----onmouseleave
 
-// ----onload 
-// ----onscroll 
-// ----onresize 
+// ----onload
+// ----onscroll
+// ----onresize
 
-// ----onfocus 
-// ----onblur 
+// ----onfocus
+// ----onblur
 // ----onsubmit
 // */
 
@@ -798,7 +798,7 @@ DOM [deal with childrens]
 
 // // mybtn.onclick = function () {
 // // console.log("clicked");
-// // }; 
+// // };
 
 
 // // mybtn.oncontextmenu = function () {
@@ -822,7 +822,7 @@ DOM [deal with childrens]
 // };
 
 ////////////////////////////////////////////////////////////////
-// // (Validate Form And Prevent Default)  
+// // (Validate Form And Prevent Default)
 
 // let userinput = document.querySelector("[name='username']");
 // let ageinput = document.querySelector("[name='age']");
@@ -841,7 +841,7 @@ DOM [deal with childrens]
 //   }
 
 //   if (ageinput.value !== "") {
-//   agevalid = true ; 
+//   agevalid = true ;
 //   }
 
 
@@ -859,23 +859,23 @@ DOM [deal with childrens]
 //////////////////////////////////////////////////////////////////////
 // (CSS Styling And Stylesheets)
 /*
-DOM [CSS] 
---style 
---cssText 
---removeProperty (propertyName) [Inline, Stylesheet] 
-- setProperty(propertyName, value, priority) 
+DOM [CSS]
+--style
+--cssText
+--removeProperty (propertyName) [Inline, Stylesheet]
+- setProperty(propertyName, value, priority)
 */
 
 
-// let element = document.getElementById("my-div"); 
+// let element = document.getElementById("my-div");
 
-// element.style.color = "red"; 
-// element.style.fontWeight = "bold"; 
+// element.style.color = "red";
+// element.style.fontWeight = "bold";
 
-// element.style.cssText = "font-weight: bold; color: green; opacity: 0.9"; 
+// element.style.cssText = "font-weight: bold; color: green; opacity: 0.9";
 
-// element.style.removeProperty("color"); 
-// element.style.setProperty("font-size", "40px", "important"); 
+// element.style.removeProperty("color");
+// element.style.setProperty("font-size", "40px", "important");
 
 // document.styleSheets[0].rules[0].style.removeProperty("line-height");
 // document.styleSheets[0].rules[0].style.setProperty("background-color", "red", "important");
@@ -884,13 +884,13 @@ DOM [CSS]
 
 // (CSS Styling And Stylesheets)
 
-/* 
-DOM [Deal With Elements] 
---before [Element || String] 
---after [Element || String] 
---append [Element || String] 
---prepend [Element || String] 
---remove 
+/*
+DOM [Deal With Elements]
+--before [Element || String]
+--after [Element || String]
+--append [Element || String]
+--prepend [Element || String]
+--remove
 */
 
 // let element = document.getElementById("my-div");
@@ -906,9 +906,9 @@ DOM [Deal With Elements]
 // element.prepend(" Hello From JS Before  >>>");
 
 // element.append("createdp");
-// element.prepend("createdp"); 
+// element.prepend("createdp");
 
-// ////remove :: 
+// ////remove ::
 
 // element.remove();
 // createdp.remove();
@@ -916,12 +916,12 @@ DOM [Deal With Elements]
 //////////////////////////////////////////////////////////////////////////////
 // (DOM Traversing)
 /*
-DOM [Traversing] 
----nextSibling 
----previousSibling 
----nextElementSibling 
----previousElementSibling 
----parentElement 
+DOM [Traversing]
+---nextSibling
+---previousSibling
+---nextElementSibling
+---previousElementSibling
+---parentElement
 */
 
 // let span = document.querySelector(".two");
@@ -939,19 +939,19 @@ DOM [Traversing]
 //////////////////////////     /////////////////////////////// //////////////////
 // (  What Is BOM? )
 /*BOM[Browser Object Model]
-Introduction 
-Window Object Is The Browser Window 
-Window Contain The Document Object 
-All Global Variables And Objects And Functions Are Members Of Window Object 
-Test Document And Console 
+Introduction
+Window Object Is The Browser Window
+Window Contain The Document Object
+All Global Variables And Objects And Functions Are Members Of Window Object
+Test Document And Console
 What Can We Do With Window Object ?
-  Open Window 
-Close Window 
-Move Window 
-Resize Window 
-Print Document 
-Run Code After Period Of Time Once Or More 
-Fully Control The URL 
+  Open Window
+Close Window
+Move Window
+Resize Window
+Print Document
+Run Code After Period Of Time Once Or More
+Fully Control The URL
 Save Data Inside Browser To Use Later
   */
 
@@ -961,22 +961,22 @@ Save Data Inside Browser To Use Later
 //////////////////////////////////////////////////////////////////
 // ( setTimeout and clearTimeout )
 /*
-BOM [Browser Object-Model] 
-setTimeout(Function, Timeout, Additional Params) 
-clearTimeout(Identifier) 
+BOM [Browser Object-Model]
+setTimeout(Function, Timeout, Additional Params)
+clearTimeout(Identifier)
 */
 
 // setTimeout(function () {
 //   console.log("msg");
 // }, 3000);
 
-// /////hello part one 
+// /////hello part one
 // setTimeout(saymsg, 3000);
 
 // function saymsg() {
 //   console.log("Hello java after 3 sec .")
 // }
-// //     hello part two 
+// //     hello part two
 
 
 // setTimeout(saymsg, 3000, "Saif", 25);
@@ -1002,14 +1002,14 @@ clearTimeout(Identifier)
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-// Local Storage : 
+// Local Storage :
 
-// setItem : 
+// setItem :
 // window.localStorage.setItem("color", "red");
 // window.localStorage.fontWeight = "bold";
 // window.localStorage["fontSize"] = "20px";
 
-// //getItem : 
+// //getItem :
 // console.log(window.localStorage.getItem("color"));
 // console.log(window.localStorage.color);
 // console.log(window.localStorage["color"]);
@@ -1020,12 +1020,12 @@ clearTimeout(Identifier)
 // //clear all :
 // // window.localStorage.clear("color");
 
-// //get key : 
-// console.log(window.localStorage.key(0)); 
+// //get key :
+// console.log(window.localStorage.key(0));
 // local storage color application practice :
 
 
-// //set color in page : 
+// //set color in page :
 // document.body.style.background = window.localStorage.color ;
 
 
@@ -1039,15 +1039,15 @@ clearTimeout(Identifier)
 // let lis = document.querySelectorAll("ul li");
 // let exp = document.querySelector(".experiment");
 
-// // window.localStorage.clear(); 
+// // window.localStorage.clear();
 
 // if (window.localStorage.getItem("color") ) {
 //    // if there is color in local storage :
-//    // [1] add color to div 
+//    // [1] add color to div
 //   exp.style.backgroundColor = window.localStorage.getItem("color");
-//   // [2]  // remove activae class from all lis : 
+//   // [2]  // remove activae class from all lis :
 //     lis.forEach((li) => {
-//       li.classList.remove("active"); 
+//       li.classList.remove("active");
 //     });
 //     // [3] add active class to current color :
 //     document.querySelector(`[data-color="${window.localStorage.getItem("color")}"]`).classList.add("active");
@@ -1056,23 +1056,23 @@ clearTimeout(Identifier)
 // };
 
 // lis.forEach((li) => {
-//   li.addEventListener("click", (e) =>{ 
+//   li.addEventListener("click", (e) =>{
 //     // console.log(e.currentTarget.dataset.color);
-//     // remove activae class from all lis : 
+//     // remove activae class from all lis :
 //     lis.forEach((li) => {
-//       li.classList.remove("active"); 
+//       li.classList.remove("active");
 //     });
 //     // add active class to current element :
 //     e.currentTarget.classList.add("active");
 //     // add current color to local storge :
 //     window.localStorage.setItem("color", e.currentTarget.dataset.color);
-//     // change div background color : 
+//     // change div background color :
 //     exp.style.backgroundColor = e.currentTarget.dataset.color;
 //   });
-// }); 
+// });
 
 ////////////////////////////////////////////////////////////////////
-// (Destructuring Arrays Part 1) : 
+// (Destructuring Arrays Part 1) :
 
 // let a = 1;
 // let b = 2;
@@ -1097,11 +1097,11 @@ clearTimeout(Identifier)
 // console.log(z);
 
 ///////////////////////////////////////////////////////////////////////
-// (Destructuring Arrays Part 2) : 
+// (Destructuring Arrays Part 2) :
 
 // let myfriends = ["saif", "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
 
-// // console.log(myfriends[2][1][1]); 
+// // console.log(myfriends[2][1][1]);
 
 // // let ["saif", "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
 // // let [ , "zaid", ["jack", ["naeem", "mosaa"], "mhanna"]];
@@ -1112,24 +1112,24 @@ clearTimeout(Identifier)
 
 // let [, , [ ,  [a,b]]] = myfriends;  // we want print naeem and osama   <<
 
-// console.log(a);  
-// console.log(b);  
+// console.log(a);
+// console.log(b);
 
 ////////////////////////////////////////////////////////////////////
-// ( Destructuring Arrays Part 3 - Swap Variables ) : 
+// ( Destructuring Arrays Part 3 - Swap Variables ) :
 
 //   let book = "video";
-//   let video = "book"; 
+//   let video = "book";
 
 //   /////the first way but the hard ::
-// // save book value in stash 
-//   // let stash = book ; 
+// // save book value in stash
+//   // let stash = book ;
 
-//   // // change book value 
+//   // // change book value
 //   // book = video ;
 
 //   // // change video value
-//   // video = stash;   
+//   // video = stash;
 
 // ////this the second way the easy (destructuring way)
 //   [book, video] = [video, book];
@@ -1138,8 +1138,8 @@ clearTimeout(Identifier)
 //   console.log(video);
 
 ///////////////////////////////////////////////////////////////////
-// (destructuring objects part 1)  : 
-//   const user = { 
+// (destructuring objects part 1)  :
+//   const user = {
 //     theName : "saif",
 //     theAge : 25,
 //     theTitle : "Developer",
@@ -1169,7 +1169,7 @@ clearTimeout(Identifier)
 //   console.log(theCountry);
 
 /////////////////////////////////////////////////////////////////////////
-// ( Destructuring Objects Part 2) : 
+// ( Destructuring Objects Part 2) :
 
 // const user = {
 //   theName: "saif",
@@ -1203,7 +1203,7 @@ clearTimeout(Identifier)
 
 // const user = {
 //   theName : "saif" ,
-//   theAge : 25 , 
+//   theAge : 25 ,
 //   skills : {
 //     html: 80,
 //     css: 70,
@@ -1227,9 +1227,9 @@ clearTimeout(Identifier)
 // }
 
 ////////////////////////////////////////////////////////////////////////////////
-// (Destructuring Mixed Content) : 
+// (Destructuring Mixed Content) :
 
-// const user = { 
+// const user = {
 //   theName : "saif",
 //   theAge : 25,
 //   skills : ["html", "css", "js"],
@@ -1241,9 +1241,9 @@ clearTimeout(Identifier)
 
 // const {
 //   theName : a ,
-//   theAge : b, 
+//   theAge : b,
 //   skills : [one , two , three],
-//   addresses : {jordan  : j} 
+//   addresses : {jordan  : j}
 // } = user;
 
 // console.log(`your name is : ${a}`);
@@ -1256,11 +1256,11 @@ clearTimeout(Identifier)
 // console.log(`your live in : ${j}`);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Set Data Types And Methods) : 
+// (Set Data Types And Methods) :
 
 // let myData = [1, 1, 1 ,2 ,3] ;
 
-// //[1] : add 
+// //[1] : add
 // // let myUniqueData = new Set([1, 1, 1,2 ,3]);
 // // let myUniqueData = new Set(myData);
 // // let myUniqueData = new Set().add(1).add(1).add(1).add(2).add(3);
@@ -1284,14 +1284,14 @@ clearTimeout(Identifier)
 // console.log(myUniqueData.size);
 
 // ///[3] : clear
-// myUniqueData.clear(); 
+// myUniqueData.clear();
 
 // console.log(myUniqueData);
 // console.log(myUniqueData.size);
 
 //[4] : has
 
-///// ***false 
+///// ***false
 // let myData = [1, 1, 1, 2, 3, "A"];
 
 // let myUniqueData = new Set();
@@ -1320,7 +1320,7 @@ clearTimeout(Identifier)
 // myUniqueData.add(1).add(1).add(1).add(2).add(3).add("A");
 
 
-// console.log(`is set has => ${myUniqueData.has("a".toUpperCase())}`); //here we have a different letter (a) 
+// console.log(`is set has => ${myUniqueData.has("a".toUpperCase())}`); //here we have a different letter (a)
 
 ////// **to make true
 // let myData = [1, 1, 1, 2, 3, "A"];
@@ -1335,7 +1335,7 @@ clearTimeout(Identifier)
 // ( Set vs WeakSet And Garbage Collector) : 124
 
 // //   Set      =>  Can Store Any Data Values .
-// //   WeakSet  =>  Collection Of Objects Only . 
+// //   WeakSet  =>  Collection Of Objects Only .
 
 // // type of data : [set]
 // let mySet = new Set([1, 1, 1, 2, 3, "A", "A"]);
@@ -1349,7 +1349,7 @@ clearTimeout(Identifier)
 // let iterator = mySet.keys();
 
 // console.log(iterator);
-// console.log(iterator.next());  //here false 
+// console.log(iterator.next());  //here false
 
 // console.log(iterator.next().value);
 // console.log(iterator.next().value);
@@ -1365,7 +1365,7 @@ clearTimeout(Identifier)
 // console.log("#".repeat(20));
 
 // // type of data : [weakset]
-// // let myws = new WeakSet([1, 1, 1, 2, 3, "A", "A"]);// (obj) هون راح يعطينا خطأ لانه بستنا منا نعطيه 
+// // let myws = new WeakSet([1, 1, 1, 2, 3, "A", "A"]);// (obj) هون راح يعطينا خطأ لانه بستنا منا نعطيه
 
 // // console.log(myws);
 
@@ -1379,7 +1379,7 @@ clearTimeout(Identifier)
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Map Data Type Vs Object) : 
+// (Map Data Type Vs Object) :
 
 // let myObject = {};
 // let myEmptyObject = Object.create(null);
@@ -1405,7 +1405,7 @@ clearTimeout(Identifier)
 
 // console.log(myNewObject[10]);
 
-// // new map : 
+// // new map :
 // let myNewMap = new Map ();
 
 // myNewMap.set(10, "number");
@@ -1423,17 +1423,17 @@ clearTimeout(Identifier)
 // console.log(myNewMap);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-// // (Map Methods) : 
+// // (Map Methods) :
 
-// //map data type : 
+// //map data type :
 // // --methods
-// // -----get 
+// // -----get
 // // -----set
 // // -----delete
 // // -----clear
 // // -----has
 
-// // --properities  
+// // --properities
 // // --------size
 
 // let myMap = new Map([
@@ -1471,7 +1471,7 @@ clearTimeout(Identifier)
 //////////////////////////////////////////////////////////////////////////////////////////////
 // // (Map Vs WeakMap) : 127
 
-// // Map     => Key Can Be Anything 
+// // Map     => Key Can Be Anything
 // // WeakMap => Key Can Be Object Only
 
 // let user = {theName: "Saif"};
@@ -1480,7 +1480,7 @@ clearTimeout(Identifier)
 
 // myMap.set(user, "object value");
 
-// user = null ; //override the reference 
+// user = null ; //override the reference
 
 // console.log(myMap);
 // ////////////////
@@ -1491,45 +1491,45 @@ clearTimeout(Identifier)
 
 // let myWeakMap = new WeakMap();
 
-// myWeakMap.set(wMapUser, "object value"); 
+// myWeakMap.set(wMapUser, "object value");
 
-// wMapUser = null ; //override the reference 
+// wMapUser = null ; //override the reference
 
 // console.log(myWeakMap);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// (Array.from Method) : 
+// (Array.from Method) :
 
 /*
---Array Methods 
-----Array.from(Iterable, MapFunc, This) 
----------Variable 
----------String Numbers 
----------Set 
----------Using The Map Function 
----------Arrow Function 
+--Array Methods
+----Array.from(Iterable, MapFunc, This)
+---------Variable
+---------String Numbers
+---------Set
+---------Using The Map Function
+---------Arrow Function
 ---------Shorten The Method + Use argument's
 */
 
 // console.log(Array.from("saif"));
 // console.log(Array.from("12345"));
 
-// console.log(Array.from("12345", function (n) {  //n = number 
+// console.log(Array.from("12345", function (n) {  //n = number
 //   return +n + +n;
 // })
 // );
 
-// console.log(Array.from("12345", (n) => +n + +n));// second way (arrow function)  >>the same result 
+// console.log(Array.from("12345", (n) => +n + +n));// second way (arrow function)  >>the same result
 
-// ////example : 
+// ////example :
 
-// let myArray = [1, 1, 1, 2, 3, 4]; 
+// let myArray = [1, 1, 1, 2, 3, 4];
 
 // let mySet = new Set(myArray);
 
-// console.log(mySet);  // the first way 
+// console.log(mySet);  // the first way
 
-// console.log(Array.from(mySet)); // the second way 
+// console.log(Array.from(mySet)); // the second way
 
 // console.log([...new Set(myArray)]);  // the third way and its the important one and the easier (this is in the future)
 
@@ -1564,23 +1564,23 @@ clearTimeout(Identifier)
 // //
 // // myArray.copyWithin(1, -2); //  10, 'A', 'B', 40, 50, 'A', 'B' // here that mean include from the last two to the end all include ('A', 'B')
 
-// myArray.copyWithin(1, -2, -1); // 10, "A", 30, 40, 50, "A", "B" // here we add -1 in the end to remove B (not include ) 
+// myArray.copyWithin(1, -2, -1); // 10, "A", 30, 40, 50, "A", "B" // here we add -1 in the end to remove B (not include )
 
 // console.log(myArray);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Array.some Method) : 
+// (Array.some Method) :
 /*
---Array Methods 
-----Array.some (CallbackFunc (Element, Index, Array), This Argument) 
------CallbackFunc => Function To Run On Every Element On The Given Array 
--------Element => The Current Element To Process 
--------Index => Index Of Current Element 
--------Array => The Current Array Working With 
------This Argument => Value To Use As This When Executing CallbackFunc 
---Using 
------Check if Element Exists In Array 
+--Array Methods
+----Array.some (CallbackFunc (Element, Index, Array), This Argument)
+-----CallbackFunc => Function To Run On Every Element On The Given Array
+-------Element => The Current Element To Process
+-------Index => Index Of Current Element
+-------Array => The Current Array Working With
+-----This Argument => Value To Use As This When Executing CallbackFunc
+--Using
+-----Check if Element Exists In Array
 -----Check If Number In Range
 */
 
@@ -1589,29 +1589,29 @@ clearTimeout(Identifier)
 // // let myNumber = 5;
 
 // // let myNumber1 = 10;
-// // let check = nums.some(function (e) {    // the first way 
+// // let check = nums.some(function (e) {    // the first way
 // //   console.log("test");
 // //   return e > 4;
 // // });
 
 
-// // let check = nums.some(function (e) {    
+// // let check = nums.some(function (e) {
 // //   console.log(this);     //  the world of (this) will print window
 // //   return e > 5;
 // // });
 
-// // let check = nums.some(function (e) {    
-// //   console.log(this);     
+// // let check = nums.some(function (e) {
+// //   console.log(this);
 // //   return e > 5;
 // // }, myNumber);
 
 // // let check = nums.some(function (e) {    // here will print true becase the mynumber = 5 and in nums we have a number to 7 ..
-// //   console.log(this);     
+// //   console.log(this);
 // //   return e > this;
 // // }, myNumber);
 
 // // let check1 = nums.some(function (e) {    // here will print false because the myNumber1 = 10 and in nums we dont have a number more than 10 ..
-// //   console.log(this);     
+// //   console.log(this);
 // //   return e > this;
 // // }, myNumber1);
 
@@ -1633,7 +1633,7 @@ clearTimeout(Identifier)
 // // console.log(checkValues(nums, 5));  // here will print false because we dont have a 20 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
 // // console.log(checkValues(nums, 8));  // here will print true because we have a 8 in the (( nums = [1, 2, 3, 4, 6, 7, 8] ))
 
-// //////////////// 
+// ////////////////
 
 // let nums = [1, 2, 3, 4, 6, 7, 8];
 // let nums1 = [1, 2, 3, 4, 6, 7, 8, 10];
@@ -1643,12 +1643,12 @@ clearTimeout(Identifier)
 //   max: 20
 // };
 
-// let chechNumberInRange = nums.some(function (e) {  
+// let chechNumberInRange = nums.some(function (e) {
 //   return e >= this.min && e <= this.max;
 // }, range);
 
 // console.log(chechNumberInRange);  // here the answer will print false because we dont have a number in nums between or equal of 10 ...20
-// ///////////////// //////////////// ////////////// 
+// ///////////////// //////////////// //////////////
 // let chechNumberInRange1 = nums1.some(function (e) {
 //   // console.log(this.min);
 //   // console.log(this.max);
@@ -1665,7 +1665,7 @@ clearTimeout(Identifier)
 //   30: "place 2",
 //   40: "place 3",
 //   50: "place 4"
-// }; 
+// };
 
 // let mainlocation = 15 ;
 
@@ -1684,7 +1684,7 @@ clearTimeout(Identifier)
 // console.log(check);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Spread Syntax And Use Cases) : 
+// (Spread Syntax And Use Cases) :
 
 // //spread with string => expand string
 
@@ -1692,7 +1692,7 @@ clearTimeout(Identifier)
 // console.log(..."Saif");
 // console.log([..."Saif"]);
 
-// // concatenate arrays   
+// // concatenate arrays
 
 // let myArray1 = [1, 2, 3];
 // let myArray2 = [4, 5, 6];
@@ -1700,12 +1700,12 @@ clearTimeout(Identifier)
 // let allArrays = [...myArray1, ...myArray2];
 // console.log(allArrays);
 
-// // copy array 
+// // copy array
 
 // let copiedarray = [...myArray1];
 // console.log(copiedarray);
 
-// // push inside array 
+// // push inside array
 
 // let allfriends = ["saif", "zaid", "jack"];
 // let friendsthisyear = ["fahed", "shahem"];
@@ -1715,11 +1715,11 @@ clearTimeout(Identifier)
 
 // console.log(allfriends);
 
-// // use with math object 
+// // use with math object
 
-// let myNums = [10, 100 ,1000 , -100 , -10]; 
+// let myNums = [10, 100 ,1000 , -100 , -10];
 // console.log(Math.max(10, 100 ,1000 , -100 , -10));  // first way without focus inside in myNums
-// console.log(Math.max(...myNums)); // second way inside the myNums by used three dot ... 
+// console.log(Math.max(...myNums)); // second way inside the myNums by used three dot ...
 
 // //  spread with objects => merge objects
 
@@ -1739,7 +1739,7 @@ clearTimeout(Identifier)
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // (Intro And What Is Regular Expression) : 134
 /*
----Regular expressions 
+---Regular expressions
 -----Email
 -----IP
 -----Phone
@@ -1749,24 +1749,24 @@ clearTimeout(Identifier)
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //(Regular Expressions - Modifiers) : 135
 /*
----Regular Expression 
+---Regular Expression
 
----Syntax 
----/pattern/modifier(s); 
+---Syntax
+---/pattern/modifier(s);
 ---new RegExp("pattern", "modifier(s)")
 
----Modifiers => Flags 
+---Modifiers => Flags
 (معلومه:نستطيع استخدام اكثر من حرف مع بعض و ذلك يوضح مع الامثلة )
 ---i => case-insensitive //   ببطل في اولوية للاحرف الكبير او صغير (بتكون الاولوية للاول)  (insensitive غير حساس)
----g => global //  تستخدم حتى اجيب كل الاشياء المتشابهة 
----m => Multilines // تبحث بين الاسطر و تبلش من كلمة معينه وتنتهي الى كلمه معينه 
+---g => global //  تستخدم حتى اجيب كل الاشياء المتشابهة
+---m => Multilines // تبحث بين الاسطر و تبلش من كلمة معينه وتنتهي الى كلمه معينه
 
--Search Methods 
----match(Pattern) 
+-Search Methods
+---match(Pattern)
 
--Match 
--- Matches A String Against a Regular Expression Pattern 
-------Returns An Array With The Matches 
+-Match
+-- Matches A String Against a Regular Expression Pattern
+------Returns An Array With The Matches
 ------Returns null If No Match Is Found.*/
 
 // let myString = "Hello, My Name Is Saif haddad saif";
@@ -1787,13 +1787,13 @@ clearTimeout(Identifier)
 
 // console.log(myString.match(regex));
 //////////////
-// let myString = "Hello, My Name Is Saif haddad saif"; ///هون استخدمنا حرفين مع بعض i g// 
+// let myString = "Hello, My Name Is Saif haddad saif"; ///هون استخدمنا حرفين مع بعض i g//
 
 // let regex = /saif/ig;
 
 // console.log(myString.match(regex));
 ///////////////
-// let myString = "Hello, My Name Is Saif haddad saif"; 
+// let myString = "Hello, My Name Is Saif haddad saif";
 
 // let regex = /saifs/ig;
 
@@ -1803,22 +1803,22 @@ clearTimeout(Identifier)
 // (Regular Expressions - Ranges Part 1) : 136
 
 /*
---Regular Expression 
+--Regular Expression
 
---Ranges 
+--Ranges
 
----Part-1 
-(X|Y) => X Or Y 
-[0-9] => 0 Το 9 
-[^0-9] => Any Character Not 0 To 9 
-Practice 
+---Part-1
+(X|Y) => X Or Y
+[0-9] => 0 Το 9
+[^0-9] => Any Character Not 0 To 9
+Practice
 
----Part-2 
-[a-z] 
-[^a-z] 
-[A-Z] 
-[^A-Z] 
-[abc] 
+---Part-2
+[a-z]
+[^a-z]
+[A-Z]
+[^A-Z]
+[abc]
 [^abc]
 */
 
@@ -1828,7 +1828,7 @@ Practice
 
 // let tld = "Com Net Org Info Code Io";
 // let tldre = /(info|org|io)/ig;
-// console.log(tld.match(tldre));  
+// console.log(tld.match(tldre));
 
 // let nums = "12345678910";
 // let numsre = /[0-9]/ig;
@@ -1865,39 +1865,39 @@ Practice
 ///////////////////////////////////////////////////////////////////////////////////////
 // (Regular Expressions - Ranges Part 2)  : 137
 /*
----Part-2 
-[a-z] 
-[^a-z] 
-[A-Z] 
-[^A-Z] 
-[abc] 
+---Part-2
+[a-z]
+[^a-z]
+[A-Z]
+[^A-Z]
+[abc]
 [^abc]
 */
 
 
 // let myString = "AaBbcdefG123!234%^&*";
 
-// let atozsmall = /[a-z]/g;  // [a-z] 
+// let atozsmall = /[a-z]/g;  // [a-z]
 
-// let notatozsmall = /[^a-z]/g;   // [^a-z] 
+// let notatozsmall = /[^a-z]/g;   // [^a-z]
 
-// let AtoZcapital = /[A-Z]/g;  // [A-Z] 
+// let AtoZcapital = /[A-Z]/g;  // [A-Z]
 
-// let notAtoZcapital = /[^A-Z]/g;   // [^A-Z]  
+// let notAtoZcapital = /[^A-Z]/g;   // [^A-Z]
 
-// let aANDcANDe = /[ace]/g;  // [abc] 
+// let aANDcANDe = /[ace]/g;  // [abc]
 
-// let notaANDcANDe = /[^ace]/g;  // [^abc] 
+// let notaANDcANDe = /[^ace]/g;  // [^abc]
 
-// let lettersCapsAndSmall = /[a-zA-Z]/g;  // [a-zA-Z] 
+// let lettersCapsAndSmall = /[a-zA-Z]/g;  // [a-zA-Z]
 
-// let numsAndSpecials = /[^a-zA-Z]/g;  // [^a-zA-Z] 
+// let numsAndSpecials = /[^a-zA-Z]/g;  // [^a-zA-Z]
 
-// let Specials = /[^a-zA-Z0-9]/g;  // [^a-zA-Z0-9] 
+// let Specials = /[^a-zA-Z0-9]/g;  // [^a-zA-Z0-9]
 
-// let Specials1 = /[^a-z^A-Z0-9]/g;  // [^a-z^A-Z0-9] 
+// let Specials1 = /[^a-z^A-Z0-9]/g;  // [^a-z^A-Z0-9]
 
-// let Specials2 = /[^a-z^A-Z^0-9]/g;  // [^a-z^A-Z^0-9]  
+// let Specials2 = /[^a-z^A-Z^0-9]/g;  // [^a-z^A-Z^0-9]
 
 // console.log(myString.match(atozsmall));
 // console.log(myString.match(notatozsmall));
@@ -1914,27 +1914,27 @@ Practice
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Regular Expressions - Character Classes Part 1) : 138
 /*
-Regular Expression 
-Character Classes 
-.=> matches any character, except newline or other line terminators. 
-\w=> matches word characters. [a-z, A-Z, 0-9 And Underscore] 
-\W=> matches Non word characters 
-\d => matches digits from 0 to 9. 
-\D => matches non-digit characters. 
-\s => matches whitespace character. 
-\S => matches non whitespace character. 
+Regular Expression
+Character Classes
+.=> matches any character, except newline or other line terminators.
+\w=> matches word characters. [a-z, A-Z, 0-9 And Underscore]
+\W=> matches Non word characters
+\d => matches digits from 0 to 9.
+\D => matches non-digit characters.
+\s => matches whitespace character.
+\S => matches non whitespace character.
 */
 
-// let email = 'O@@@g...com O@g.com O@g.net A@Y.com-o-g.com-o@s.org 1@1.com'; 
-// let dot=/./g; 
-// let word = /\W/g; 
-// let word1 = /\w/g; 
-// let valid = /\w@/g; 
-// let valid1 = /\w@\w/g; 
-// let valid2 = /\w@\w.com/g; 
-// let valid3 = /\w@\w.(com|net)/g; 
+// let email = 'O@@@g...com O@g.com O@g.net A@Y.com-o-g.com-o@s.org 1@1.com';
+// let dot=/./g;
+// let word = /\W/g;
+// let word1 = /\w/g;
+// let valid = /\w@/g;
+// let valid1 = /\w@\w/g;
+// let valid2 = /\w@\w.com/g;
+// let valid3 = /\w@\w.(com|net)/g;
 
-// console.log(email.match(dot)); 
+// console.log(email.match(dot));
 // console.log(email.match(word));
 // console.log(email.match(word1));
 // console.log(email.match(valid));
@@ -1943,23 +1943,23 @@ Character Classes
 // console.log(email.match(valid3));
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Regular Expressions - Character Classes Part 2)  : 
+// (Regular Expressions - Character Classes Part 2)  :
 /*
-Regular Expression 
-Character Classes 
-\b => matches at the beginning or end of a word. 
-\B => matches NOT at the beginning/end of a word. 
-Test Method 
-pattern.test(input) 
+Regular Expression
+Character Classes
+\b => matches at the beginning or end of a word.
+\B => matches NOT at the beginning/end of a word.
+Test Method
+pattern.test(input)
 
 */
 
 // let names = "Sayed 1Spam 25pam 3Spam Spam4 Spam5 Osama Ahmed";
 
-// let re = /(\bSpam)/g ; 
+// let re = /(\bSpam)/g ;
 // console.log(names.match(re));
 
-// let re1 = /(\bSpam|spam\b)/gi ; 
+// let re1 = /(\bSpam|spam\b)/gi ;
 // console.log(names.match(re1));
 
 // console.log(re1.test(names));
@@ -1970,9 +1970,9 @@ pattern.test(input)
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Regular Expressions - Quantifiers Part 1)   : 
+// (Regular Expressions - Quantifiers Part 1)   :
 
-// let mails = "o@nn.sa osama@gmail.com elzero@gmail.net osama@gmail.ru"; //All Emails 
+// let mails = "o@nn.sa osama@gmail.com elzero@gmail.net osama@gmail.ru"; //All Emails
 // let mailsRe = /(\w@\w\w.sa)/ig;
 // console.log(mails.match(mailsRe));
 
@@ -1994,7 +1994,7 @@ pattern.test(input)
 // console.log("#".repeat(30));
 // ///////////////////////////////////////
 // let nums = "0110 10 150 05120 0560 350 00";
-// let numsRe = /(0\d0)/ig; // // here the output is null because we dont have a number at start 0 and the end 0 and in th center just a one number . 
+// let numsRe = /(0\d0)/ig; // // here the output is null because we dont have a number at start 0 and the end 0 and in th center just a one number .
 // console.log(nums.match(numsRe));
 
 // let numsRe1 = /(0\d+0)/ig;
@@ -2025,31 +2025,31 @@ pattern.test(input)
 // console.log(url.match(urlRe5));
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-// (Regular Expressions - Quantifiers Part 2)  : 
+// (Regular Expressions - Quantifiers Part 2)  :
 
 /*
-Regular Expression 
-Quantifiers 
-n{x}=> Number of 
-n{x,y} => Range 
-n{x,}=> At Least x 
+Regular Expression
+Quantifiers
+n{x}=> Number of
+n{x,y} => Range
+n{x,}=> At Least x
 */
 
 // let serials = "S100S S3000 S50000S S950000S";
 
-// console.log(serials.match(/s\d{3}s/ig)); // S[Three Number]S 
-// console.log(serials.match(/s\d{4,5}s/ig)); // S[Four-Or Five Number]S 
+// console.log(serials.match(/s\d{3}s/ig)); // S[Three Number]S
+// console.log(serials.match(/s\d{4,5}s/ig)); // S[Four-Or Five Number]S
 // console.log(serials.match(/s\d{4,}s/ig)); // S[At Least Four]5
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-// (Regular Expressions - Quantifiers Part 3)  : 
+// (Regular Expressions - Quantifiers Part 3)  :
 /*
-  Regular Expression 
-  
-Quantifiers 
-$  => End With Something 
-^  => Start With Something 
-?= => Followed By Something 
+  Regular Expression
+
+Quantifiers
+$  => End With Something
+^  => Start With Something
+?= => Followed By Something
 ?! => Not Followed By Something
 */
 
@@ -2065,7 +2065,7 @@ $  => End With Something
 
 
 //////////////////////////////////////////////////////////////////////////////////////
-// (Regular Expressions - Replace With Pattern)   : 
+// (Regular Expressions - Replace With Pattern)   :
 /*
 --Regular Expressions
 
@@ -2075,20 +2075,20 @@ $  => End With Something
 
 // let text = "We Love Programming And @ Because @ Is Amazing";
 
-// console.log(text.replace("@", "Java Script")); 
-// console.log(text.replaceAll("@", "Java Script")); 
+// console.log(text.replace("@", "Java Script"));
+// console.log(text.replaceAll("@", "Java Script"));
 
 // let re = /(@)/ig;
 
-// console.log(text.replace(re, "Java Script")); 
-// console.log(text.replaceAll(re, "Java Script")); 
-// console.log(text.replaceAll(/(@)/ig, "Java Script"));   
+// console.log(text.replace(re, "Java Script"));
+// console.log(text.replaceAll(re, "Java Script"));
+// console.log(text.replaceAll(/(@)/ig, "Java Script"));
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // ( Regular Expressions - Form Validation)  :   Here we have code html 144
 /*
 --Regular Expressions
-----Input Form Validation Practice 
+----Input Form Validation Practice
 */
 
 // document.getElementById("register").onsubmit = function () {
@@ -2099,15 +2099,44 @@ $  => End With Something
 //   return false;
 // }
 
-document.getElementById("register").onsubmit = function () {
-  let phoneinput = document.getElementById("phone").value;
-  let phoneRe = /(\d{4}\s\d{3}\-\d{4})/; // (1234) 123-1234
-  let ValidationResult = phoneRe.test(phoneinput);
-  if (ValidationResult === false) {
-    return false;
-  }
-  return true;
-};
+// document.getElementById("register").onsubmit = function () {
+//   let phoneinput = document.getElementById("phone").value;
+//   let phoneRe = /(\d{4}\s\d{3}\-\d{4})/; // (1234) 123-1234
+//   let ValidationResult = phoneRe.test(phoneinput);
+//   if (ValidationResult === false) {
+//     return false;
+//   }
+//   return true;
+// };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-// (OOP Introduction)  :
+// (OOP Introduction)  :  object oriented programming 147 : 
+/*
+What Is OOP?  
+
+• OOP Stand For => Object Oriented Programming 
+OOP Is A Paradigm or Style Of Code 
+OOP Use The Concept Of Object To Design A Computer Program 
+Its Not New => Simula Is The First OOP Programming Language At 1960 
+• Some Languages Support OOP and Some Not 
+Object Is A Package Contains Properties and Functions That Work Together To Produce Something in
+Your Application. Functions Here Called Methods
+
+---object simulation 
+-----1)methods :
+-------A)walk
+-------B)stop
+
+-----2)properities
+-------A)color
+-------B)price
+
+Why We Use OOP ? 
+
+• You Will be Able to Create a Large and Complex Software Architecture in Organized Ways. 
+• You Will be Able To Hide Certain Parts Of Code in Your Object With Encapsulation To Prevent Mess With The Code. 
+• You Will Be Able To Create Reusable Objects To Use in Your Application Easily With Inheritance.
+ */
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Constructor Function Introduction) : 148 
