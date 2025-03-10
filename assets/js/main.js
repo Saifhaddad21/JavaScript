@@ -2140,3 +2140,53 @@ Why We Use OOP ?
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Constructor Function Introduction) : 148 
+
+// function User(id, username, salary) {  //should be the first character is capital
+//   this.id = id;
+//   this.userN = username;
+//   this.sala = salary;
+// };
+
+function User(id, username, salary) {  //should be the first character is capital
+  this.id = id;
+  this.userN = username;
+  this.sala = salary + 1000;  // Here we need to add 1000 to each employee's salary
+};
+
+let userone = new User(100, "saif", 5000);
+let usertwo = new User(101, "zaid", 6000);
+let userthree = new User(102, "jack", 7000);
+
+console.log(userone.id);
+console.log(userone.userN);
+console.log(userone.sala);
+
+
+console.log(usertwo.id);
+console.log(usertwo.userN);
+console.log(usertwo.sala);
+
+
+console.log(userthree.id);
+console.log(userthree.userN);
+console.log(userthree.sala);
+
+
+// const userone = {
+//   id: 100,
+//   username: "saif",
+//   salary: 5000,
+// };
+
+// const usertwo = {
+//   id: 101,
+//   username: "zaid",
+//   salary: 6000,
+// };
+// const userthree = {
+//   id: 103,
+//   username: "jack",
+//   salary: 7000,
+// };
+////////////////////////////////////////////////////////////////////////////////////////////
+// (Constructor Function New Syntax)  : 
