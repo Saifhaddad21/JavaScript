@@ -2073,18 +2073,41 @@ $  => End With Something
 ----ReplaceAll
 */
 
-let text = "We Love Programming And @ Because @ Is Amazing";
+// let text = "We Love Programming And @ Because @ Is Amazing";
 
-console.log(text.replace("@", "Java Script")); 
-console.log(text.replaceAll("@", "Java Script")); 
+// console.log(text.replace("@", "Java Script")); 
+// console.log(text.replaceAll("@", "Java Script")); 
 
-let re = /(@)/ig;
+// let re = /(@)/ig;
 
-console.log(text.replace(re, "Java Script")); 
-console.log(text.replaceAll(re, "Java Script")); 
-console.log(text.replaceAll(/(@)/ig, "Java Script"));   
-
+// console.log(text.replace(re, "Java Script")); 
+// console.log(text.replaceAll(re, "Java Script")); 
+// console.log(text.replaceAll(/(@)/ig, "Java Script"));   
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-// ( Regular Expressions - Form Validation)  :
+// ( Regular Expressions - Form Validation)  :   Here we have code html 144
+/*
+--Regular Expressions
+----Input Form Validation Practice 
+*/
 
+// document.getElementById("register").onsubmit = function () {
+//   let phoneinput = document.getElementById("phone").value;
+//   let phoneRe = /(\d{4}\s\d{3}\-\d{4})/; // (1234) 123-1234
+//   let ValidationResult = phoneRe.test(phoneinput);
+//   console.log(ValidationResult);
+//   return false;
+// }
+
+document.getElementById("register").onsubmit = function () {
+  let phoneinput = document.getElementById("phone").value;
+  let phoneRe = /(\d{4}\s\d{3}\-\d{4})/; // (1234) 123-1234
+  let ValidationResult = phoneRe.test(phoneinput);
+  if (ValidationResult === false) {
+    return false;
+  }
+  return true;
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (OOP Introduction)  :
