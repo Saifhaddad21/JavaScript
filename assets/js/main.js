@@ -2147,29 +2147,29 @@ Why We Use OOP ?
 //   this.sala = salary;
 // };
 
-function User(id, username, salary) {  //should be the first character is capital
-  this.id = id;
-  this.userN = username;
-  this.sala = salary + 1000;  // Here we need to add 1000 to each employee's salary
-};
+// function User(id, username, salary) {  //should be the first character is capital
+//   this.id = id;
+//   this.userN = username;
+//   this.sala = salary + 1000;  // Here we need to add 1000 to each employee's salary
+// };
 
-let userone = new User(100, "saif", 5000);
-let usertwo = new User(101, "zaid", 6000);
-let userthree = new User(102, "jack", 7000);
+// let userone = new User(100, "saif", 5000);
+// let usertwo = new User(101, "zaid", 6000);
+// let userthree = new User(102, "jack", 7000);
 
-console.log(userone.id);
-console.log(userone.userN);
-console.log(userone.sala);
-
-
-console.log(usertwo.id);
-console.log(usertwo.userN);
-console.log(usertwo.sala);
+// console.log(userone.id);
+// console.log(userone.userN);
+// console.log(userone.sala);
 
 
-console.log(userthree.id);
-console.log(userthree.userN);
-console.log(userthree.sala);
+// console.log(usertwo.id);
+// console.log(usertwo.userN);
+// console.log(usertwo.sala);
+
+
+// console.log(userthree.id);
+// console.log(userthree.userN);
+// console.log(userthree.sala);
 
 
 // const userone = {
@@ -2190,3 +2190,26 @@ console.log(userthree.sala);
 // };
 ////////////////////////////////////////////////////////////////////////////////////////////
 // (Constructor Function New Syntax)  : 
+
+class User {
+  constructor(id, username, salary) {  //should be the first character is capital
+  this.id = id;
+  this.userN = username;
+  this.sala = salary + 1000; 
+ } // Here we need to add 1000 to each employee's salary
+}
+
+let userone = new User(100, "saif", 5000);
+let usertwo = new User(101, "zaid", 6000);
+let userthree = new User(102, "jack", 7000);
+
+console.log(userone.id);
+console.log(userone.userN);
+console.log(userone.sala);
+
+console.log(userone instanceof User);
+console.log(userone.constructor === User);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ( Deal With Properties And Methods)  : 150
+
