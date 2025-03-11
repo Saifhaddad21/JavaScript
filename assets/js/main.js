@@ -2380,25 +2380,56 @@ Class
 // ( Prototype Introduction)  : 155 
 
 
+// class User {
+//   constructor(id, username) {
+//     this.i = id ;
+//     this.u = username ; 
+//   }
+//   sayHello () {
+//     return `Hello ${this.u}`;
+//   }
+// }
+
+// let userone = new User(100 , "Saif");
+
+// console.log(userone.u);
+
+// console.log(User.prototype);
+
+// let strone = "Saif";
+
+// console.log(String.prototype);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Add To Prototype Chain And Extend Constructors)  : 156
+
 class User {
   constructor(id, username) {
-    this.i = id ;
-    this.u = username ; 
+    this.i = id;
+    this.u = username;
   }
-  sayHello () {
+  sayHello ( ) {
     return `Hello ${this.u}`;
   }
 }
 
-let userone = new User(100 , "Saif");
+let userone = new User(100, "Saif");
 
 console.log(userone.u);
-
 console.log(User.prototype);
+console.log(userone);
 
-let strone = "Saif";
+User.prototype.sayWelcome = function () {
+  return `Welcome ${this.u}`;
+}
 
-console.log(String.prototype);
+Object.prototype.love = "Saif Mhanna Haddad";
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Add To Prototype Chain And Extend Constructors)  : 156
+String.prototype.addDotBeforeAndAfter = function (val) {
+  return `.${this}.`;
+}
+
+let myString = "Haddad" ;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Object Meta Data And Descriptor Part 1)  : 157
