@@ -2295,56 +2295,86 @@ Class
 -Inheritance: 
 */
 
-// parent class 
-class User {
-constructor(id, username) { 
-this.i = id; 
-this.u = username; 
-    } 
-    sayHello() {
-      return `Hello ${this.u}`;
-      } 
-  }
+// // parent class 
+// class User {
+// constructor(id, username) { 
+// this.i = id; 
+// this.u = username; 
+//     } 
+//     sayHello() {
+//       return `Hello ${this.u}`;
+//       } 
+//   }
 
-  // Derived class 
-class Admin extends User{  // inheritance from user
-  constructor(id, username ,permissions) { 
-    super(id, username);
-  this.p = permissions;
-      } 
-    }
+//   // Derived class 
+// class Admin extends User{  // inheritance from user
+//   constructor(id, username ,permissions) { 
+//     super(id, username);
+//   this.p = permissions;
+//       } 
+//     }
 
-    class superMan extends Admin{    //inheritance from admin
-      constructor(id, username ,permissions, abilities) { 
-        super(id, username, permissions);
-        this.ab = abilities;
-          } 
-        }
-  
-let userOne = new User(100, "Saif"); 
-let adminone = new Admin(110, "Zaid", 1); 
-let superMan1 = new superMan(110, "Zaid", 1, 2); 
+//     class superMan extends Admin{    //inheritance from admin
+//       constructor(id, username ,permissions, abilities) { 
+//         super(id, username, permissions);
+//         this.ab = abilities;
+//           } 
+//         }
+
+// let userOne = new User(100, "Saif"); 
+// let adminone = new Admin(110, "Zaid", 1); 
+// let superMan1 = new superMan(110, "Zaid", 1, 2); 
 
 
-console.log(userOne.u); 
-console.log(userOne.sayHello());
-///////////////////////////////////
-console.log("#".repeat(40));
-/////////////////////////////////
-console.log(adminone.i); 
-console.log(adminone.u); 
-console.log(adminone.p); 
-console.log(adminone.sayHello()); 
-///////////////////////////////////
-console.log("#".repeat(40));
-/////////////////////////////////
-console.log(superMan1.i); 
-console.log(superMan1.u); 
-console.log(superMan1.p); 
-console.log(superMan1.ab); 
-console.log(adminone.sayHello()); 
+// console.log(userOne.u); 
+// console.log(userOne.sayHello());
+// ///////////////////////////////////
+// console.log("#".repeat(40));
+// /////////////////////////////////
+// console.log(adminone.i); 
+// console.log(adminone.u); 
+// console.log(adminone.p); 
+// console.log(adminone.sayHello()); 
+// ///////////////////////////////////
+// console.log("#".repeat(40));
+// /////////////////////////////////
+// console.log(superMan1.i); 
+// console.log(superMan1.u); 
+// console.log(superMan1.p); 
+// console.log(superMan1.ab); 
+// console.log(adminone.sayHello()); 
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // (Class Encapsulation)  : 154
 
+
+/*
+Encapsulation 
+Class Fields Are Public By Default 
+Guards The Data Against Illegal Access. 
+Helps To Achieve The Target Without Revealing Its Complex Details. 
+Will Reduce Human Errors. 
+Make The App More Flexible And Manageable. 
+- Simplifies The App. 
+*/
+class User {
+  // Private Properity  : 
+  #e;
+  constructor(id, username, eSalary) {  // eSalary === expected salary
+    this.i = id;
+    this.u = username;
+    this.#e = eSalary;
+  }
+  getSallary () {
+    return parseInt(this.#e);
+  }
+}
+let userone = new User(100, "Elzero", "5000 Gneh");
+
+console.log(userone.u);
+// console.log(userone.#e); // Property '#e' is not accessible outside class 'User' because it has a private identifier.
+console.log(userone.getSallary() * 0.3);  
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// ( Prototype Introduction)  : 
