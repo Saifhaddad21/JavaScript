@@ -2516,26 +2516,56 @@ Class
 ---Year 2038 Problem in Computer Science.
 */
 
-let dateNow = new Date();
+// let dateNow = new Date();
 
-console.log(dateNow);
+// console.log(dateNow);
 
-console.log(Date.now()); // 1000 mill = 1 seconds
+// console.log(Date.now()); // 1000 mill = 1 seconds
 
-let seconds = Date.now() / 1000;  // Number of seconds 
-console.log(`seconds ${seconds}`);
+// let seconds = Date.now() / 1000;  // Number of seconds 
+// console.log(`seconds ${seconds}`);
 
-let minutes = seconds / 60 ;  // Number of minutes 
-console.log(`minutes ${minutes}`);
+// let minutes = seconds / 60 ;  // Number of minutes 
+// console.log(`minutes ${minutes}`);
 
-let hours = minutes / 60 ;  // Number of hours 
-console.log(`hours ${hours}`);
+// let hours = minutes / 60 ;  // Number of hours 
+// console.log(`hours ${hours}`);
 
-let days = hours / 24 ;  // Number of days 
-console.log(`days ${days}`);
+// let days = hours / 24 ;  // Number of days 
+// console.log(`days ${days}`);
 
-let years = days / 365 ;  // Number of years 
-console.log(`years ${years}`);
+// let years = days / 365 ;  // Number of years 
+// console.log(`years ${years}`);
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 // (Get Date And Time)  :  160
+/*
+Date And Time 
+--getTime()=> Number Of Milliseconds 
+--getDate() => Day Of The Month 
+--getFullYear() 
+--getMonth()=> Zero Based 
+--getDay()> Day Of The Week 
+--getHours() 
+--getMinutes() 
+--getSeconds()
+*/
+
+let dateNow = new Date();
+let myBirthday = new Date("Feb 17, 00");
+let datedifference = dateNow - myBirthday;
+
+console.log(datedifference);
+console.log(datedifference / 1000 / 60 / 60 / 24 / 365); // millseconds / seconds / minutes / days / years
+
+console.log(dateNow);
+console.log(dateNow.getDate());
+console.log(dateNow.getTime());
+console.log(dateNow.getDay());
+console.log(dateNow.getMonth());
+console.log(dateNow.getFullYear());
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// (Set Date And Time) : 161
+
+
