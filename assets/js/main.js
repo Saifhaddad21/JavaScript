@@ -2551,21 +2551,64 @@ Date And Time
 --getSeconds()
 */
 
-let dateNow = new Date();
-let myBirthday = new Date("Feb 17, 00");
-let datedifference = dateNow - myBirthday;
+// let dateNow = new Date();
+// let myBirthday = new Date("Feb 17, 00");
+// let datedifference = dateNow - myBirthday;
 
-console.log(datedifference);
-console.log(datedifference / 1000 / 60 / 60 / 24 / 365); // millseconds / seconds / minutes / days / years
+// console.log(datedifference);
+// console.log(datedifference / 1000 / 60 / 60 / 24 / 365); // millseconds / seconds / minutes / days / years
 
-console.log(dateNow);
-console.log(dateNow.getDate());
-console.log(dateNow.getTime());
-console.log(dateNow.getDay());
-console.log(dateNow.getMonth());
-console.log(dateNow.getFullYear());
+// console.log(dateNow);
+// console.log(dateNow.getDate());
+// console.log(dateNow.getTime());
+// console.log(dateNow.getDay());
+// console.log(dateNow.getMonth());
+// console.log(dateNow.getFullYear());
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // (Set Date And Time) : 161
+/*
+Date And Time 
+---setTime(Milliseconds) 
+---setDate() => Day Of The Month [Negative And Positive] 
+---setFullYear(year, month => Optional [8-11], day > Optional [1-31]) 
+---setMonth(Month [8-11], Day > Optional [1-31]) [Negative And Positive] 
+---setHours (Hours [8-23], Minutes > Optional [8-59], Seconds > Optional [8-59], MS > Optional [8-999]) 
+---setMinutes(Minutes [8-59], Seconds => Optional [0-59], MS> Optional [0-999]) 
+---setSeconds(Seconds => [8-59], MS > Optional [0-999])
+*/
+let datenow = new Date();
+console.log(datenow);
 
+console.log("#".repeat(50));
 
+// datenow.setTime(0);
+// console.log(datenow);
+
+// console.log("#".repeat(50));
+
+// datenow.setTime(10000);
+// console.log(datenow);
+
+// console.log("#".repeat(50));
+////////////////////////////////
+// datenow.setDate(1);
+// console.log(datenow);
+
+// datenow.setDate(31);
+// console.log(datenow);
+
+// datenow.setDate(-1);
+// console.log(datenow);
+
+// datenow.setDate(36);
+// console.log(datenow);
+////////////////////////////////
+datenow.setFullYear(2025);
+console.log(datenow);
+
+datenow.setFullYear(2025, 1); //from {0 - 11} 0 >> jun \\ 1 >> feb \\ ...
+console.log(datenow);
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// (Formatting Date And Time) : 
