@@ -2211,37 +2211,82 @@ Why We Use OOP ?
 // console.log(userone.constructor === User);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-// ( Deal With Properties And Methods)  : 150
+// // ( Deal With Properties And Methods)  : 150
 
-class User {
-  constructor(id, username, salary){
-  // Properties  : 
-  this.i = id;
-  this.u = username || "Unknown";
-  this.s = salary < 6000 ? salary + 500 : salary;
-  this.msg = function () {
-    return `Hello ${this.u} Your Salary Is ${this.s}`;
-    };
-  }
-  // Methods : 
-  writeMsg (){
-    return `Hello ${this.u} Your Salary Is ${this.s}`;
-  }
-}
+// class User {
+//   constructor(id, username, salary){
+//   // Properties  : 
+//   this.i = id;
+//   this.u = username || "Unknown";
+//   this.s = salary < 6000 ? salary + 500 : salary;
+//   this.msg = function () {
+//     return `Hello ${this.u} Your Salary Is ${this.s}`;
+//     };
+//   }
+//   // Methods : 
+//   writeMsg (){
+//     return `Hello ${this.u} Your Salary Is ${this.s}`;
+//   }
+// }
 
-let userone = new User(100, "saif", 5000);
-let usertwo = new User(101, "", 7000);
+// let userone = new User(100, "saif", 5000);
+// let usertwo = new User(101, "", 7000);
 
-console.log(userone.u);
-console.log(userone.s);
-console.log(userone.msg());
-console.log(userone.writeMsg());
+// console.log(userone.u);
+// console.log(userone.s);
+// console.log(userone.msg());
+// console.log(userone.writeMsg());
 
-console.log(usertwo.u);
-console.log(usertwo.s);
-console.log(usertwo.msg); // Native code 
-console.log(usertwo.writeMsg); // Native code  
+// console.log(usertwo.u);
+// console.log(usertwo.s);
+// console.log(usertwo.msg); // Native code 
+// console.log(usertwo.writeMsg); // Native code  
 
 //////////////// ////////////////////// ////////////////////////////  / ///////////////////////////////////////
 // (Update Properties And Built In Constructors)  : 151
+class User {
+  constructor(id,username,salary) {
+    this.i = id;
+    this.u = username;
+    this.s = salary;
+  }
+  ubdateName (newName) {
+    this.u = newName;
+  }
+}
 
+let userone = new User (100, "Saif", 5000);
+
+console.log(userone.u);
+
+userone.ubdateName("Zaid");
+console.log(userone.u);
+
+let strone = "Saif";
+let strtwo = new String("Saif");
+
+console.log(typeof strone);
+console.log(typeof strtwo);
+
+console.log(strone instanceof String);
+console.log(strtwo instanceof String);
+
+console.log(strone.constructor === String);
+console.log(strtwo.constructor === String);
+/////////////////////
+console.log("#".repeat(50));
+/////////////////////
+let numone = 100;
+let numtwo = new Number(200);
+
+console.log(typeof numone);
+console.log(typeof numtwo);
+
+console.log(numone instanceof Number);
+console.log(numtwo instanceof Number);
+
+console.log(numone.constructor === Number);
+console.log(numtwo.constructor === Number);
+
+ //////////////////////////////////////////////////////////////////////////////////////////////////////
+//  ( Class Static Properties And Methods)   : 
