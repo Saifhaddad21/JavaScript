@@ -2243,50 +2243,108 @@ Why We Use OOP ?
 // console.log(usertwo.writeMsg); // Native code  
 
 //////////////// ////////////////////// ////////////////////////////  / ///////////////////////////////////////
-// (Update Properties And Built In Constructors)  : 151
-class User {
-  constructor(id,username,salary) {
-    this.i = id;
-    this.u = username;
-    this.s = salary;
-  }
-  ubdateName (newName) {
-    this.u = newName;
-  }
-}
+// // (Update Properties And Built In Constructors)  : 151
+// class User {
+//   constructor(id,username,salary) {
+//     this.i = id;
+//     this.u = username;
+//     this.s = salary;
+//   }
+//   ubdateName (newName) {
+//     this.u = newName;
+//   }
+// }
 
-let userone = new User (100, "Saif", 5000);
+// let userone = new User (100, "Saif", 5000);
 
-console.log(userone.u);
+// console.log(userone.u);
 
-userone.ubdateName("Zaid");
-console.log(userone.u);
+// userone.ubdateName("Zaid");
+// console.log(userone.u);
 
-let strone = "Saif";
-let strtwo = new String("Saif");
+// let strone = "Saif";
+// let strtwo = new String("Saif");
 
-console.log(typeof strone);
-console.log(typeof strtwo);
+// console.log(typeof strone);
+// console.log(typeof strtwo);
 
-console.log(strone instanceof String);
-console.log(strtwo instanceof String);
+// console.log(strone instanceof String);
+// console.log(strtwo instanceof String);
 
-console.log(strone.constructor === String);
-console.log(strtwo.constructor === String);
-/////////////////////
-console.log("#".repeat(50));
-/////////////////////
-let numone = 100;
-let numtwo = new Number(200);
+// console.log(strone.constructor === String);
+// console.log(strtwo.constructor === String);
+// /////////////////////
+// console.log("#".repeat(50));
+// /////////////////////
+// let numone = 100;
+// let numtwo = new Number(200);
 
-console.log(typeof numone);
-console.log(typeof numtwo);
+// console.log(typeof numone);
+// console.log(typeof numtwo);
 
-console.log(numone instanceof Number);
-console.log(numtwo instanceof Number);
+// console.log(numone instanceof Number);
+// console.log(numtwo instanceof Number);
 
-console.log(numone.constructor === Number);
-console.log(numtwo.constructor === Number);
+// console.log(numone.constructor === Number);
+// console.log(numtwo.constructor === Number);
 
  //////////////////////////////////////////////////////////////////////////////////////////////////////
-//  ( Class Static Properties And Methods)   : 
+//  ( Class Inheritance)   :   153   {{the inheritance is very important !!!!}}
+/*
+Class 
+-Inheritance: 
+*/
+
+// parent class 
+class User {
+constructor(id, username) { 
+this.i = id; 
+this.u = username; 
+    } 
+    sayHello() {
+      return `Hello ${this.u}`;
+      } 
+  }
+
+  // Derived class 
+class Admin extends User{  // inheritance from user
+  constructor(id, username ,permissions) { 
+    super(id, username);
+  this.p = permissions;
+      } 
+    }
+
+    class superMan extends Admin{    //inheritance from admin
+      constructor(id, username ,permissions, abilities) { 
+        super(id, username, permissions);
+        this.ab = abilities;
+          } 
+        }
+  
+let userOne = new User(100, "Saif"); 
+let adminone = new Admin(110, "Zaid", 1); 
+let superMan1 = new superMan(110, "Zaid", 1, 2); 
+
+
+console.log(userOne.u); 
+console.log(userOne.sayHello());
+///////////////////////////////////
+console.log("#".repeat(40));
+/////////////////////////////////
+console.log(adminone.i); 
+console.log(adminone.u); 
+console.log(adminone.p); 
+console.log(adminone.sayHello()); 
+///////////////////////////////////
+console.log("#".repeat(40));
+/////////////////////////////////
+console.log(superMan1.i); 
+console.log(superMan1.u); 
+console.log(superMan1.p); 
+console.log(superMan1.ab); 
+console.log(adminone.sayHello()); 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// (Class Encapsulation)  : 154
+
