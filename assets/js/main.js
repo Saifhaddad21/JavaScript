@@ -2346,35 +2346,59 @@ Class
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// (Class Encapsulation)  : 154
+// (Class Encapsulation)  : 154     parseInt
 
 
-/*
-Encapsulation 
-Class Fields Are Public By Default 
-Guards The Data Against Illegal Access. 
-Helps To Achieve The Target Without Revealing Its Complex Details. 
-Will Reduce Human Errors. 
-Make The App More Flexible And Manageable. 
-- Simplifies The App. 
-*/
-class User {
-  // Private Properity  : 
-  #e;
-  constructor(id, username, eSalary) {  // eSalary === expected salary
-    this.i = id;
-    this.u = username;
-    this.#e = eSalary;
-  }
-  getSallary () {
-    return parseInt(this.#e);
-  }
-}
-let userone = new User(100, "Elzero", "5000 Gneh");
+// /*
+// Encapsulation 
+// Class Fields Are Public By Default 
+// Guards The Data Against Illegal Access. 
+// Helps To Achieve The Target Without Revealing Its Complex Details. 
+// Will Reduce Human Errors. 
+// Make The App More Flexible And Manageable. 
+// - Simplifies The App. 
+// */
+// class User {
+//   // Private Properity  : 
+//   #e;
+//   constructor(id, username, eSalary) {  // eSalary === expected salary
+//     this.i = id;
+//     this.u = username;
+//     this.#e = eSalary;
+//   }
+//   getSallary () {
+//     return parseInt(this.#e);
+//   }
+// }
+// let userone = new User(100, "Elzero", "5000 Gneh");
 
-console.log(userone.u);
-// console.log(userone.#e); // Property '#e' is not accessible outside class 'User' because it has a private identifier.
-console.log(userone.getSallary() * 0.3);  
+// console.log(userone.u);
+// // console.log(userone.#e); // Property '#e' is not accessible outside class 'User' because it has a private identifier.
+// console.log(userone.getSallary() * 0.3);  
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-// ( Prototype Introduction)  : 
+// ( Prototype Introduction)  : 155 
+
+
+class User {
+  constructor(id, username) {
+    this.i = id ;
+    this.u = username ; 
+  }
+  sayHello () {
+    return `Hello ${this.u}`;
+  }
+}
+
+let userone = new User(100 , "Saif");
+
+console.log(userone.u);
+
+console.log(User.prototype);
+
+let strone = "Saif";
+
+console.log(String.prototype);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Add To Prototype Chain And Extend Constructors)  : 156
