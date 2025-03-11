@@ -2403,33 +2403,72 @@ Class
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Add To Prototype Chain And Extend Constructors)  : 156
 
-class User {
-  constructor(id, username) {
-    this.i = id;
-    this.u = username;
-  }
-  sayHello ( ) {
-    return `Hello ${this.u}`;
-  }
-}
+// class User {
+//   constructor(id, username) {
+//     this.i = id;
+//     this.u = username;
+//   }
+//   sayHello ( ) {
+//     return `Hello ${this.u}`;
+//   }
+// }
 
-let userone = new User(100, "Saif");
+// let userone = new User(100, "Saif");
 
-console.log(userone.u);
-console.log(User.prototype);
-console.log(userone);
+// console.log(userone.u);
+// console.log(User.prototype);
+// console.log(userone);
 
-User.prototype.sayWelcome = function () {
-  return `Welcome ${this.u}`;
-}
+// User.prototype.sayWelcome = function () {
+//   return `Welcome ${this.u}`;
+// }
 
-Object.prototype.love = "Saif Mhanna Haddad";
+// Object.prototype.love = "Saif Mhanna Haddad";
 
-String.prototype.addDotBeforeAndAfter = function (val) {
-  return `.${this}.`;
-}
+// String.prototype.addDotBeforeAndAfter = function (val) {
+//   return `.${this}.`;
+// }
 
-let myString = "Haddad" ;
+// let myString = "Haddad" ;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Object Meta Data And Descriptor Part 1)  : 157
+/*
+--Object Meta Data And Descriptor 
+----writable 
+------enumerable 
+--------configurable [Cannot Delete Or Reconfigure] 
+ */
+
+const myObject = {
+  a: 1,
+  b: 2,
+};
+
+Object.defineProperty(myObject, "c", {
+  writable : false,
+  enumerable: true,
+  configurable: false,
+  value: 3,
+});
+
+Object.defineProperty(myObject, "c", {
+  writable : false,
+  enumerable: true,
+  configurable: true, // Uncaught TypeError: (Cannot redefine property): c  
+  value: 3,
+});
+
+myObject.c = 100;
+
+console.log(delete myObject.c)
+
+for (let prop in myObject) {
+  console.log(prop, myObject[prop]);
+}
+console.log(myObject);
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// (Object Meta Data And Descriptor Part 2 )    :   158
