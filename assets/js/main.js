@@ -2191,25 +2191,57 @@ Why We Use OOP ?
 ////////////////////////////////////////////////////////////////////////////////////////////
 // (Constructor Function New Syntax)  : 
 
-class User {
-  constructor(id, username, salary) {  //should be the first character is capital
-  this.id = id;
-  this.userN = username;
-  this.sala = salary + 1000; 
- } // Here we need to add 1000 to each employee's salary
-}
+// class User {
+//   constructor(id, username, salary) {  //should be the first character is capital
+//   this.id = id;
+//   this.userN = username;
+//   this.sala = salary + 1000; 
+//  } // Here we need to add 1000 to each employee's salary
+// }
 
-let userone = new User(100, "saif", 5000);
-let usertwo = new User(101, "zaid", 6000);
-let userthree = new User(102, "jack", 7000);
+// let userone = new User(100, "saif", 5000);
+// let usertwo = new User(101, "zaid", 6000);
+// let userthree = new User(102, "jack", 7000);
 
-console.log(userone.id);
-console.log(userone.userN);
-console.log(userone.sala);
+// console.log(userone.id);
+// console.log(userone.userN);
+// console.log(userone.sala);
 
-console.log(userone instanceof User);
-console.log(userone.constructor === User);
+// console.log(userone instanceof User);
+// console.log(userone.constructor === User);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ( Deal With Properties And Methods)  : 150
+
+class User {
+  constructor(id, username, salary){
+  // Properties  : 
+  this.i = id;
+  this.u = username || "Unknown";
+  this.s = salary < 6000 ? salary + 500 : salary;
+  this.msg = function () {
+    return `Hello ${this.u} Your Salary Is ${this.s}`;
+    };
+  }
+  // Methods : 
+  writeMsg (){
+    return `Hello ${this.u} Your Salary Is ${this.s}`;
+  }
+}
+
+let userone = new User(100, "saif", 5000);
+let usertwo = new User(101, "", 7000);
+
+console.log(userone.u);
+console.log(userone.s);
+console.log(userone.msg());
+console.log(userone.writeMsg());
+
+console.log(usertwo.u);
+console.log(usertwo.s);
+console.log(usertwo.msg); // Native code 
+console.log(usertwo.writeMsg); // Native code  
+
+//////////////// ////////////////////// ////////////////////////////  / ///////////////////////////////////////
+// (Update Properties And Built In Constructors)  : 151
 
