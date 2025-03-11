@@ -2471,33 +2471,71 @@ Class
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // (Object Meta Data And Descriptor Part 2 )    :   158
 
-const myObject = {
-  a: 1,
-  b: 2,
-};
+// const myObject = {
+//   a: 1,
+//   b: 2,
+// };
 
-Object.defineProperties(myObject, {
-  c: {
-    configurable: true,
-    value: 3,
-  },
+// Object.defineProperties(myObject, {
+//   c: {
+//     configurable: true,
+//     value: 3,
+//   },
 
-  d: {
-    configurable: true,
-    value: 4,
-  },
+//   d: {
+//     configurable: true,
+//     value: 4,
+//   },
 
-  e: {
-    configurable: true,
-    value: 5,
-  },
-});
+//   e: {
+//     configurable: true,
+//     value: 5,
+//   },
+// });
 
-console.log(myObject);
+// console.log(myObject);
 
-console.log(Object.getOwnPropertyDescriptor(myObject, "d"));
+// console.log(Object.getOwnPropertyDescriptor(myObject, "d"));
 
-console.log(Object.getOwnPropertyDescriptors(myObject));
+// console.log(Object.getOwnPropertyDescriptors(myObject));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ( Date And Time Introduction) : 159
+/*
+--Date And Time 
+---Date Constructor 
+
+--Static Methods 
+---Date.now() 
+
+---To Track Time You Need Starting Point 
+---Epoch Time Or Unix Time In Computer Science Is The Number of Seconds Since January 1, 1978. 
+---Why 1970 [829 Days To 136 Years] 
+
+--Search For 
+---Year 2038 Problem in Computer Science.
+*/
+
+let dateNow = new Date();
+
+console.log(dateNow);
+
+console.log(Date.now()); // 1000 mill = 1 seconds
+
+let seconds = Date.now() / 1000;  // Number of seconds 
+console.log(`seconds ${seconds}`);
+
+let minutes = seconds / 60 ;  // Number of minutes 
+console.log(`minutes ${minutes}`);
+
+let hours = minutes / 60 ;  // Number of hours 
+console.log(`hours ${hours}`);
+
+let days = hours / 24 ;  // Number of days 
+console.log(`days ${days}`);
+
+let years = days / 365 ;  // Number of years 
+console.log(`years ${years}`);
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// (Get Date And Time)  :  160
