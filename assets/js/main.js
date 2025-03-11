@@ -2611,56 +2611,89 @@ Date And Time
 // console.log(datenow);
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-// (Formatting Date And Time) : 162
-/*
-Date And Time 
-new Date(timestamp) 
-new Date(Date String) 
-new Date(Numeric Values) 
-Format 
+// // (Formatting Date And Time) : 162
+// /*
+// Date And Time 
+// new Date(timestamp) 
+// new Date(Date String) 
+// new Date(Numeric Values) 
+// Format 
 
-- "Feb 17 2000" 
-"2/17/2000" 
-"2000-2-17" => ISO International Standard 
-"2000 2" 
-"2000" 
-"00" 
-2000, 1, 17, 10, 30, 20
-2000, 1, 17 
-"1982-10-25T06:10:00Z" 
-Date.parse("String") // Read Date From A String
-*/
+// - "Feb 17 2000" 
+// "2/17/2000" 
+// "2000-2-17" => ISO International Standard 
+// "2000 2" 
+// "2000" 
+// "00" 
+// 2000, 1, 17, 10, 30, 20
+// 2000, 1, 17 
+// "1982-10-25T06:10:00Z" 
+// Date.parse("String") // Read Date From A String
+// */
 
-console.log(Date.parse("Feb 17 2000"));
+// console.log(Date.parse("Feb 17 2000"));
 
-let date1 = new Date(0);
-console.log(date1);
+// let date1 = new Date(0);
+// console.log(date1);
 
-let date2 = new Date(950738400000);
-console.log(date2);
+// let date2 = new Date(950738400000);
+// console.log(date2);
 
-// let date3 = new Date(2-17-2000);  // the same 
-// let date3 = new Date(2 17 2000);  // the same 
-let date3 = new Date(2/17/2000);     // the same 
-console.log(date3);
+// // let date3 = new Date(2-17-2000);  // the same 
+// // let date3 = new Date(2 17 2000);  // the same 
+// let date3 = new Date(2/17/2000);     // the same 
+// console.log(date3);
 
-let date4 = new Date("2000-2-17");
-console.log(date4);
+// let date4 = new Date("2000-2-17");
+// console.log(date4);
 
-let date5 = new Date("2000-2");
-console.log(date5);
+// let date5 = new Date("2000-2");
+// console.log(date5);
 
-let date6 = new Date("00");
-console.log(date6);
+// let date6 = new Date("00");
+// console.log(date6);
 
-let date7 = new Date(2000, 1, 17, 10, 30, 20);  // 1(index) >> feb|| 10 >> the hour || 30 >> minutes || 20 >> seconds
-console.log(date7);
+// let date7 = new Date(2000, 1, 17, 10, 30, 20);  // 1(index) >> feb|| 10 >> the hour || 30 >> minutes || 20 >> seconds
+// console.log(date7);
 
-let date8 = new Date(2000, 1, 17 );
-console.log(date8);
+// let date8 = new Date(2000, 1, 17 );
+// console.log(date8);
 
-let date9 = new Date("2000-2-17T10:00:00Z");
-console.log(date9);
+// let date9 = new Date("2000-2-17T10:00:00Z");
+// console.log(date9);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Tracking Operations Time) : 
+// (Tracking Operations Time) : 163   
+/*
+Date And Time 
+--Track-Operations Time 
+
+Search 
+--performance.now() 
+--performance.mark()
+*/
+
+// Start Time :
+let Start = new Date();
+
+
+// Operation : 
+for (let i = 0; i < 100000; i++) {
+  // document.write(`<div>${i}</div>`);
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(i));
+  document.body.appendChild(div);
+}
+
+// End Time :
+let End = new Date();
+
+
+//Operation Duration :
+let duration = End - Start ; 
+
+
+console.log(duration);
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// (Generator Function Introduction)  : 164
