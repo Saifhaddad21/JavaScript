@@ -2576,39 +2576,91 @@ Date And Time
 ---setHours (Hours [8-23], Minutes > Optional [8-59], Seconds > Optional [8-59], MS > Optional [8-999]) 
 ---setMinutes(Minutes [8-59], Seconds => Optional [0-59], MS> Optional [0-999]) 
 ---setSeconds(Seconds => [8-59], MS > Optional [0-999])
-*/
-let datenow = new Date();
-console.log(datenow);
-
-console.log("#".repeat(50));
-
-// datenow.setTime(0);
+// */
+// let datenow = new Date();
 // console.log(datenow);
 
 // console.log("#".repeat(50));
 
-// datenow.setTime(10000);
+// // datenow.setTime(0);
+// // console.log(datenow);
+
+// // console.log("#".repeat(50));
+
+// // datenow.setTime(10000);
+// // console.log(datenow);
+
+// // console.log("#".repeat(50));
+// ////////////////////////////////
+// // datenow.setDate(1);
+// // console.log(datenow);
+
+// // datenow.setDate(31);
+// // console.log(datenow);
+
+// // datenow.setDate(-1);
+// // console.log(datenow);
+
+// // datenow.setDate(36);
+// // console.log(datenow);
+// ////////////////////////////////
+// datenow.setFullYear(2025);
 // console.log(datenow);
 
-// console.log("#".repeat(50));
-////////////////////////////////
-// datenow.setDate(1);
+// datenow.setFullYear(2025, 1); //from {0 - 11} 0 >> jun \\ 1 >> feb \\ ...
 // console.log(datenow);
-
-// datenow.setDate(31);
-// console.log(datenow);
-
-// datenow.setDate(-1);
-// console.log(datenow);
-
-// datenow.setDate(36);
-// console.log(datenow);
-////////////////////////////////
-datenow.setFullYear(2025);
-console.log(datenow);
-
-datenow.setFullYear(2025, 1); //from {0 - 11} 0 >> jun \\ 1 >> feb \\ ...
-console.log(datenow);
 
 ////////////////////////////////////////////////////////////////////////////////////////////
-// (Formatting Date And Time) : 
+// (Formatting Date And Time) : 162
+/*
+Date And Time 
+new Date(timestamp) 
+new Date(Date String) 
+new Date(Numeric Values) 
+Format 
+
+- "Feb 17 2000" 
+"2/17/2000" 
+"2000-2-17" => ISO International Standard 
+"2000 2" 
+"2000" 
+"00" 
+2000, 1, 17, 10, 30, 20
+2000, 1, 17 
+"1982-10-25T06:10:00Z" 
+Date.parse("String") // Read Date From A String
+*/
+
+console.log(Date.parse("Feb 17 2000"));
+
+let date1 = new Date(0);
+console.log(date1);
+
+let date2 = new Date(950738400000);
+console.log(date2);
+
+// let date3 = new Date(2-17-2000);  // the same 
+// let date3 = new Date(2 17 2000);  // the same 
+let date3 = new Date(2/17/2000);     // the same 
+console.log(date3);
+
+let date4 = new Date("2000-2-17");
+console.log(date4);
+
+let date5 = new Date("2000-2");
+console.log(date5);
+
+let date6 = new Date("00");
+console.log(date6);
+
+let date7 = new Date(2000, 1, 17, 10, 30, 20);  // 1(index) >> feb|| 10 >> the hour || 30 >> minutes || 20 >> seconds
+console.log(date7);
+
+let date8 = new Date(2000, 1, 17 );
+console.log(date8);
+
+let date9 = new Date("2000-2-17T10:00:00Z");
+console.log(date9);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Tracking Operations Time) : 
