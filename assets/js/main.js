@@ -2673,27 +2673,83 @@ Search
 --performance.mark()
 */
 
-// Start Time :
-let Start = new Date();
+// // Start Time :
+// let Start = new Date();
 
 
-// Operation : 
-for (let i = 0; i < 100000; i++) {
-  // document.write(`<div>${i}</div>`);
-  let div = document.createElement("div");
-  div.appendChild(document.createTextNode(i));
-  document.body.appendChild(div);
-}
+// // Operation : 
+// for (let i = 0; i < 100000; i++) {
+//   // document.write(`<div>${i}</div>`);
+//   let div = document.createElement("div");
+//   div.appendChild(document.createTextNode(i));
+//   document.body.appendChild(div);
+// }
 
-// End Time :
-let End = new Date();
-
-
-//Operation Duration :
-let duration = End - Start ; 
+// // End Time :
+// let End = new Date();
 
 
-console.log(duration);
+// //Operation Duration :
+// let duration = End - Start ; 
+
+
+// console.log(duration);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // (Generator Function Introduction)  : 164
+/*
+Generators   المولدات 
+Generator Function Run Its Code When Required. 
+Generator Function Return Special Object [Generator Object] 
+Generators Are Iterable
+*/ 
+// function* generateNumbers () {
+//   yield 1 ;
+//   alert("Hello After Yield 1")
+//   yield 2 ;
+//   yield 3 ;
+//   yield 4 ;
+// }
+
+// let generator = generateNumbers();
+
+// console.log(typeof generator);
+// console.log(generator);
+
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+// for (let value of generateNumbers() ) {
+//   console.log(value);
+
+// }
+
+function* generateNumbers () {
+  yield 1 ;
+  console.log("Hello After Yield 1");
+  yield 2 ;
+  yield 3 ;
+  yield 4 ;
+}
+
+let generator = generateNumbers();
+
+console.log(typeof generator);
+console.log(generator);
+
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+
+for (let value of generateNumbers() ) {
+  console.log(value);
+  
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+// (Delegate Generator Function)   : 
