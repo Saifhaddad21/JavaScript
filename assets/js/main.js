@@ -2848,18 +2848,34 @@ Generators Are Iterable
 //   return `Something`;
 // }
 
-let a = 10 ;  
-let arr = [10, 20, 30] ;
+// let a = 10 ;  
+// let arr = [10, 20, 30] ;
 
-function saySomething() {
-  return `Something`;
-}
+// function saySomething() {
+//   return `Something`;
+// }
 
-export {a, arr, saySomething}; // this another way to export in one function
+// export {a, arr, saySomething}; // this another way to export in one function
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // (Named vs Default Export And Import All)  :  168
 
+// let a = 10 ;  
+// let arr = [10, 20, 30] ;
+
+// function saySomething() {
+//   return `Something`;
+// }
+
+// export {a, arr, saySomething}; // 
+
+// export default function sayHello() {
+//   return `Hello`;
+  
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// (What Is JSON)  :  169
+  
 
 
 
