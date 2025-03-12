@@ -2937,21 +2937,21 @@ JSON
 JSON 
 ---JSON.parse => Convert Text Data To JS Object 
     JSON.stringify => Convert JS Object To JSON 
-*/
-const myJsonObjectFromServer = '{"Username": "Saif", "Age": 25}';
-console.log(typeof myJsonObjectFromServer);
-console.log(myJsonObjectFromServer);
+// */
+// const myJsonObjectFromServer = '{"Username": "Saif", "Age": 25}';
+// console.log(typeof myJsonObjectFromServer);
+// console.log(myJsonObjectFromServer);
 
-const myJsObject = JSON.parse(myJsonObjectFromServer);
-console.log(typeof myJsObject);
-console.log(myJsObject);
+// const myJsObject = JSON.parse(myJsonObjectFromServer);
+// console.log(typeof myJsObject);
+// console.log(myJsObject);
 
-myJsObject["Username"] = "Zaid";
-myJsObject["Age"] = 26;
+// myJsObject["Username"] = "Zaid";
+// myJsObject["Age"] = 26;
 
-const myJsonObjectToServer = JSON.stringify(myJsObject);
-console.log(typeof myJsonObjectToServer);
-console.log(myJsonObjectToServer);
+// const myJsonObjectToServer = JSON.stringify(myJsObject);
+// console.log(typeof myJsonObjectToServer);
+// console.log(myJsonObjectToServer);
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -2959,4 +2959,44 @@ console.log(myJsonObjectToServer);
 
 
 
+/*
+- To Understand Ajax, Fetch, Promises
 
+- Asynchronous vs Synchronous Programming
+  -- Meaning
+
+  Synchronous
+  -- Operations Runs in Sequence
+  -- Each Operation Must Wait For The Previous One To Complete
+  -- Story From Real Life
+
+  Asynchronous
+  -- Operations Runs In Parallel
+  -- This Means That An Operation Can Occur While Another One Is Still Being Processed
+  -- Story From Real Life
+
+  -- Facebook As Example
+  -- Simulation
+
+Search
+  -- JavaScript Is A Single-Threaded
+  -- Multi-Threaded Languages
+*/
+
+// Synchronous : 
+
+console.log("1");
+console.log("2");   
+window.alert("Operation");      
+console.log("3");
+
+console.log("1");
+// setTimeout(() => console.log("jjjj"),8000);
+
+setTimeout(() => {
+console.log("===============", a);
+
+},2000);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Call Stack And Web API)  :  174
