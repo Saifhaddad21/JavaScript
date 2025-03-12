@@ -2727,29 +2727,87 @@ Generators Are Iterable
 
 // }
 
-function* generateNumbers () {
-  yield 1 ;
-  console.log("Hello After Yield 1");
-  yield 2 ;
-  yield 3 ;
-  yield 4 ;
-}
+// function* generateNumbers () {
+//   yield 1 ;
+//   console.log("Hello After Yield 1");
+//   yield 2 ;
+//   yield 3 ;
+//   yield 4 ;
+// }
 
-let generator = generateNumbers();
+// let generator = generateNumbers();
 
-console.log(typeof generator);
-console.log(generator);
+// console.log(typeof generator);
+// console.log(generator);
 
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
 
-for (let value of generateNumbers() ) {
-  console.log(value);
-  
-}
+// for (let value of generateNumbers() ) {
+//   console.log(value);
+
+// }
 
 //////////////////////////////////////////////////////////////////////////////////
-// (Delegate Generator Function)   : 
+// (Delegate Generator Function)   :  
+
+function* generateNumbers() {
+  yield 1 ;
+  yield 2 ;
+  yield 3 ;
+}
+
+function* generateLetters() {
+  yield "A";
+  yield "B";
+  yield "C";
+}
+
+function* generateAlls() {
+  yield* generateNumbers();
+  yield* generateLetters();
+  yield* [4, 5, 6];
+}
+
+let generator = generateAlls();
+
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+// ////////////////////////////////////////////
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.return());  // here we use the return but without use a name that will print true with undifined ...
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+// ////////////////////////////////////////////////////
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.return("Z"));  // here will print true with value name Z
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Generate Infinite Numbers)  :  
