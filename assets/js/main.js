@@ -2817,30 +2817,48 @@ Generators Are Iterable
 //     return "A";
 //     yield 3 ;
 //     yield 4 ;
+// //   }
+
+// function* generateNumbers() {
+//   // yield 1 ;
+//   // yield 2 ;
+//   // return "A";
+//   // yield 3 ;
+//   // yield 4 ;
+//   let index = 0 ;
+
+//   while(true) {
+//     yield index++;
 //   }
-
-function* generateNumbers() {
-  // yield 1 ;
-  // yield 2 ;
-  // return "A";
-  // yield 3 ;
-  // yield 4 ;
-  let index = 0 ;
-
-  while(true) {
-    yield index++;
-  }
-}
-  let generator = generateNumbers();
+// }
+//   let generator = generateNumbers();
   
-  console.log(generator.next());
-  console.log(generator.next());
-  console.log(generator.next());
-  console.log(generator.next());
+//   console.log(generator.next());
+//   console.log(generator.next());
+//   console.log(generator.next());
+//   console.log(generator.next());
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // (Modules Import And Export)  : 167
 
+// export let a = 10 ;
+// export let arr = [10, 20, 30] ;
+
+// export function saySomething() {
+//   return `Something`;
+// }
+
+let a = 10 ;  
+let arr = [10, 20, 30] ;
+
+function saySomething() {
+  return `Something`;
+}
+
+export {a, arr, saySomething}; // this another way to export in one function
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// (Named vs Default Export And Import All)  :  168
 
 
 
