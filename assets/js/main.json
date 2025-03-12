@@ -1,0 +1,11 @@
+{
+    "String": "Saif",
+    "Number": 100,
+    "Object": {
+        "Jo": "Jordan",
+        "Eg": "Egypt"
+    },
+    "Array": ["HTML", "CSS", "Js"],
+    "Boolean": true,
+    "Null": null
+}  
