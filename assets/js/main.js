@@ -2754,60 +2754,98 @@ Generators Are Iterable
 //////////////////////////////////////////////////////////////////////////////////
 // (Delegate Generator Function)   :  
 
-function* generateNumbers() {
-  yield 1 ;
-  yield 2 ;
-  yield 3 ;
-}
+// function* generateNumbers() {
+//   yield 1 ;
+//   yield 2 ;
+//   yield 3 ;
+// }
 
-function* generateLetters() {
-  yield "A";
-  yield "B";
-  yield "C";
-}
+// function* generateLetters() {
+//   yield "A";
+//   yield "B";
+//   yield "C";
+// }
 
-function* generateAlls() {
-  yield* generateNumbers();
-  yield* generateLetters();
-  yield* [4, 5, 6];
-}
+// function* generateAlls() {
+//   yield* generateNumbers();
+//   yield* generateLetters();
+//   yield* [4, 5, 6];
+// }
 
-let generator = generateAlls();
+// let generator = generateAlls();
 
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
 
-// ////////////////////////////////////////////
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.return());  // here we use the return but without use a name that will print true with undifined ...
-// console.log(generator.next());
-// console.log(generator.next());
-// console.log(generator.next());
+// // ////////////////////////////////////////////
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.return());  // here we use the return but without use a name that will print true with undifined ...
+// // console.log(generator.next());
+// // console.log(generator.next());
+// // console.log(generator.next());
 
-// ////////////////////////////////////////////////////
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.return("Z"));  // here will print true with value name Z
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
+// // ////////////////////////////////////////////////////
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.return("Z"));  // here will print true with value name Z
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-// (Generate Infinite Numbers)  :  
+// (Generate Infinite Numbers)  :  166 
+// function* generateNumbers() {
+//     yield 1 ;
+//     yield 2 ;
+//     return "A";
+//     yield 3 ;
+//     yield 4 ;
+//   }
+
+function* generateNumbers() {
+  // yield 1 ;
+  // yield 2 ;
+  // return "A";
+  // yield 3 ;
+  // yield 4 ;
+  let index = 0 ;
+
+  while(true) {
+    yield index++;
+  }
+}
+  let generator = generateNumbers();
+  
+  console.log(generator.next());
+  console.log(generator.next());
+  console.log(generator.next());
+  console.log(generator.next());
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// (Modules Import And Export)  : 167
+
+
+
+
+
+
+
+
+
